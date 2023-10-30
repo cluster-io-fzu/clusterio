@@ -1,0 +1,23 @@
+{
+  "groups": [
+    {
+      "name": "jsr.coding",
+      "type": "org.west2.clusterio.jsr.config.CodingConfig",
+      "sourceType": "org.west2.clusterio.jsr.config.JrsBeanRegister",
+      "sourceMethod": "getSaTokenConfig()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "jsr.coding.data-shards",
+      "type": "java.lang.Integer",
+      "sourceType": "org.west2.clusterio.jsr.config.CodingConfig"
+    },
+    {
+      "name": "jsr.coding.parity-shards",
+      "type": "java.lang.Integer",
+      "sourceType": "org.west2.clusterio.jsr.config.CodingConfig"
+    }
+  ],
+  "hints": []
+}

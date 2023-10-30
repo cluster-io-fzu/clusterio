@@ -1,0 +1,7 @@
+server:
+  port: 9737
+
+jsr:
+  coding:
+    data-shards: 6
+    parity-shards: 3
