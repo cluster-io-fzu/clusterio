@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>clusterio-common</artifactId>
+    <artifactId>clusterio-namenode</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -17,12 +17,20 @@
     </properties>
     <dependencies>
         <dependency>
+            <groupId>org.west2.clusterio</groupId>
+            <artifactId>clusterio-common</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-all</artifactId>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
         </dependency>
     </dependencies>
 </project>

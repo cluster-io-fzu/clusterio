@@ -9,7 +9,7 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>proxy</module>
+        <module>namenode</module>
         <module>common</module>
     </modules>
 
@@ -20,6 +20,7 @@
         <slf4j-api.version>2.0.6</slf4j-api.version>
         <commons-lang3.version>3.12.0</commons-lang3.version>
         <fastjson.version>1.2.83</fastjson.version>
+        <netty.version>4.1.101.Final</netty.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -42,6 +43,11 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${netty.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
