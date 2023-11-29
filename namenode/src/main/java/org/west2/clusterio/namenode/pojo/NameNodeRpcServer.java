@@ -1,27 +1,46 @@
 package org.west2.clusterio.namenode.pojo;
 
-import org.west2.clusterio.common.net.NioTcpServer;
-import org.west2.clusterio.common.net.PeerServer;
+import io.grpc.Server;
+import io.grpc.ServerBuilder;
+import io.grpc.ServerServiceDefinition;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.west2.clusterio.common.utils.StartAndShutdown;
 
-import static org.west2.clusterio.common.constant.Constants.DEFAULT_NAMENODE_PORT;
+import java.io.IOException;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 
 public class NameNodeRpcServer implements StartAndShutdown {
-    private PeerServer tcpServer;
-    private NameSystem nameSystem;
+    private static final Logger logger = LoggerFactory.getLogger(NameNodeRpcServer.class.getName());
 
-    public void serverInit(int bossGroupThreads,int workGroupThreads){
-//        tcpServer = new NioTcpServer(DEFAULT_NAMENODE_PORT,bossGroupThreads,workGroupThreads,)
+    private final int port;
+    private final Server server;
+
+    public NameNodeRpcServer(ServerBuilder<?> serverBuilder, int port, List<ServerServiceDefinition> services) {
+        this.port = port;
+        server = serverBuilder.addServices(services).build();
     }
 
     @Override
-    public void shutdown() throws Exception {
-        tcpServer.shutdown();
+    public void start() throws IOException {
+        server.start();
+        logger.info("Namenode Server RPC Started, listening on "+port);
     }
 
     @Override
-    public void start() throws Exception {
-        tcpServer.start();
+    public void shutdown() throws InterruptedException {
+        logger.info("Namenode RPC server is shutting down");
+        if (server !=null){
+            server.shutdown().awaitTermination(30, TimeUnit.SECONDS);
+        }
+    }
+
+    private void blockUntilShutdown() throws  InterruptedException{
+        if (server != null){
+            server.awaitTermination();
+        }
     }
 
 }
