@@ -42,5 +42,4 @@ public class NameNodeRpcServer implements StartAndShutdown {
             server.awaitTermination();
         }
     }
-
 }
