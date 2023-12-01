@@ -5,10 +5,11 @@ option java_outer_classname = "HdfsProtos";
 
 
 message StorageInfoProtoc{
-  uint32 layoutVersion = 1;
-  uint32 namespaceID = 2;
-  string clusterID = 3;
-  uint64 cTime = 4;
+  string storageUuid = 1;
+  uint32 layoutVersion = 2;
+  uint32 namespaceID = 3;
+  string clusterID = 4;
+  uint64 cTime = 5;
 }
 
 message DatanodeIDProto{

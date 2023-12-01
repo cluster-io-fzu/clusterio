@@ -1,77 +1,82 @@
 package org.west2.clusterio.namenode.pojo;
 
-public class DatanodeInfo {
-    private String ipAddr;
-    private String hostName;
-    private String datanodeUuid;
-    private int port;
-    private int layoutVersion;
-    private int namespaceID;
-    private int clusterID;
+public class DatanodeInfo extends DatanodeID{
+    private long capacity;
+    private long dfsUsed;
+    private long nonDfsUsed;
+    private long remaining;
+    private long lastUpdated;
+    private int numBlocks;
+    private long lastBlockReportTime;
 
-    public DatanodeInfo(String ipAddr, String hostName, String datanodeUuid, int port, int layoutVersion, int namespaceID, int clusterID) {
-        this.ipAddr = ipAddr;
-        this.hostName = hostName;
-        this.datanodeUuid = datanodeUuid;
-        this.port = port;
-        this.layoutVersion = layoutVersion;
-        this.namespaceID = namespaceID;
-        this.clusterID = clusterID;
+    public DatanodeInfo(String datanodeUuid, String ipAddr, String hostName, int port, long capacity, long dfsUsed, long nonDfsUsed, long remaining, long lastUpdated, int numBlocks, long lastBlockReportTime) {
+        super(datanodeUuid, ipAddr, hostName, port);
+        this.capacity = capacity;
+        this.dfsUsed = dfsUsed;
+        this.nonDfsUsed = nonDfsUsed;
+        this.remaining = remaining;
+        this.lastUpdated = lastUpdated;
+        this.numBlocks = numBlocks;
+        this.lastBlockReportTime = lastBlockReportTime;
     }
 
-    public String getIpAddr() {
-        return ipAddr;
+    public DatanodeInfo(String datanodeUuid, String ipAddr, String hostName, int port) {
+        super(datanodeUuid, ipAddr, hostName, port);
     }
 
-    public void setIpAddr(String ipAddr) {
-        this.ipAddr = ipAddr;
+    public long getCapacity() {
+        return capacity;
     }
 
-    public String getHostName() {
-        return hostName;
+    public void setCapacity(long capacity) {
+        this.capacity = capacity;
     }
 
-    public void setHostName(String hostName) {
-        this.hostName = hostName;
+    public long getDfsUsed() {
+        return dfsUsed;
     }
 
-    public String getDatanodeUuid() {
-        return datanodeUuid;
+    public void setDfsUsed(long dfsUsed) {
+        this.dfsUsed = dfsUsed;
     }
 
-    public void setDatanodeUuid(String datanodeUuid) {
-        this.datanodeUuid = datanodeUuid;
+    public long getNonDfsUsed() {
+        return nonDfsUsed;
     }
 
-    public int getPort() {
-        return port;
+    public void setNonDfsUsed(long nonDfsUsed) {
+        this.nonDfsUsed = nonDfsUsed;
     }
 
-    public void setPort(int port) {
-        this.port = port;
+    public long getRemaining() {
+        return remaining;
     }
 
-    public int getLayoutVersion() {
-        return layoutVersion;
+    public void setRemaining(long remaining) {
+        this.remaining = remaining;
     }
 
-    public void setLayoutVersion(int layoutVersion) {
-        this.layoutVersion = layoutVersion;
+    public long getLastUpdated() {
+        return lastUpdated;
     }
 
-    public int getNamespaceID() {
-        return namespaceID;
+    public void setLastUpdated(long lastUpdated) {
+        this.lastUpdated = lastUpdated;
     }
 
-    public void setNamespaceID(int namespaceID) {
-        this.namespaceID = namespaceID;
+    public int getNumBlocks() {
+        return numBlocks;
     }
 
-    public int getClusterID() {
-        return clusterID;
+    public void setNumBlocks(int numBlocks) {
+        this.numBlocks = numBlocks;
     }
 
-    public void setClusterID(int clusterID) {
-        this.clusterID = clusterID;
+    public long getLastBlockReportTime() {
+        return lastBlockReportTime;
+    }
+
+    public void setLastBlockReportTime(long lastBlockReportTime) {
+        this.lastBlockReportTime = lastBlockReportTime;
     }
 }

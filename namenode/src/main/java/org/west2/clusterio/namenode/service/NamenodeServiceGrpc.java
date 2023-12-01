@@ -1,4 +1,4 @@
-package org.west2.clusterio.namenode.protocol.service;
+package org.west2.clusterio.namenode.service;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
