@@ -1,4 +1,4 @@
-package org.west2.clusterio.namenode.protocol.service;
+package org.west2.clusterio.namenode.service;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
@@ -16,28 +16,28 @@ public final class DatanodeServiceGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<org.west2.clusterio.namenode.protocol.DatanodeProtocol.RegisterDatanodeRequestProto,
-      org.west2.clusterio.namenode.protocol.DatanodeProtocol.HeartbeatResponseProto> getRegisterDatanodeMethod;
+      org.west2.clusterio.namenode.protocol.DatanodeProtocol.RegisterDatanodeResponseProto> getRegisterDatanodeMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "registerDatanode",
       requestType = org.west2.clusterio.namenode.protocol.DatanodeProtocol.RegisterDatanodeRequestProto.class,
-      responseType = org.west2.clusterio.namenode.protocol.DatanodeProtocol.HeartbeatResponseProto.class,
+      responseType = org.west2.clusterio.namenode.protocol.DatanodeProtocol.RegisterDatanodeResponseProto.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<org.west2.clusterio.namenode.protocol.DatanodeProtocol.RegisterDatanodeRequestProto,
-      org.west2.clusterio.namenode.protocol.DatanodeProtocol.HeartbeatResponseProto> getRegisterDatanodeMethod() {
-    io.grpc.MethodDescriptor<org.west2.clusterio.namenode.protocol.DatanodeProtocol.RegisterDatanodeRequestProto, org.west2.clusterio.namenode.protocol.DatanodeProtocol.HeartbeatResponseProto> getRegisterDatanodeMethod;
+      org.west2.clusterio.namenode.protocol.DatanodeProtocol.RegisterDatanodeResponseProto> getRegisterDatanodeMethod() {
+    io.grpc.MethodDescriptor<org.west2.clusterio.namenode.protocol.DatanodeProtocol.RegisterDatanodeRequestProto, org.west2.clusterio.namenode.protocol.DatanodeProtocol.RegisterDatanodeResponseProto> getRegisterDatanodeMethod;
     if ((getRegisterDatanodeMethod = DatanodeServiceGrpc.getRegisterDatanodeMethod) == null) {
       synchronized (DatanodeServiceGrpc.class) {
         if ((getRegisterDatanodeMethod = DatanodeServiceGrpc.getRegisterDatanodeMethod) == null) {
           DatanodeServiceGrpc.getRegisterDatanodeMethod = getRegisterDatanodeMethod =
-              io.grpc.MethodDescriptor.<org.west2.clusterio.namenode.protocol.DatanodeProtocol.RegisterDatanodeRequestProto, org.west2.clusterio.namenode.protocol.DatanodeProtocol.HeartbeatResponseProto>newBuilder()
+              io.grpc.MethodDescriptor.<org.west2.clusterio.namenode.protocol.DatanodeProtocol.RegisterDatanodeRequestProto, org.west2.clusterio.namenode.protocol.DatanodeProtocol.RegisterDatanodeResponseProto>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "registerDatanode"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.west2.clusterio.namenode.protocol.DatanodeProtocol.RegisterDatanodeRequestProto.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.west2.clusterio.namenode.protocol.DatanodeProtocol.HeartbeatResponseProto.getDefaultInstance()))
+                  org.west2.clusterio.namenode.protocol.DatanodeProtocol.RegisterDatanodeResponseProto.getDefaultInstance()))
               .setSchemaDescriptor(new DatanodeServiceMethodDescriptorSupplier("registerDatanode"))
               .build();
         }
@@ -159,7 +159,7 @@ public final class DatanodeServiceGrpc {
     /**
      */
     default void registerDatanode(org.west2.clusterio.namenode.protocol.DatanodeProtocol.RegisterDatanodeRequestProto request,
-        io.grpc.stub.StreamObserver<org.west2.clusterio.namenode.protocol.DatanodeProtocol.HeartbeatResponseProto> responseObserver) {
+        io.grpc.stub.StreamObserver<org.west2.clusterio.namenode.protocol.DatanodeProtocol.RegisterDatanodeResponseProto> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRegisterDatanodeMethod(), responseObserver);
     }
 
@@ -208,7 +208,7 @@ public final class DatanodeServiceGrpc {
     /**
      */
     public void registerDatanode(org.west2.clusterio.namenode.protocol.DatanodeProtocol.RegisterDatanodeRequestProto request,
-        io.grpc.stub.StreamObserver<org.west2.clusterio.namenode.protocol.DatanodeProtocol.HeartbeatResponseProto> responseObserver) {
+        io.grpc.stub.StreamObserver<org.west2.clusterio.namenode.protocol.DatanodeProtocol.RegisterDatanodeResponseProto> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRegisterDatanodeMethod(), getCallOptions()), request, responseObserver);
     }
@@ -248,7 +248,7 @@ public final class DatanodeServiceGrpc {
 
     /**
      */
-    public org.west2.clusterio.namenode.protocol.DatanodeProtocol.HeartbeatResponseProto registerDatanode(org.west2.clusterio.namenode.protocol.DatanodeProtocol.RegisterDatanodeRequestProto request) {
+    public org.west2.clusterio.namenode.protocol.DatanodeProtocol.RegisterDatanodeResponseProto registerDatanode(org.west2.clusterio.namenode.protocol.DatanodeProtocol.RegisterDatanodeRequestProto request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRegisterDatanodeMethod(), getCallOptions(), request);
     }
@@ -286,7 +286,7 @@ public final class DatanodeServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<org.west2.clusterio.namenode.protocol.DatanodeProtocol.HeartbeatResponseProto> registerDatanode(
+    public com.google.common.util.concurrent.ListenableFuture<org.west2.clusterio.namenode.protocol.DatanodeProtocol.RegisterDatanodeResponseProto> registerDatanode(
         org.west2.clusterio.namenode.protocol.DatanodeProtocol.RegisterDatanodeRequestProto request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRegisterDatanodeMethod(), getCallOptions()), request);
@@ -332,7 +332,7 @@ public final class DatanodeServiceGrpc {
       switch (methodId) {
         case METHODID_REGISTER_DATANODE:
           serviceImpl.registerDatanode((org.west2.clusterio.namenode.protocol.DatanodeProtocol.RegisterDatanodeRequestProto) request,
-              (io.grpc.stub.StreamObserver<org.west2.clusterio.namenode.protocol.DatanodeProtocol.HeartbeatResponseProto>) responseObserver);
+              (io.grpc.stub.StreamObserver<org.west2.clusterio.namenode.protocol.DatanodeProtocol.RegisterDatanodeResponseProto>) responseObserver);
           break;
         case METHODID_HEARTBEAT:
           serviceImpl.heartbeat((org.west2.clusterio.namenode.protocol.DatanodeProtocol.HeartbeatRequestProto) request,
@@ -365,7 +365,7 @@ public final class DatanodeServiceGrpc {
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               org.west2.clusterio.namenode.protocol.DatanodeProtocol.RegisterDatanodeRequestProto,
-              org.west2.clusterio.namenode.protocol.DatanodeProtocol.HeartbeatResponseProto>(
+              org.west2.clusterio.namenode.protocol.DatanodeProtocol.RegisterDatanodeResponseProto>(
                 service, METHODID_REGISTER_DATANODE)))
         .addMethod(
           getHeartbeatMethod(),

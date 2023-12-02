@@ -60,7 +60,7 @@ message BlockReportResponseProto{
 
 
 service DatanodeService{
-  rpc registerDatanode(RegisterDatanodeRequestProto) returns(HeartbeatResponseProto);
+  rpc registerDatanode(RegisterDatanodeRequestProto) returns(RegisterDatanodeResponseProto);
   rpc heartbeat(HeartbeatRequestProto) returns(HeartbeatResponseProto);
   rpc blockReport(BlockReportRequestProto) returns(BlockReportResponseProto);
 }
