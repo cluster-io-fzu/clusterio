@@ -1,13 +1,12 @@
 package org.west2.clusterio.namenode.pojo;
 
-import io.grpc.Server;
-import io.grpc.ServerBuilder;
-import io.grpc.ServerServiceDefinition;
+import io.grpc.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.west2.clusterio.common.utils.StartAndShutdown;
 
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -17,10 +16,16 @@ public class NameNodeRpcServer implements StartAndShutdown {
 
     private final int port;
     private final Server server;
-
-    public NameNodeRpcServer(ServerBuilder<?> serverBuilder, int port, List<ServerServiceDefinition> services) {
+    public NameNodeRpcServer(int port,List<BindableService> services){
+        this(Grpc.newServerBuilderForPort(port, InsecureServerCredentials.create()),port,services);
+    }
+    public NameNodeRpcServer(ServerBuilder<?> serverBuilder, int port, List<BindableService> services) {
         this.port = port;
-        server = serverBuilder.addServices(services).build();
+        Iterator<BindableService> iterator = services.iterator();
+        while (iterator.hasNext()){
+            serverBuilder.addService(iterator.next());
+        }
+        server = serverBuilder.build();
     }
 
     @Override

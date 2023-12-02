@@ -1,10 +1,16 @@
 package org.west2.clusterio.namenode.pojo;
 
+import javax.xml.crypto.Data;
+
 public class DatanodeID {
     private String ipAddr;
     private String hostName;
     private int port;
     private final String datanodeUuid;
+
+    public DatanodeID(DatanodeID from){
+        this(from.datanodeUuid,from.ipAddr,from.hostName,from.port);
+    }
 
     public DatanodeID(String datanodeUuid,String ipAddr, String hostName, int port) {
         this.datanodeUuid = datanodeUuid;
