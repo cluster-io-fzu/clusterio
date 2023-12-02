@@ -3,10 +3,13 @@ package org.west2.clusterio.common.net;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
-import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.util.NettyRuntime;
 import io.netty.util.internal.SystemPropertyUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.west2.clusterio.common.constant.LoggerName;
 
 /**
  * A tcp server use netty to realize nio
@@ -27,24 +30,33 @@ public class NioTcpServer implements PeerServer {
     private NioEventLoopGroup bossGroup;
     private NioEventLoopGroup workGroup;
     private ServerBootstrap  bootstrap;
-    private ChannelFuture channelFuture;
-    private ChannelHandler channelHandler;//Maybe will change to list
+    private ChannelInitializer<NioSocketChannel> channelInitializer;
+    private Channel channel;
 
-    public NioTcpServer(int port, ChannelInboundHandler channelHandler) {
+    public NioTcpServer(int port, ChannelInitializer<NioSocketChannel> channelInitializer) {
         this.port = port;
-        this.channelHandler = channelHandler;
+        this.channelInitializer = channelInitializer;
     }
 
-    public NioTcpServer(int port, int bossGroupThreads, int workGroupThreads, ChannelInboundHandler channelHandler) {
+    public NioTcpServer(int port, int bossGroupThreads, int workGroupThreads, ChannelInitializer<NioSocketChannel> channelInitializer) {
         this.port = port;
         this.bossGroupThreads = bossGroupThreads;
         this.workGroupThreads = workGroupThreads;
-        this.channelHandler = channelHandler;
+        this.channelInitializer = channelInitializer;
     }
 
     @Override
     public void shutdown() throws Exception {
-
+        try {
+            if (channel != null){
+                channel.closeFuture().sync();
+            }
+        }catch (Exception e){
+            throw e;
+        }finally {
+            bossGroup.shutdownGracefully();
+            workGroup.shutdownGracefully();
+        }
     }
 
     @Override
@@ -57,17 +69,11 @@ public class NioTcpServer implements PeerServer {
                     .channel(NioServerSocketChannel.class)
                     .option(ChannelOption.SO_BACKLOG,DEFAULT_SO_BACKLOG)
                     .childOption(ChannelOption.SO_KEEPALIVE,DEFAULT_SO_KEEPALIVE)
-                    .childHandler(new ChannelInitializer<SocketChannel>() {
-                        @Override
-                        protected void initChannel(SocketChannel socketChannel) throws Exception {
-                            socketChannel.pipeline().addLast(channelHandler);
-                        }
-                    });
-            channelFuture = bootstrap.bind(port).sync();
-            channelFuture.channel().closeFuture().sync();
-        }finally {
-            bossGroup.shutdownGracefully();
-            workGroup.shutdownGracefully();
+                    .childHandler(channelInitializer);
+            ChannelFuture channelFuture = bootstrap.bind(port).sync();
+            channel = channelFuture.channel();
+        }catch (Exception e){
+            throw e;
         }
     }
 }

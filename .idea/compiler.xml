@@ -6,9 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="common" />
-        <module name="namenode" />
         <module name="clusterio-namenode" />
+        <module name="common" />
+        <module name="clusterio-common" />
+        <module name="namenode" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

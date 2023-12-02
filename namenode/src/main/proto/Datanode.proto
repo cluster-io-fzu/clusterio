@@ -1,0 +1,66 @@
+syntax = "proto3";
+option java_package = "org.west2.clusterio.namenode.protocol";
+option java_outer_classname = "DatanodeProtocol";
+
+import "hdfs.proto";
+
+message DatanodeRegistrationProto{
+  DatanodeIDProto datanodeId = 1;
+  StorageInfoProtoc storageInfo = 2;
+}
+
+message RegisterDatanodeRequestProto{
+  DatanodeRegistrationProto registration = 1;
+}
+/**
+ * If the request of registration does not contains storageInfo
+ * then it will be updated
+ */
+message RegisterDatanodeResponseProto{
+  DatanodeRegistrationProto registration = 1;
+}
+
+message HeartbeatRequestProto{
+  DatanodeRegistrationProto registration = 1;
+  repeated StorageReportProto reports = 2;
+  uint64 cacheCapacity = 3;
+  uint64 cacheUsed = 4;
+}
+
+message HeartbeatResponseProto{
+
+}
+
+message BlockReportRequestProto{
+  DatanodeRegistrationProto registration = 1;
+  string blockPoolId = 2;
+  repeated StorageReportProto reports = 3;
+  BlockReportContextProto context = 4;
+}
+
+message BlockReportContextProto{
+  int32 totalPieces = 1;
+  //The index of the current RPC
+  int32 curRpc = 2;
+  //The unique 64-bit ID if this block report
+  int64 id = 3;
+}
+
+
+message StorageBlockReportProto{
+  string storageUuid = 1;
+  repeated uint64 blocks = 2;
+  //The total number of blocks in this datanode
+  uint64 numberOfBlocks = 3;
+  repeated bytes blocksBuffers = 4;
+}
+
+message BlockReportResponseProto{
+}
+
+
+service DatanodeService{
+  rpc registerDatanode(RegisterDatanodeRequestProto) returns(RegisterDatanodeResponseProto);
+  rpc heartbeat(HeartbeatRequestProto) returns(HeartbeatResponseProto);
+  rpc blockReport(BlockReportRequestProto) returns(BlockReportResponseProto);
+}
