@@ -1,13 +1,10 @@
 package org.west2.clusterio.namenode.pojo;
 
-import org.checkerframework.checker.units.qual.C;
 import org.west2.clusterio.common.constant.Constants;
 import org.west2.clusterio.namenode.common.DatanodeStatus;
-import org.west2.clusterio.namenode.protocol.HdfsProtos;
 
-import javax.xml.crypto.Data;
+
 import java.util.Map;
-import java.util.UUID;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -34,7 +31,7 @@ public class DatanodeManager {
 
     public void heartbeatInitialize(){
         ScheduledExecutorService executor = Executors.newSingleThreadScheduledExecutor();
-        executor.scheduleAtFixedRate(new HeartbeatTimer(),0, Constants.DEFAULT_HEARTBEAT_INTERVAL, TimeUnit.MILLISECONDS);
+        executor.scheduleAtFixedRate(new HeartbeatValidationTimer(),0, Constants.DEFAULT_HEARTBEAT_INTERVAL, TimeUnit.MILLISECONDS);
     }
 
     public final Command heartbeat(String uuid,DatanodeInfo info){

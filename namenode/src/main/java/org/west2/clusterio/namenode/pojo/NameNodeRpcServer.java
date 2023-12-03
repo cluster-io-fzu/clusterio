@@ -1,6 +1,7 @@
 package org.west2.clusterio.namenode.pojo;
 
 import io.grpc.*;
+import io.grpc.netty.shaded.io.grpc.netty.NettyServerBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.west2.clusterio.common.utils.StartAndShutdown;
@@ -17,7 +18,13 @@ public class NameNodeRpcServer implements StartAndShutdown {
     private final int port;
     private final Server server;
     public NameNodeRpcServer(int port,List<BindableService> services){
-        this(Grpc.newServerBuilderForPort(port, InsecureServerCredentials.create()),port,services);
+        this.port = port;
+        NettyServerBuilder serverBuilder = NettyServerBuilder.forPort(port);
+        Iterator<BindableService> iterator = services.iterator();
+        while (iterator.hasNext()){
+            serverBuilder.addService(iterator.next());
+        }
+        server = serverBuilder.build();
     }
     public NameNodeRpcServer(ServerBuilder<?> serverBuilder, int port, List<BindableService> services) {
         this.port = port;

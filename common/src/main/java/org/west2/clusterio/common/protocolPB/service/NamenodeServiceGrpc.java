@@ -1,43 +1,43 @@
-package org.west2.clusterio.namenode.service;
+package org.west2.clusterio.common.protocolPB.service;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.59.1)",
+    value = "by gRPC proto compiler (version 1.57.2)",
     comments = "Source: Namenode.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class NamenodeServiceGrpc {
 
   private NamenodeServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "NamenodeService";
+  public static final java.lang.String SERVICE_NAME = "NamenodeService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<org.west2.clusterio.namenode.protocol.NamenodeProtocol.GetBlocksRequestProto,
-      org.west2.clusterio.namenode.protocol.NamenodeProtocol.GetBlocksResponseProto> getGetBlocksMethod;
+  private static volatile io.grpc.MethodDescriptor<org.west2.clusterio.common.protocolPB.NamenodeProtocol.GetBlocksRequestProto,
+      org.west2.clusterio.common.protocolPB.NamenodeProtocol.GetBlocksResponseProto> getGetBlocksMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "getBlocks",
-      requestType = org.west2.clusterio.namenode.protocol.NamenodeProtocol.GetBlocksRequestProto.class,
-      responseType = org.west2.clusterio.namenode.protocol.NamenodeProtocol.GetBlocksResponseProto.class,
+      requestType = org.west2.clusterio.common.protocolPB.NamenodeProtocol.GetBlocksRequestProto.class,
+      responseType = org.west2.clusterio.common.protocolPB.NamenodeProtocol.GetBlocksResponseProto.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<org.west2.clusterio.namenode.protocol.NamenodeProtocol.GetBlocksRequestProto,
-      org.west2.clusterio.namenode.protocol.NamenodeProtocol.GetBlocksResponseProto> getGetBlocksMethod() {
-    io.grpc.MethodDescriptor<org.west2.clusterio.namenode.protocol.NamenodeProtocol.GetBlocksRequestProto, org.west2.clusterio.namenode.protocol.NamenodeProtocol.GetBlocksResponseProto> getGetBlocksMethod;
+  public static io.grpc.MethodDescriptor<org.west2.clusterio.common.protocolPB.NamenodeProtocol.GetBlocksRequestProto,
+      org.west2.clusterio.common.protocolPB.NamenodeProtocol.GetBlocksResponseProto> getGetBlocksMethod() {
+    io.grpc.MethodDescriptor<org.west2.clusterio.common.protocolPB.NamenodeProtocol.GetBlocksRequestProto, org.west2.clusterio.common.protocolPB.NamenodeProtocol.GetBlocksResponseProto> getGetBlocksMethod;
     if ((getGetBlocksMethod = NamenodeServiceGrpc.getGetBlocksMethod) == null) {
       synchronized (NamenodeServiceGrpc.class) {
         if ((getGetBlocksMethod = NamenodeServiceGrpc.getGetBlocksMethod) == null) {
           NamenodeServiceGrpc.getGetBlocksMethod = getGetBlocksMethod =
-              io.grpc.MethodDescriptor.<org.west2.clusterio.namenode.protocol.NamenodeProtocol.GetBlocksRequestProto, org.west2.clusterio.namenode.protocol.NamenodeProtocol.GetBlocksResponseProto>newBuilder()
+              io.grpc.MethodDescriptor.<org.west2.clusterio.common.protocolPB.NamenodeProtocol.GetBlocksRequestProto, org.west2.clusterio.common.protocolPB.NamenodeProtocol.GetBlocksResponseProto>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getBlocks"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.west2.clusterio.namenode.protocol.NamenodeProtocol.GetBlocksRequestProto.getDefaultInstance()))
+                  org.west2.clusterio.common.protocolPB.NamenodeProtocol.GetBlocksRequestProto.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.west2.clusterio.namenode.protocol.NamenodeProtocol.GetBlocksResponseProto.getDefaultInstance()))
+                  org.west2.clusterio.common.protocolPB.NamenodeProtocol.GetBlocksResponseProto.getDefaultInstance()))
               .setSchemaDescriptor(new NamenodeServiceMethodDescriptorSupplier("getBlocks"))
               .build();
         }
@@ -52,7 +52,7 @@ public final class NamenodeServiceGrpc {
   public static NamenodeServiceStub newStub(io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<NamenodeServiceStub> factory =
       new io.grpc.stub.AbstractStub.StubFactory<NamenodeServiceStub>() {
-        @Override
+        @java.lang.Override
         public NamenodeServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
           return new NamenodeServiceStub(channel, callOptions);
         }
@@ -67,7 +67,7 @@ public final class NamenodeServiceGrpc {
       io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<NamenodeServiceBlockingStub> factory =
       new io.grpc.stub.AbstractStub.StubFactory<NamenodeServiceBlockingStub>() {
-        @Override
+        @java.lang.Override
         public NamenodeServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
           return new NamenodeServiceBlockingStub(channel, callOptions);
         }
@@ -82,7 +82,7 @@ public final class NamenodeServiceGrpc {
       io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<NamenodeServiceFutureStub> factory =
       new io.grpc.stub.AbstractStub.StubFactory<NamenodeServiceFutureStub>() {
-        @Override
+        @java.lang.Override
         public NamenodeServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
           return new NamenodeServiceFutureStub(channel, callOptions);
         }
@@ -96,8 +96,8 @@ public final class NamenodeServiceGrpc {
 
     /**
      */
-    default void getBlocks(org.west2.clusterio.namenode.protocol.NamenodeProtocol.GetBlocksRequestProto request,
-        io.grpc.stub.StreamObserver<org.west2.clusterio.namenode.protocol.NamenodeProtocol.GetBlocksResponseProto> responseObserver) {
+    default void getBlocks(org.west2.clusterio.common.protocolPB.NamenodeProtocol.GetBlocksRequestProto request,
+        io.grpc.stub.StreamObserver<org.west2.clusterio.common.protocolPB.NamenodeProtocol.GetBlocksResponseProto> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetBlocksMethod(), responseObserver);
     }
   }
@@ -108,7 +108,7 @@ public final class NamenodeServiceGrpc {
   public static abstract class NamenodeServiceImplBase
       implements io.grpc.BindableService, AsyncService {
 
-    @Override public final io.grpc.ServerServiceDefinition bindService() {
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return NamenodeServiceGrpc.bindService(this);
     }
   }
@@ -123,7 +123,7 @@ public final class NamenodeServiceGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected NamenodeServiceStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new NamenodeServiceStub(channel, callOptions);
@@ -131,8 +131,8 @@ public final class NamenodeServiceGrpc {
 
     /**
      */
-    public void getBlocks(org.west2.clusterio.namenode.protocol.NamenodeProtocol.GetBlocksRequestProto request,
-        io.grpc.stub.StreamObserver<org.west2.clusterio.namenode.protocol.NamenodeProtocol.GetBlocksResponseProto> responseObserver) {
+    public void getBlocks(org.west2.clusterio.common.protocolPB.NamenodeProtocol.GetBlocksRequestProto request,
+        io.grpc.stub.StreamObserver<org.west2.clusterio.common.protocolPB.NamenodeProtocol.GetBlocksResponseProto> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetBlocksMethod(), getCallOptions()), request, responseObserver);
     }
@@ -148,7 +148,7 @@ public final class NamenodeServiceGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected NamenodeServiceBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new NamenodeServiceBlockingStub(channel, callOptions);
@@ -156,7 +156,7 @@ public final class NamenodeServiceGrpc {
 
     /**
      */
-    public org.west2.clusterio.namenode.protocol.NamenodeProtocol.GetBlocksResponseProto getBlocks(org.west2.clusterio.namenode.protocol.NamenodeProtocol.GetBlocksRequestProto request) {
+    public org.west2.clusterio.common.protocolPB.NamenodeProtocol.GetBlocksResponseProto getBlocks(org.west2.clusterio.common.protocolPB.NamenodeProtocol.GetBlocksRequestProto request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetBlocksMethod(), getCallOptions(), request);
     }
@@ -172,7 +172,7 @@ public final class NamenodeServiceGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected NamenodeServiceFutureStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new NamenodeServiceFutureStub(channel, callOptions);
@@ -180,8 +180,8 @@ public final class NamenodeServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<org.west2.clusterio.namenode.protocol.NamenodeProtocol.GetBlocksResponseProto> getBlocks(
-        org.west2.clusterio.namenode.protocol.NamenodeProtocol.GetBlocksRequestProto request) {
+    public com.google.common.util.concurrent.ListenableFuture<org.west2.clusterio.common.protocolPB.NamenodeProtocol.GetBlocksResponseProto> getBlocks(
+        org.west2.clusterio.common.protocolPB.NamenodeProtocol.GetBlocksRequestProto request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetBlocksMethod(), getCallOptions()), request);
     }
@@ -202,21 +202,21 @@ public final class NamenodeServiceGrpc {
       this.methodId = methodId;
     }
 
-    @Override
-    @SuppressWarnings("unchecked")
+    @java.lang.Override
+    @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET_BLOCKS:
-          serviceImpl.getBlocks((org.west2.clusterio.namenode.protocol.NamenodeProtocol.GetBlocksRequestProto) request,
-              (io.grpc.stub.StreamObserver<org.west2.clusterio.namenode.protocol.NamenodeProtocol.GetBlocksResponseProto>) responseObserver);
+          serviceImpl.getBlocks((org.west2.clusterio.common.protocolPB.NamenodeProtocol.GetBlocksRequestProto) request,
+              (io.grpc.stub.StreamObserver<org.west2.clusterio.common.protocolPB.NamenodeProtocol.GetBlocksResponseProto>) responseObserver);
           break;
         default:
           throw new AssertionError();
       }
     }
 
-    @Override
-    @SuppressWarnings("unchecked")
+    @java.lang.Override
+    @java.lang.SuppressWarnings("unchecked")
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
@@ -232,8 +232,8 @@ public final class NamenodeServiceGrpc {
           getGetBlocksMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              org.west2.clusterio.namenode.protocol.NamenodeProtocol.GetBlocksRequestProto,
-              org.west2.clusterio.namenode.protocol.NamenodeProtocol.GetBlocksResponseProto>(
+              org.west2.clusterio.common.protocolPB.NamenodeProtocol.GetBlocksRequestProto,
+              org.west2.clusterio.common.protocolPB.NamenodeProtocol.GetBlocksResponseProto>(
                 service, METHODID_GET_BLOCKS)))
         .build();
   }
@@ -242,12 +242,12 @@ public final class NamenodeServiceGrpc {
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     NamenodeServiceBaseDescriptorSupplier() {}
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return org.west2.clusterio.namenode.protocol.NamenodeProtocol.getDescriptor();
+      return org.west2.clusterio.common.protocolPB.NamenodeProtocol.getDescriptor();
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
       return getFileDescriptor().findServiceByName("NamenodeService");
     }
@@ -261,13 +261,13 @@ public final class NamenodeServiceGrpc {
   private static final class NamenodeServiceMethodDescriptorSupplier
       extends NamenodeServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    NamenodeServiceMethodDescriptorSupplier(String methodName) {
+    NamenodeServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
       return getServiceDescriptor().findMethodByName(methodName);
     }
