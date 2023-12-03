@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option java_package = "org.west2.clusterio.namenode.protocol";
+option java_package = "org.west2.clusterio.common.protocol";
 option java_outer_classname = "HdfsProtos";
 
 

@@ -1,13 +1,13 @@
-package org.west2.clusterio.namenode.service.impl;
+package org.west2.clusterio.namenode.service;
 
 import io.grpc.stub.StreamObserver;
 import org.west2.clusterio.namenode.pojo.Command;
 import org.west2.clusterio.namenode.pojo.DatanodeID;
 import org.west2.clusterio.namenode.pojo.DatanodeInfo;
 import org.west2.clusterio.namenode.pojo.DatanodeManager;
-import org.west2.clusterio.namenode.protocol.DatanodeProtocol;
-import org.west2.clusterio.namenode.protocol.HdfsProtos;
-import org.west2.clusterio.namenode.service.DatanodeServiceGrpc;
+import org.west2.clusterio.common.protocolPB.DatanodeProtocol;
+import org.west2.clusterio.common.protocolPB.HdfsProtos;
+import org.west2.clusterio.common.protocolPB.service.DatanodeServiceGrpc;
 
 /**
  * Datanode related rpc service on a namenode
@@ -51,7 +51,7 @@ public class DatanodeServiceImpl extends DatanodeServiceGrpc.DatanodeServiceImpl
         //for now, each datanode have one storage which means report could parse to datanodeInfo
         DatanodeInfo datanodeInfo = new DatanodeInfo(datanodeID);
         HdfsProtos.StorageReportProto report = request.getReports(0);
-        setProperties(datanodeInfo,report);
+        setInfoProperties(datanodeInfo,report);
         //TODO put command as response to datanode
         Command command = manager.heartbeat(datanodeUuid, datanodeInfo);
 //        responseObserver.onNext();
@@ -70,7 +70,7 @@ public class DatanodeServiceImpl extends DatanodeServiceGrpc.DatanodeServiceImpl
         String hostName = proto.getHostName();
         return new DatanodeID(datanodeUuid,ipAddr,hostName,port);
     }
-    private void setProperties(DatanodeInfo info,HdfsProtos.StorageReportProto report){
+    private void setInfoProperties(DatanodeInfo info,HdfsProtos.StorageReportProto report){
         info.setCapacity(report.getCapacity());
         info.setDfsUsed(report.getUsed());
         info.setRemaining(report.getRemaining());

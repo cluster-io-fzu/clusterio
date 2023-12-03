@@ -7,7 +7,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-public class HeartbeatTimer implements Runnable {
+public class HeartbeatValidationTimer implements Runnable {
     @Override
     public void run() {
         DatanodeManager manager = DatanodeManager.getManager();

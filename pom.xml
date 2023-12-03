@@ -11,6 +11,7 @@
     <modules>
         <module>namenode</module>
         <module>common</module>
+        <module>datanode</module>
     </modules>
 
     <properties>
