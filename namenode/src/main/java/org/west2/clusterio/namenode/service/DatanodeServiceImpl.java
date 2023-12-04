@@ -1,10 +1,11 @@
 package org.west2.clusterio.namenode.service;
 
 import io.grpc.stub.StreamObserver;
-import org.west2.clusterio.namenode.pojo.Command;
-import org.west2.clusterio.namenode.pojo.DatanodeID;
-import org.west2.clusterio.namenode.pojo.DatanodeInfo;
-import org.west2.clusterio.namenode.pojo.DatanodeManager;
+import org.west2.clusterio.common.protocol.DatanodeRegistration;
+import org.west2.clusterio.namenode.server.Command;
+import org.west2.clusterio.common.protocol.DatanodeID;
+import org.west2.clusterio.common.protocol.DatanodeInfo;
+import org.west2.clusterio.namenode.server.DatanodeManager;
 import org.west2.clusterio.common.protocolPB.DatanodeProtocol;
 import org.west2.clusterio.common.protocolPB.HdfsProtos;
 import org.west2.clusterio.common.protocolPB.service.DatanodeServiceGrpc;
@@ -14,14 +15,12 @@ import org.west2.clusterio.common.protocolPB.service.DatanodeServiceGrpc;
  */
 
 public class DatanodeServiceImpl extends DatanodeServiceGrpc.DatanodeServiceImplBase {
-    private  DatanodeManager manager = DatanodeManager.getManager();
+    private final DatanodeManager manager = DatanodeManager.getManager();
     //datanode register itself to namenode
     @Override
     public void registerDatanode(DatanodeProtocol.RegisterDatanodeRequestProto request, StreamObserver<DatanodeProtocol.RegisterDatanodeResponseProto> responseObserver) {
-        super.registerDatanode(request, responseObserver);
-        DatanodeProtocol.DatanodeRegistrationProto registration = request.getRegistration();
-        HdfsProtos.DatanodeIDProto idProto = registration.getDatanodeId();
-        DatanodeID datanodeID = parseDatanodeID(idProto);
+        DatanodeRegistration registration = new DatanodeRegistration(request.getRegistration());
+        DatanodeID datanodeID = new DatanodeID(registration);
         DatanodeInfo info = new DatanodeInfo(datanodeID);
         boolean success = manager.register(info.getDatanodeUuid(), info);
         DatanodeProtocol.DatanodeRegistrationProto.Builder regBuilder = DatanodeProtocol.DatanodeRegistrationProto.newBuilder().setDatanodeId(request.getRegistration().getDatanodeId());
@@ -44,16 +43,14 @@ public class DatanodeServiceImpl extends DatanodeServiceGrpc.DatanodeServiceImpl
     //otherwise the namenode will rearrange the blocks on it
     @Override
     public void heartbeat(DatanodeProtocol.HeartbeatRequestProto request, StreamObserver<DatanodeProtocol.HeartbeatResponseProto> responseObserver) {
-        super.heartbeat(request, responseObserver);
-        String datanodeUuid = request.getRegistration().getDatanodeId().getDatanodeUuid();
-        HdfsProtos.DatanodeIDProto idProto = request.getRegistration().getDatanodeId();
-        DatanodeID datanodeID = parseDatanodeID(idProto);
+        DatanodeRegistration registration = new DatanodeRegistration(request.getRegistration());
+        DatanodeID datanodeID = new DatanodeID(registration);
         //for now, each datanode have one storage which means report could parse to datanodeInfo
         DatanodeInfo datanodeInfo = new DatanodeInfo(datanodeID);
         HdfsProtos.StorageReportProto report = request.getReports(0);
         setInfoProperties(datanodeInfo,report);
         //TODO put command as response to datanode
-        Command command = manager.heartbeat(datanodeUuid, datanodeInfo);
+        Command command = manager.heartbeat(datanodeID.getDatanodeUuid(), datanodeInfo);
 //        responseObserver.onNext();
         responseObserver.onCompleted();
     }
@@ -63,13 +60,6 @@ public class DatanodeServiceImpl extends DatanodeServiceGrpc.DatanodeServiceImpl
         super.blockReport(request, responseObserver);
     }
 
-    private DatanodeID parseDatanodeID(HdfsProtos.DatanodeIDProto proto){
-        String datanodeUuid = proto.getDatanodeUuid();
-        int port = proto.getPort();
-        String ipAddr = proto.getIpAddr();
-        String hostName = proto.getHostName();
-        return new DatanodeID(datanodeUuid,ipAddr,hostName,port);
-    }
     private void setInfoProperties(DatanodeInfo info,HdfsProtos.StorageReportProto report){
         info.setCapacity(report.getCapacity());
         info.setDfsUsed(report.getUsed());
