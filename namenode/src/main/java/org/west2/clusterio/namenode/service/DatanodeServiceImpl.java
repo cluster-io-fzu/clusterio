@@ -2,10 +2,10 @@ package org.west2.clusterio.namenode.service;
 
 import io.grpc.stub.StreamObserver;
 import org.west2.clusterio.common.protocol.DatanodeRegistration;
-import org.west2.clusterio.namenode.pojo.Command;
+import org.west2.clusterio.namenode.server.Command;
 import org.west2.clusterio.common.protocol.DatanodeID;
 import org.west2.clusterio.common.protocol.DatanodeInfo;
-import org.west2.clusterio.namenode.pojo.DatanodeManager;
+import org.west2.clusterio.namenode.server.DatanodeManager;
 import org.west2.clusterio.common.protocolPB.DatanodeProtocol;
 import org.west2.clusterio.common.protocolPB.HdfsProtos;
 import org.west2.clusterio.common.protocolPB.service.DatanodeServiceGrpc;
@@ -19,7 +19,6 @@ public class DatanodeServiceImpl extends DatanodeServiceGrpc.DatanodeServiceImpl
     //datanode register itself to namenode
     @Override
     public void registerDatanode(DatanodeProtocol.RegisterDatanodeRequestProto request, StreamObserver<DatanodeProtocol.RegisterDatanodeResponseProto> responseObserver) {
-        super.registerDatanode(request, responseObserver);
         DatanodeRegistration registration = new DatanodeRegistration(request.getRegistration());
         DatanodeID datanodeID = new DatanodeID(registration);
         DatanodeInfo info = new DatanodeInfo(datanodeID);
@@ -44,7 +43,6 @@ public class DatanodeServiceImpl extends DatanodeServiceGrpc.DatanodeServiceImpl
     //otherwise the namenode will rearrange the blocks on it
     @Override
     public void heartbeat(DatanodeProtocol.HeartbeatRequestProto request, StreamObserver<DatanodeProtocol.HeartbeatResponseProto> responseObserver) {
-        super.heartbeat(request, responseObserver);
         DatanodeRegistration registration = new DatanodeRegistration(request.getRegistration());
         DatanodeID datanodeID = new DatanodeID(registration);
         //for now, each datanode have one storage which means report could parse to datanodeInfo

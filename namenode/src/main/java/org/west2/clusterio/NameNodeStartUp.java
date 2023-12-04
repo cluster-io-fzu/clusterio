@@ -4,7 +4,7 @@ import io.grpc.BindableService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.west2.clusterio.common.constant.Constants;
-import org.west2.clusterio.namenode.pojo.NameNodeRpcServer;
+import org.west2.clusterio.namenode.server.NameNodeRpcServer;
 import org.west2.clusterio.namenode.service.DatanodeServiceImpl;
 import org.west2.clusterio.namenode.service.NamenodeServiceImpl;
 

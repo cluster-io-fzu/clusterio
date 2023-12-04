@@ -9,7 +9,7 @@ public class StorageInfo {
     private String clusterID;
     private long cTime;
 
-    public StorageInfo(String storageUuid, int layoutVersion, int namespaceID, String clusterID, int cTime) {
+    public StorageInfo(String storageUuid, int layoutVersion, int namespaceID, String clusterID, long cTime) {
         this.storageUuid = storageUuid;
         this.layoutVersion = layoutVersion;
         this.namespaceID = namespaceID;
