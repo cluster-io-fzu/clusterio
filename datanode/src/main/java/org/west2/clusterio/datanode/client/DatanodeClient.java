@@ -11,8 +11,8 @@ public class DatanodeClient {
         channel = NettyChannelBuilder.forAddress(host, port)
                 .negotiationType(NegotiationType.PLAINTEXT).build();
     }
-    public void sendHeartbeat(){
-        DatanodeServiceGrpc.DatanodeServiceBlockingStub blockingStub = DatanodeServiceGrpc.newBlockingStub(channel);
-        blockingStub.heartbeat()
-    }
+//    public void sendHeartbeat(){
+//        DatanodeServiceGrpc.DatanodeServiceBlockingStub blockingStub = DatanodeServiceGrpc.newBlockingStub(channel);
+//        blockingStub.heartbeat()
+//    }
 }

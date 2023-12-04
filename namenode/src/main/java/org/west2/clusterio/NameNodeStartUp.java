@@ -3,6 +3,7 @@ package org.west2.clusterio;
 import io.grpc.BindableService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.west2.clusterio.common.constant.Constants;
 import org.west2.clusterio.namenode.pojo.NameNodeRpcServer;
 import org.west2.clusterio.namenode.service.DatanodeServiceImpl;
 import org.west2.clusterio.namenode.service.NamenodeServiceImpl;
@@ -17,7 +18,7 @@ public class NameNodeStartUp {
     public static void main(String[] args)  {
         log.info("Name Node is starting up");
         List<BindableService> services = Arrays.asList(new DatanodeServiceImpl(),new NamenodeServiceImpl());
-        NameNodeRpcServer server = new NameNodeRpcServer(9096,services);
+        NameNodeRpcServer server = new NameNodeRpcServer(Constants.DEFAULT_NAMENODE_PORT,services);
         try {
             server.start();
         }catch (IOException e){

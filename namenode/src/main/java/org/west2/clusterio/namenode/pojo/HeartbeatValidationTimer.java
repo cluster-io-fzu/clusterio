@@ -1,7 +1,8 @@
 package org.west2.clusterio.namenode.pojo;
 
 import org.west2.clusterio.common.constant.Constants;
-import org.west2.clusterio.namenode.common.DatanodeStatus;
+import org.west2.clusterio.common.protocol.DatanodeInfo;
+import org.west2.clusterio.common.protocol.DatanodeStatus;
 
 import java.util.Iterator;
 import java.util.Map;

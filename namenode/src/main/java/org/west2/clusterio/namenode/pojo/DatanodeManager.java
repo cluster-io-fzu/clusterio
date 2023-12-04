@@ -1,7 +1,8 @@
 package org.west2.clusterio.namenode.pojo;
 
 import org.west2.clusterio.common.constant.Constants;
-import org.west2.clusterio.namenode.common.DatanodeStatus;
+import org.west2.clusterio.common.protocol.DatanodeInfo;
+import org.west2.clusterio.common.protocol.DatanodeStatus;
 
 
 import java.util.Map;
@@ -12,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 public class DatanodeManager {
     private static DatanodeManager manager = new DatanodeManager();
     //Datanode uuid(temporary) => DatanodeInfo
-    private Map<String,DatanodeInfo> registry;
+    private Map<String, DatanodeInfo> registry;
     private int size;
     private int namespaceID;
     private String clusterID;

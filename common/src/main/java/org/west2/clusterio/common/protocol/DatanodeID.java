@@ -1,6 +1,6 @@
-package org.west2.clusterio.namenode.pojo;
+package org.west2.clusterio.common.protocol;
 
-import javax.xml.crypto.Data;
+import org.west2.clusterio.common.protocolPB.HdfsProtos;
 
 public class DatanodeID {
     private String ipAddr;
@@ -12,11 +12,23 @@ public class DatanodeID {
         this(from.datanodeUuid,from.ipAddr,from.hostName,from.port);
     }
 
+    public DatanodeID(HdfsProtos.DatanodeIDProto from){
+        this(from.getDatanodeUuid(),from.getIpAddr(),from.getHostName(),from.getPort());
+    }
+
     public DatanodeID(String datanodeUuid,String ipAddr, String hostName, int port) {
         this.datanodeUuid = datanodeUuid;
         this.ipAddr = ipAddr;
         this.hostName = hostName;
         this.port = port;
+    }
+
+    public HdfsProtos.DatanodeIDProto parseDatanodeID(){
+        return HdfsProtos.DatanodeIDProto.newBuilder()
+                .setDatanodeUuid(this.datanodeUuid)
+                .setHostName(this.hostName)
+                .setIpAddr(this.ipAddr)
+                .setPort(this.port).build();
     }
 
     public String getIpAddr() {

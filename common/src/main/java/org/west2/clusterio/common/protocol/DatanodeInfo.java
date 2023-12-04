@@ -1,10 +1,6 @@
-package org.west2.clusterio.namenode.pojo;
+package org.west2.clusterio.common.protocol;
 
-import org.west2.clusterio.namenode.common.DatanodeStatus;
-
-import java.util.concurrent.TimeUnit;
-
-public class DatanodeInfo extends DatanodeID{
+public class DatanodeInfo extends DatanodeID {
     private long capacity;
     private long dfsUsed;
     private long nonDfsUsed; //haven't been used
