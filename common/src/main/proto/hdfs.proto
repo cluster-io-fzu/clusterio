@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option java_package = "org.west2.clusterio.common.protocol";
+option java_package = "org.west2.clusterio.common.protocolPB";
 option java_outer_classname = "HdfsProtos";
 
 
@@ -27,6 +27,21 @@ message StorageReportProto{
   uint64 used = 4;
   uint64 remaining = 5;
   uint64 blockPoolUsed = 6;
+}
+
+message DatanodeInfoProto{
+  DatanodeIDProto id = 1;
+  uint64 capacity = 2;
+  uint64 dfsUsed = 3;
+  uint64 remaining = 4;
+  uint64 nonDfsUsed = 5;
+  uint64 lastUpdated = 6;
+  uint32 numBlocks = 7;
+  uint64 lastBlockReportTime = 8;
+}
+
+message DatanodeInfosProto{
+  repeated DatanodeInfoProto datanodes = 1;
 }
 
 message BlockProto{
