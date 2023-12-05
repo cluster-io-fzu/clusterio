@@ -1,8 +1,9 @@
 package org.west2.clusterio.namenode.server;
 
 import org.west2.clusterio.common.constant.Constants;
-import org.west2.clusterio.common.protocol.DatanodeInfo;
-import org.west2.clusterio.common.protocol.DatanodeStatus;
+import org.west2.clusterio.datanode.protocol.DatanodeCommand;
+import org.west2.clusterio.datanode.protocol.DatanodeInfo;
+import org.west2.clusterio.datanode.protocol.DatanodeStatus;
 
 
 import java.util.HashMap;
@@ -24,7 +25,7 @@ public class DatanodeManager {
         return manager;
     }
 
-    public final boolean register(String uuid,DatanodeInfo info){
+    public final boolean register(String uuid, DatanodeInfo info){
         if (registry.containsKey(uuid)){
             return false;
         }
@@ -37,17 +38,12 @@ public class DatanodeManager {
         executor.scheduleAtFixedRate(new HeartbeatValidationTimer(),0, Constants.DEFAULT_HEARTBEAT_INTERVAL, TimeUnit.MILLISECONDS);
     }
 
-    public final Command heartbeat(String uuid,DatanodeInfo info){
+    public final DatanodeCommand heartbeat(String uuid, DatanodeInfo info){
         DatanodeInfo datanodeInfo = registry.get(uuid);
         datanodeInfo.update(info);
 
         //TODO when datanode send a heartbeat put a related command as its response
-        return new Command() {
-            @Override
-            public int hashCode() {
-                return super.hashCode();
-            }
-        };
+        return null;
     }
 
     public void heartbeatExpiration(String uuid){

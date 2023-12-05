@@ -1,5 +1,5 @@
 syntax = "proto3";
-option java_package = "org.west2.clusterio.common.protocol";
+option java_package = "org.west2.clusterio.common.protocolPB";
 option java_outer_classname = "DatanodeProtocol";
 
 import "hdfs.proto";
@@ -8,6 +8,28 @@ message DatanodeRegistrationProto{
   DatanodeIDProto datanodeId = 1;
   StorageInfoProtoc storageInfo = 2;
 }
+
+message DatanodeCommandProto{
+  enum Type{
+    BlockCommand = 0;
+  }
+  Type cmdType = 1;
+  BlockCommandProto blkCmd = 2;
+}
+
+message BlockCommandProto{
+  enum Action{
+    TRANSFER = 0;
+    INVALIDATE = 1;
+    SHUTDOWN = 2;
+  }
+  Action action = 1;
+  string blockPoolId = 2;
+  repeated BlockProto blocks = 3;
+  repeated DatanodeInfoProto targets = 4;
+  repeated string storageUuids = 5;
+}
+
 
 message RegisterDatanodeRequestProto{
   DatanodeRegistrationProto registration = 1;
@@ -23,12 +45,12 @@ message RegisterDatanodeResponseProto{
 message HeartbeatRequestProto{
   DatanodeRegistrationProto registration = 1;
   repeated StorageReportProto reports = 2;
-  uint64 cacheCapacity = 3;
-  uint64 cacheUsed = 4;
+  //uint64 cacheCapacity = 3;
+  //uint64 cacheUsed = 4;
 }
 
 message HeartbeatResponseProto{
-
+  repeated DatanodeCommandProto cmds = 1;
 }
 
 message BlockReportRequestProto{

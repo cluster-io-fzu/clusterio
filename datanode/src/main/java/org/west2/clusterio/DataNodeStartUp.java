@@ -1,8 +1,8 @@
 package org.west2.clusterio;
 
-import org.west2.clusterio.common.protocol.DatanodeID;
-import org.west2.clusterio.common.protocol.DatanodeRegistration;
-import org.west2.clusterio.common.protocol.StorageInfo;
+import org.west2.clusterio.datanode.protocol.DatanodeID;
+import org.west2.clusterio.datanode.protocol.DatanodeRegistration;
+import org.west2.clusterio.datanode.protocol.StorageInfo;
 import org.west2.clusterio.common.utils.NetworkUtil;
 import org.west2.clusterio.datanode.DatanodeSystem;
 import org.west2.clusterio.datanode.client.DatanodeClient;

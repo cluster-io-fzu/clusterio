@@ -27,11 +27,11 @@ public final class DatanodeProtocol {
      * <code>.DatanodeIDProto datanodeId = 1;</code>
      * @return The datanodeId.
      */
-    org.west2.clusterio.common.protocolPB.HdfsProtos.DatanodeIDProto getDatanodeId();
+    HdfsProtos.DatanodeIDProto getDatanodeId();
     /**
      * <code>.DatanodeIDProto datanodeId = 1;</code>
      */
-    org.west2.clusterio.common.protocolPB.HdfsProtos.DatanodeIDProtoOrBuilder getDatanodeIdOrBuilder();
+    HdfsProtos.DatanodeIDProtoOrBuilder getDatanodeIdOrBuilder();
 
     /**
      * <code>.StorageInfoProtoc storageInfo = 2;</code>
@@ -42,11 +42,11 @@ public final class DatanodeProtocol {
      * <code>.StorageInfoProtoc storageInfo = 2;</code>
      * @return The storageInfo.
      */
-    org.west2.clusterio.common.protocolPB.HdfsProtos.StorageInfoProtoc getStorageInfo();
+    HdfsProtos.StorageInfoProtoc getStorageInfo();
     /**
      * <code>.StorageInfoProtoc storageInfo = 2;</code>
      */
-    org.west2.clusterio.common.protocolPB.HdfsProtos.StorageInfoProtocOrBuilder getStorageInfoOrBuilder();
+    HdfsProtos.StorageInfoProtocOrBuilder getStorageInfoOrBuilder();
   }
   /**
    * Protobuf type {@code DatanodeRegistrationProto}
@@ -63,34 +63,34 @@ public final class DatanodeProtocol {
     private DatanodeRegistrationProto() {
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
         UnusedPrivateParameter unused) {
       return new DatanodeRegistrationProto();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_DatanodeRegistrationProto_descriptor;
+      return DatanodeProtocol.internal_static_DatanodeRegistrationProto_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_DatanodeRegistrationProto_fieldAccessorTable
+      return DatanodeProtocol.internal_static_DatanodeRegistrationProto_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.class, org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.Builder.class);
+              DatanodeRegistrationProto.class, Builder.class);
     }
 
     private int bitField0_;
     public static final int DATANODEID_FIELD_NUMBER = 1;
-    private org.west2.clusterio.common.protocolPB.HdfsProtos.DatanodeIDProto datanodeId_;
+    private HdfsProtos.DatanodeIDProto datanodeId_;
     /**
      * <code>.DatanodeIDProto datanodeId = 1;</code>
      * @return Whether the datanodeId field is set.
      */
-    @java.lang.Override
+    @Override
     public boolean hasDatanodeId() {
       return ((bitField0_ & 0x00000001) != 0);
     }
@@ -98,25 +98,25 @@ public final class DatanodeProtocol {
      * <code>.DatanodeIDProto datanodeId = 1;</code>
      * @return The datanodeId.
      */
-    @java.lang.Override
-    public org.west2.clusterio.common.protocolPB.HdfsProtos.DatanodeIDProto getDatanodeId() {
-      return datanodeId_ == null ? org.west2.clusterio.common.protocolPB.HdfsProtos.DatanodeIDProto.getDefaultInstance() : datanodeId_;
+    @Override
+    public HdfsProtos.DatanodeIDProto getDatanodeId() {
+      return datanodeId_ == null ? HdfsProtos.DatanodeIDProto.getDefaultInstance() : datanodeId_;
     }
     /**
      * <code>.DatanodeIDProto datanodeId = 1;</code>
      */
-    @java.lang.Override
-    public org.west2.clusterio.common.protocolPB.HdfsProtos.DatanodeIDProtoOrBuilder getDatanodeIdOrBuilder() {
-      return datanodeId_ == null ? org.west2.clusterio.common.protocolPB.HdfsProtos.DatanodeIDProto.getDefaultInstance() : datanodeId_;
+    @Override
+    public HdfsProtos.DatanodeIDProtoOrBuilder getDatanodeIdOrBuilder() {
+      return datanodeId_ == null ? HdfsProtos.DatanodeIDProto.getDefaultInstance() : datanodeId_;
     }
 
     public static final int STORAGEINFO_FIELD_NUMBER = 2;
-    private org.west2.clusterio.common.protocolPB.HdfsProtos.StorageInfoProtoc storageInfo_;
+    private HdfsProtos.StorageInfoProtoc storageInfo_;
     /**
      * <code>.StorageInfoProtoc storageInfo = 2;</code>
      * @return Whether the storageInfo field is set.
      */
-    @java.lang.Override
+    @Override
     public boolean hasStorageInfo() {
       return ((bitField0_ & 0x00000002) != 0);
     }
@@ -124,20 +124,20 @@ public final class DatanodeProtocol {
      * <code>.StorageInfoProtoc storageInfo = 2;</code>
      * @return The storageInfo.
      */
-    @java.lang.Override
-    public org.west2.clusterio.common.protocolPB.HdfsProtos.StorageInfoProtoc getStorageInfo() {
-      return storageInfo_ == null ? org.west2.clusterio.common.protocolPB.HdfsProtos.StorageInfoProtoc.getDefaultInstance() : storageInfo_;
+    @Override
+    public HdfsProtos.StorageInfoProtoc getStorageInfo() {
+      return storageInfo_ == null ? HdfsProtos.StorageInfoProtoc.getDefaultInstance() : storageInfo_;
     }
     /**
      * <code>.StorageInfoProtoc storageInfo = 2;</code>
      */
-    @java.lang.Override
-    public org.west2.clusterio.common.protocolPB.HdfsProtos.StorageInfoProtocOrBuilder getStorageInfoOrBuilder() {
-      return storageInfo_ == null ? org.west2.clusterio.common.protocolPB.HdfsProtos.StorageInfoProtoc.getDefaultInstance() : storageInfo_;
+    @Override
+    public HdfsProtos.StorageInfoProtocOrBuilder getStorageInfoOrBuilder() {
+      return storageInfo_ == null ? HdfsProtos.StorageInfoProtoc.getDefaultInstance() : storageInfo_;
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -147,7 +147,7 @@ public final class DatanodeProtocol {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (((bitField0_ & 0x00000001) != 0)) {
@@ -159,7 +159,7 @@ public final class DatanodeProtocol {
       getUnknownFields().writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -178,15 +178,15 @@ public final class DatanodeProtocol {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto)) {
+      if (!(obj instanceof DatanodeRegistrationProto)) {
         return super.equals(obj);
       }
-      org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto other = (org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto) obj;
+      DatanodeRegistrationProto other = (DatanodeRegistrationProto) obj;
 
       if (hasDatanodeId() != other.hasDatanodeId()) return false;
       if (hasDatanodeId()) {
@@ -202,7 +202,7 @@ public final class DatanodeProtocol {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -222,44 +222,44 @@ public final class DatanodeProtocol {
       return hash;
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto parseFrom(
+    public static DatanodeRegistrationProto parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto parseFrom(
+    public static DatanodeRegistrationProto parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto parseFrom(
+    public static DatanodeRegistrationProto parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto parseFrom(
+    public static DatanodeRegistrationProto parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto parseFrom(byte[] data)
+    public static DatanodeRegistrationProto parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto parseFrom(
+    public static DatanodeRegistrationProto parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto parseFrom(java.io.InputStream input)
+    public static DatanodeRegistrationProto parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto parseFrom(
+    public static DatanodeRegistrationProto parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -267,26 +267,26 @@ public final class DatanodeProtocol {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto parseDelimitedFrom(java.io.InputStream input)
+    public static DatanodeRegistrationProto parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto parseDelimitedFrom(
+    public static DatanodeRegistrationProto parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto parseFrom(
+    public static DatanodeRegistrationProto parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto parseFrom(
+    public static DatanodeRegistrationProto parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -294,23 +294,23 @@ public final class DatanodeProtocol {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto prototype) {
+    public static Builder newBuilder(DatanodeRegistrationProto prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -320,27 +320,27 @@ public final class DatanodeProtocol {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:DatanodeRegistrationProto)
-        org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProtoOrBuilder {
+        DatanodeRegistrationProtoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_DatanodeRegistrationProto_descriptor;
+        return DatanodeProtocol.internal_static_DatanodeRegistrationProto_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_DatanodeRegistrationProto_fieldAccessorTable
+        return DatanodeProtocol.internal_static_DatanodeRegistrationProto_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.class, org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.Builder.class);
+                DatanodeRegistrationProto.class, Builder.class);
       }
 
-      // Construct using org.west2.clusterio.common.protocol.DatanodeProtocol.DatanodeRegistrationProto.newBuilder()
+      // Construct using org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -351,7 +351,7 @@ public final class DatanodeProtocol {
           getStorageInfoFieldBuilder();
         }
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
@@ -368,35 +368,35 @@ public final class DatanodeProtocol {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_DatanodeRegistrationProto_descriptor;
+        return DatanodeProtocol.internal_static_DatanodeRegistrationProto_descriptor;
       }
 
-      @java.lang.Override
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto getDefaultInstanceForType() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.getDefaultInstance();
+      @Override
+      public DatanodeRegistrationProto getDefaultInstanceForType() {
+        return DatanodeRegistrationProto.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto build() {
-        org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto result = buildPartial();
+      @Override
+      public DatanodeRegistrationProto build() {
+        DatanodeRegistrationProto result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto buildPartial() {
-        org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto result = new org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto(this);
+      @Override
+      public DatanodeRegistrationProto buildPartial() {
+        DatanodeRegistrationProto result = new DatanodeRegistrationProto(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto result) {
+      private void buildPartial0(DatanodeRegistrationProto result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -414,50 +414,50 @@ public final class DatanodeProtocol {
         result.bitField0_ |= to_bitField0_;
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return super.clone();
       }
-      @java.lang.Override
+      @Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.setField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.addRepeatedField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto) {
-          return mergeFrom((org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto)other);
+        if (other instanceof DatanodeRegistrationProto) {
+          return mergeFrom((DatanodeRegistrationProto)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto other) {
-        if (other == org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.getDefaultInstance()) return this;
+      public Builder mergeFrom(DatanodeRegistrationProto other) {
+        if (other == DatanodeRegistrationProto.getDefaultInstance()) return this;
         if (other.hasDatanodeId()) {
           mergeDatanodeId(other.getDatanodeId());
         }
@@ -469,18 +469,18 @@ public final class DatanodeProtocol {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException();
         }
         try {
           boolean done = false;
@@ -521,9 +521,9 @@ public final class DatanodeProtocol {
       }
       private int bitField0_;
 
-      private org.west2.clusterio.common.protocolPB.HdfsProtos.DatanodeIDProto datanodeId_;
+      private HdfsProtos.DatanodeIDProto datanodeId_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.west2.clusterio.common.protocolPB.HdfsProtos.DatanodeIDProto, org.west2.clusterio.common.protocolPB.HdfsProtos.DatanodeIDProto.Builder, org.west2.clusterio.common.protocolPB.HdfsProtos.DatanodeIDProtoOrBuilder> datanodeIdBuilder_;
+          HdfsProtos.DatanodeIDProto, HdfsProtos.DatanodeIDProto.Builder, HdfsProtos.DatanodeIDProtoOrBuilder> datanodeIdBuilder_;
       /**
        * <code>.DatanodeIDProto datanodeId = 1;</code>
        * @return Whether the datanodeId field is set.
@@ -535,9 +535,9 @@ public final class DatanodeProtocol {
        * <code>.DatanodeIDProto datanodeId = 1;</code>
        * @return The datanodeId.
        */
-      public org.west2.clusterio.common.protocolPB.HdfsProtos.DatanodeIDProto getDatanodeId() {
+      public HdfsProtos.DatanodeIDProto getDatanodeId() {
         if (datanodeIdBuilder_ == null) {
-          return datanodeId_ == null ? org.west2.clusterio.common.protocolPB.HdfsProtos.DatanodeIDProto.getDefaultInstance() : datanodeId_;
+          return datanodeId_ == null ? HdfsProtos.DatanodeIDProto.getDefaultInstance() : datanodeId_;
         } else {
           return datanodeIdBuilder_.getMessage();
         }
@@ -545,7 +545,7 @@ public final class DatanodeProtocol {
       /**
        * <code>.DatanodeIDProto datanodeId = 1;</code>
        */
-      public Builder setDatanodeId(org.west2.clusterio.common.protocolPB.HdfsProtos.DatanodeIDProto value) {
+      public Builder setDatanodeId(HdfsProtos.DatanodeIDProto value) {
         if (datanodeIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -562,7 +562,7 @@ public final class DatanodeProtocol {
        * <code>.DatanodeIDProto datanodeId = 1;</code>
        */
       public Builder setDatanodeId(
-          org.west2.clusterio.common.protocolPB.HdfsProtos.DatanodeIDProto.Builder builderForValue) {
+          HdfsProtos.DatanodeIDProto.Builder builderForValue) {
         if (datanodeIdBuilder_ == null) {
           datanodeId_ = builderForValue.build();
         } else {
@@ -575,11 +575,11 @@ public final class DatanodeProtocol {
       /**
        * <code>.DatanodeIDProto datanodeId = 1;</code>
        */
-      public Builder mergeDatanodeId(org.west2.clusterio.common.protocolPB.HdfsProtos.DatanodeIDProto value) {
+      public Builder mergeDatanodeId(HdfsProtos.DatanodeIDProto value) {
         if (datanodeIdBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0) &&
             datanodeId_ != null &&
-            datanodeId_ != org.west2.clusterio.common.protocolPB.HdfsProtos.DatanodeIDProto.getDefaultInstance()) {
+            datanodeId_ != HdfsProtos.DatanodeIDProto.getDefaultInstance()) {
             getDatanodeIdBuilder().mergeFrom(value);
           } else {
             datanodeId_ = value;
@@ -609,7 +609,7 @@ public final class DatanodeProtocol {
       /**
        * <code>.DatanodeIDProto datanodeId = 1;</code>
        */
-      public org.west2.clusterio.common.protocolPB.HdfsProtos.DatanodeIDProto.Builder getDatanodeIdBuilder() {
+      public HdfsProtos.DatanodeIDProto.Builder getDatanodeIdBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getDatanodeIdFieldBuilder().getBuilder();
@@ -617,23 +617,23 @@ public final class DatanodeProtocol {
       /**
        * <code>.DatanodeIDProto datanodeId = 1;</code>
        */
-      public org.west2.clusterio.common.protocolPB.HdfsProtos.DatanodeIDProtoOrBuilder getDatanodeIdOrBuilder() {
+      public HdfsProtos.DatanodeIDProtoOrBuilder getDatanodeIdOrBuilder() {
         if (datanodeIdBuilder_ != null) {
           return datanodeIdBuilder_.getMessageOrBuilder();
         } else {
           return datanodeId_ == null ?
-              org.west2.clusterio.common.protocolPB.HdfsProtos.DatanodeIDProto.getDefaultInstance() : datanodeId_;
+              HdfsProtos.DatanodeIDProto.getDefaultInstance() : datanodeId_;
         }
       }
       /**
        * <code>.DatanodeIDProto datanodeId = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.west2.clusterio.common.protocolPB.HdfsProtos.DatanodeIDProto, org.west2.clusterio.common.protocolPB.HdfsProtos.DatanodeIDProto.Builder, org.west2.clusterio.common.protocolPB.HdfsProtos.DatanodeIDProtoOrBuilder>
+          HdfsProtos.DatanodeIDProto, HdfsProtos.DatanodeIDProto.Builder, HdfsProtos.DatanodeIDProtoOrBuilder>
           getDatanodeIdFieldBuilder() {
         if (datanodeIdBuilder_ == null) {
           datanodeIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              org.west2.clusterio.common.protocolPB.HdfsProtos.DatanodeIDProto, org.west2.clusterio.common.protocolPB.HdfsProtos.DatanodeIDProto.Builder, org.west2.clusterio.common.protocolPB.HdfsProtos.DatanodeIDProtoOrBuilder>(
+              HdfsProtos.DatanodeIDProto, HdfsProtos.DatanodeIDProto.Builder, HdfsProtos.DatanodeIDProtoOrBuilder>(
                   getDatanodeId(),
                   getParentForChildren(),
                   isClean());
@@ -642,9 +642,9 @@ public final class DatanodeProtocol {
         return datanodeIdBuilder_;
       }
 
-      private org.west2.clusterio.common.protocolPB.HdfsProtos.StorageInfoProtoc storageInfo_;
+      private HdfsProtos.StorageInfoProtoc storageInfo_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.west2.clusterio.common.protocolPB.HdfsProtos.StorageInfoProtoc, org.west2.clusterio.common.protocolPB.HdfsProtos.StorageInfoProtoc.Builder, org.west2.clusterio.common.protocolPB.HdfsProtos.StorageInfoProtocOrBuilder> storageInfoBuilder_;
+          HdfsProtos.StorageInfoProtoc, HdfsProtos.StorageInfoProtoc.Builder, HdfsProtos.StorageInfoProtocOrBuilder> storageInfoBuilder_;
       /**
        * <code>.StorageInfoProtoc storageInfo = 2;</code>
        * @return Whether the storageInfo field is set.
@@ -656,9 +656,9 @@ public final class DatanodeProtocol {
        * <code>.StorageInfoProtoc storageInfo = 2;</code>
        * @return The storageInfo.
        */
-      public org.west2.clusterio.common.protocolPB.HdfsProtos.StorageInfoProtoc getStorageInfo() {
+      public HdfsProtos.StorageInfoProtoc getStorageInfo() {
         if (storageInfoBuilder_ == null) {
-          return storageInfo_ == null ? org.west2.clusterio.common.protocolPB.HdfsProtos.StorageInfoProtoc.getDefaultInstance() : storageInfo_;
+          return storageInfo_ == null ? HdfsProtos.StorageInfoProtoc.getDefaultInstance() : storageInfo_;
         } else {
           return storageInfoBuilder_.getMessage();
         }
@@ -666,7 +666,7 @@ public final class DatanodeProtocol {
       /**
        * <code>.StorageInfoProtoc storageInfo = 2;</code>
        */
-      public Builder setStorageInfo(org.west2.clusterio.common.protocolPB.HdfsProtos.StorageInfoProtoc value) {
+      public Builder setStorageInfo(HdfsProtos.StorageInfoProtoc value) {
         if (storageInfoBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -683,7 +683,7 @@ public final class DatanodeProtocol {
        * <code>.StorageInfoProtoc storageInfo = 2;</code>
        */
       public Builder setStorageInfo(
-          org.west2.clusterio.common.protocolPB.HdfsProtos.StorageInfoProtoc.Builder builderForValue) {
+          HdfsProtos.StorageInfoProtoc.Builder builderForValue) {
         if (storageInfoBuilder_ == null) {
           storageInfo_ = builderForValue.build();
         } else {
@@ -696,11 +696,11 @@ public final class DatanodeProtocol {
       /**
        * <code>.StorageInfoProtoc storageInfo = 2;</code>
        */
-      public Builder mergeStorageInfo(org.west2.clusterio.common.protocolPB.HdfsProtos.StorageInfoProtoc value) {
+      public Builder mergeStorageInfo(HdfsProtos.StorageInfoProtoc value) {
         if (storageInfoBuilder_ == null) {
           if (((bitField0_ & 0x00000002) != 0) &&
             storageInfo_ != null &&
-            storageInfo_ != org.west2.clusterio.common.protocolPB.HdfsProtos.StorageInfoProtoc.getDefaultInstance()) {
+            storageInfo_ != HdfsProtos.StorageInfoProtoc.getDefaultInstance()) {
             getStorageInfoBuilder().mergeFrom(value);
           } else {
             storageInfo_ = value;
@@ -730,7 +730,7 @@ public final class DatanodeProtocol {
       /**
        * <code>.StorageInfoProtoc storageInfo = 2;</code>
        */
-      public org.west2.clusterio.common.protocolPB.HdfsProtos.StorageInfoProtoc.Builder getStorageInfoBuilder() {
+      public HdfsProtos.StorageInfoProtoc.Builder getStorageInfoBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getStorageInfoFieldBuilder().getBuilder();
@@ -738,23 +738,23 @@ public final class DatanodeProtocol {
       /**
        * <code>.StorageInfoProtoc storageInfo = 2;</code>
        */
-      public org.west2.clusterio.common.protocolPB.HdfsProtos.StorageInfoProtocOrBuilder getStorageInfoOrBuilder() {
+      public HdfsProtos.StorageInfoProtocOrBuilder getStorageInfoOrBuilder() {
         if (storageInfoBuilder_ != null) {
           return storageInfoBuilder_.getMessageOrBuilder();
         } else {
           return storageInfo_ == null ?
-              org.west2.clusterio.common.protocolPB.HdfsProtos.StorageInfoProtoc.getDefaultInstance() : storageInfo_;
+              HdfsProtos.StorageInfoProtoc.getDefaultInstance() : storageInfo_;
         }
       }
       /**
        * <code>.StorageInfoProtoc storageInfo = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.west2.clusterio.common.protocolPB.HdfsProtos.StorageInfoProtoc, org.west2.clusterio.common.protocolPB.HdfsProtos.StorageInfoProtoc.Builder, org.west2.clusterio.common.protocolPB.HdfsProtos.StorageInfoProtocOrBuilder>
+          HdfsProtos.StorageInfoProtoc, HdfsProtos.StorageInfoProtoc.Builder, HdfsProtos.StorageInfoProtocOrBuilder>
           getStorageInfoFieldBuilder() {
         if (storageInfoBuilder_ == null) {
           storageInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              org.west2.clusterio.common.protocolPB.HdfsProtos.StorageInfoProtoc, org.west2.clusterio.common.protocolPB.HdfsProtos.StorageInfoProtoc.Builder, org.west2.clusterio.common.protocolPB.HdfsProtos.StorageInfoProtocOrBuilder>(
+              HdfsProtos.StorageInfoProtoc, HdfsProtos.StorageInfoProtoc.Builder, HdfsProtos.StorageInfoProtocOrBuilder>(
                   getStorageInfo(),
                   getParentForChildren(),
                   isClean());
@@ -762,13 +762,13 @@ public final class DatanodeProtocol {
         }
         return storageInfoBuilder_;
       }
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -779,18 +779,18 @@ public final class DatanodeProtocol {
     }
 
     // @@protoc_insertion_point(class_scope:DatanodeRegistrationProto)
-    private static final org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto DEFAULT_INSTANCE;
+    private static final DatanodeRegistrationProto DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto();
+      DEFAULT_INSTANCE = new DatanodeRegistrationProto();
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto getDefaultInstance() {
+    public static DatanodeRegistrationProto getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<DatanodeRegistrationProto>
         PARSER = new com.google.protobuf.AbstractParser<DatanodeRegistrationProto>() {
-      @java.lang.Override
+      @Override
       public DatanodeRegistrationProto parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -814,13 +814,2569 @@ public final class DatanodeProtocol {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<DatanodeRegistrationProto> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto getDefaultInstanceForType() {
+    @Override
+    public DatanodeRegistrationProto getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DatanodeCommandProtoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:DatanodeCommandProto)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.DatanodeCommandProto.Type cmdType = 1;</code>
+     * @return The enum numeric value on the wire for cmdType.
+     */
+    int getCmdTypeValue();
+    /**
+     * <code>.DatanodeCommandProto.Type cmdType = 1;</code>
+     * @return The cmdType.
+     */
+    DatanodeCommandProto.Type getCmdType();
+
+    /**
+     * <code>.BlockCommandProto blkCmd = 2;</code>
+     * @return Whether the blkCmd field is set.
+     */
+    boolean hasBlkCmd();
+    /**
+     * <code>.BlockCommandProto blkCmd = 2;</code>
+     * @return The blkCmd.
+     */
+    BlockCommandProto getBlkCmd();
+    /**
+     * <code>.BlockCommandProto blkCmd = 2;</code>
+     */
+    BlockCommandProtoOrBuilder getBlkCmdOrBuilder();
+  }
+  /**
+   * Protobuf type {@code DatanodeCommandProto}
+   */
+  public static final class DatanodeCommandProto extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:DatanodeCommandProto)
+      DatanodeCommandProtoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DatanodeCommandProto.newBuilder() to construct.
+    private DatanodeCommandProto(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DatanodeCommandProto() {
+      cmdType_ = 0;
+    }
+
+    @Override
+    @SuppressWarnings({"unused"})
+    protected Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DatanodeCommandProto();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return DatanodeProtocol.internal_static_DatanodeCommandProto_descriptor;
+    }
+
+    @Override
+    protected FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return DatanodeProtocol.internal_static_DatanodeCommandProto_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              DatanodeCommandProto.class, Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code DatanodeCommandProto.Type}
+     */
+    public enum Type
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>BlockCommand = 0;</code>
+       */
+      BlockCommand(0),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>BlockCommand = 0;</code>
+       */
+      public static final int BlockCommand_VALUE = 0;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @Deprecated
+      public static Type valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Type forNumber(int value) {
+        switch (value) {
+          case 0: return BlockCommand;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Type>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Type> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Type>() {
+              public Type findValueByNumber(int number) {
+                return Type.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return DatanodeCommandProto.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Type[] VALUES = values();
+
+      public static Type valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Type(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:DatanodeCommandProto.Type)
+    }
+
+    private int bitField0_;
+    public static final int CMDTYPE_FIELD_NUMBER = 1;
+    private int cmdType_ = 0;
+    /**
+     * <code>.DatanodeCommandProto.Type cmdType = 1;</code>
+     * @return The enum numeric value on the wire for cmdType.
+     */
+    @Override public int getCmdTypeValue() {
+      return cmdType_;
+    }
+    /**
+     * <code>.DatanodeCommandProto.Type cmdType = 1;</code>
+     * @return The cmdType.
+     */
+    @Override public Type getCmdType() {
+      Type result = Type.forNumber(cmdType_);
+      return result == null ? Type.UNRECOGNIZED : result;
+    }
+
+    public static final int BLKCMD_FIELD_NUMBER = 2;
+    private BlockCommandProto blkCmd_;
+    /**
+     * <code>.BlockCommandProto blkCmd = 2;</code>
+     * @return Whether the blkCmd field is set.
+     */
+    @Override
+    public boolean hasBlkCmd() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.BlockCommandProto blkCmd = 2;</code>
+     * @return The blkCmd.
+     */
+    @Override
+    public BlockCommandProto getBlkCmd() {
+      return blkCmd_ == null ? BlockCommandProto.getDefaultInstance() : blkCmd_;
+    }
+    /**
+     * <code>.BlockCommandProto blkCmd = 2;</code>
+     */
+    @Override
+    public BlockCommandProtoOrBuilder getBlkCmdOrBuilder() {
+      return blkCmd_ == null ? BlockCommandProto.getDefaultInstance() : blkCmd_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (cmdType_ != Type.BlockCommand.getNumber()) {
+        output.writeEnum(1, cmdType_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(2, getBlkCmd());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (cmdType_ != Type.BlockCommand.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, cmdType_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getBlkCmd());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @Override
+    public boolean equals(final Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof DatanodeCommandProto)) {
+        return super.equals(obj);
+      }
+      DatanodeCommandProto other = (DatanodeCommandProto) obj;
+
+      if (cmdType_ != other.cmdType_) return false;
+      if (hasBlkCmd() != other.hasBlkCmd()) return false;
+      if (hasBlkCmd()) {
+        if (!getBlkCmd()
+            .equals(other.getBlkCmd())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CMDTYPE_FIELD_NUMBER;
+      hash = (53 * hash) + cmdType_;
+      if (hasBlkCmd()) {
+        hash = (37 * hash) + BLKCMD_FIELD_NUMBER;
+        hash = (53 * hash) + getBlkCmd().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static DatanodeCommandProto parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static DatanodeCommandProto parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static DatanodeCommandProto parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static DatanodeCommandProto parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static DatanodeCommandProto parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static DatanodeCommandProto parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static DatanodeCommandProto parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static DatanodeCommandProto parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static DatanodeCommandProto parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static DatanodeCommandProto parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static DatanodeCommandProto parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static DatanodeCommandProto parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(DatanodeCommandProto prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @Override
+    protected Builder newBuilderForType(
+        BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code DatanodeCommandProto}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:DatanodeCommandProto)
+        DatanodeCommandProtoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return DatanodeProtocol.internal_static_DatanodeCommandProto_descriptor;
+      }
+
+      @Override
+      protected FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return DatanodeProtocol.internal_static_DatanodeCommandProto_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                DatanodeCommandProto.class, Builder.class);
+      }
+
+      // Construct using org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeCommandProto.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBlkCmdFieldBuilder();
+        }
+      }
+      @Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        cmdType_ = 0;
+        blkCmd_ = null;
+        if (blkCmdBuilder_ != null) {
+          blkCmdBuilder_.dispose();
+          blkCmdBuilder_ = null;
+        }
+        return this;
+      }
+
+      @Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return DatanodeProtocol.internal_static_DatanodeCommandProto_descriptor;
+      }
+
+      @Override
+      public DatanodeCommandProto getDefaultInstanceForType() {
+        return DatanodeCommandProto.getDefaultInstance();
+      }
+
+      @Override
+      public DatanodeCommandProto build() {
+        DatanodeCommandProto result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @Override
+      public DatanodeCommandProto buildPartial() {
+        DatanodeCommandProto result = new DatanodeCommandProto(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(DatanodeCommandProto result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.cmdType_ = cmdType_;
+        }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.blkCmd_ = blkCmdBuilder_ == null
+              ? blkCmd_
+              : blkCmdBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return super.setField(field, value);
+      }
+      @Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof DatanodeCommandProto) {
+          return mergeFrom((DatanodeCommandProto)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(DatanodeCommandProto other) {
+        if (other == DatanodeCommandProto.getDefaultInstance()) return this;
+        if (other.cmdType_ != 0) {
+          setCmdTypeValue(other.getCmdTypeValue());
+        }
+        if (other.hasBlkCmd()) {
+          mergeBlkCmd(other.getBlkCmd());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                cmdType_ = input.readEnum();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getBlkCmdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int cmdType_ = 0;
+      /**
+       * <code>.DatanodeCommandProto.Type cmdType = 1;</code>
+       * @return The enum numeric value on the wire for cmdType.
+       */
+      @Override public int getCmdTypeValue() {
+        return cmdType_;
+      }
+      /**
+       * <code>.DatanodeCommandProto.Type cmdType = 1;</code>
+       * @param value The enum numeric value on the wire for cmdType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCmdTypeValue(int value) {
+        cmdType_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.DatanodeCommandProto.Type cmdType = 1;</code>
+       * @return The cmdType.
+       */
+      @Override
+      public Type getCmdType() {
+        Type result = Type.forNumber(cmdType_);
+        return result == null ? Type.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.DatanodeCommandProto.Type cmdType = 1;</code>
+       * @param value The cmdType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCmdType(Type value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        cmdType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.DatanodeCommandProto.Type cmdType = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCmdType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        cmdType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private BlockCommandProto blkCmd_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          BlockCommandProto, BlockCommandProto.Builder, BlockCommandProtoOrBuilder> blkCmdBuilder_;
+      /**
+       * <code>.BlockCommandProto blkCmd = 2;</code>
+       * @return Whether the blkCmd field is set.
+       */
+      public boolean hasBlkCmd() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.BlockCommandProto blkCmd = 2;</code>
+       * @return The blkCmd.
+       */
+      public BlockCommandProto getBlkCmd() {
+        if (blkCmdBuilder_ == null) {
+          return blkCmd_ == null ? BlockCommandProto.getDefaultInstance() : blkCmd_;
+        } else {
+          return blkCmdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.BlockCommandProto blkCmd = 2;</code>
+       */
+      public Builder setBlkCmd(BlockCommandProto value) {
+        if (blkCmdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          blkCmd_ = value;
+        } else {
+          blkCmdBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.BlockCommandProto blkCmd = 2;</code>
+       */
+      public Builder setBlkCmd(
+          BlockCommandProto.Builder builderForValue) {
+        if (blkCmdBuilder_ == null) {
+          blkCmd_ = builderForValue.build();
+        } else {
+          blkCmdBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.BlockCommandProto blkCmd = 2;</code>
+       */
+      public Builder mergeBlkCmd(BlockCommandProto value) {
+        if (blkCmdBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            blkCmd_ != null &&
+            blkCmd_ != BlockCommandProto.getDefaultInstance()) {
+            getBlkCmdBuilder().mergeFrom(value);
+          } else {
+            blkCmd_ = value;
+          }
+        } else {
+          blkCmdBuilder_.mergeFrom(value);
+        }
+        if (blkCmd_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.BlockCommandProto blkCmd = 2;</code>
+       */
+      public Builder clearBlkCmd() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        blkCmd_ = null;
+        if (blkCmdBuilder_ != null) {
+          blkCmdBuilder_.dispose();
+          blkCmdBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.BlockCommandProto blkCmd = 2;</code>
+       */
+      public BlockCommandProto.Builder getBlkCmdBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getBlkCmdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.BlockCommandProto blkCmd = 2;</code>
+       */
+      public BlockCommandProtoOrBuilder getBlkCmdOrBuilder() {
+        if (blkCmdBuilder_ != null) {
+          return blkCmdBuilder_.getMessageOrBuilder();
+        } else {
+          return blkCmd_ == null ?
+              BlockCommandProto.getDefaultInstance() : blkCmd_;
+        }
+      }
+      /**
+       * <code>.BlockCommandProto blkCmd = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          BlockCommandProto, BlockCommandProto.Builder, BlockCommandProtoOrBuilder>
+          getBlkCmdFieldBuilder() {
+        if (blkCmdBuilder_ == null) {
+          blkCmdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              BlockCommandProto, BlockCommandProto.Builder, BlockCommandProtoOrBuilder>(
+                  getBlkCmd(),
+                  getParentForChildren(),
+                  isClean());
+          blkCmd_ = null;
+        }
+        return blkCmdBuilder_;
+      }
+      @Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:DatanodeCommandProto)
+    }
+
+    // @@protoc_insertion_point(class_scope:DatanodeCommandProto)
+    private static final DatanodeCommandProto DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new DatanodeCommandProto();
+    }
+
+    public static DatanodeCommandProto getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DatanodeCommandProto>
+        PARSER = new com.google.protobuf.AbstractParser<DatanodeCommandProto>() {
+      @Override
+      public DatanodeCommandProto parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DatanodeCommandProto> parser() {
+      return PARSER;
+    }
+
+    @Override
+    public com.google.protobuf.Parser<DatanodeCommandProto> getParserForType() {
+      return PARSER;
+    }
+
+    @Override
+    public DatanodeCommandProto getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BlockCommandProtoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:BlockCommandProto)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.BlockCommandProto.Action action = 1;</code>
+     * @return The enum numeric value on the wire for action.
+     */
+    int getActionValue();
+    /**
+     * <code>.BlockCommandProto.Action action = 1;</code>
+     * @return The action.
+     */
+    BlockCommandProto.Action getAction();
+
+    /**
+     * <code>string blockPoolId = 2;</code>
+     * @return The blockPoolId.
+     */
+    String getBlockPoolId();
+    /**
+     * <code>string blockPoolId = 2;</code>
+     * @return The bytes for blockPoolId.
+     */
+    com.google.protobuf.ByteString
+        getBlockPoolIdBytes();
+
+    /**
+     * <code>repeated .BlockProto blocks = 3;</code>
+     */
+    java.util.List<HdfsProtos.BlockProto>
+        getBlocksList();
+    /**
+     * <code>repeated .BlockProto blocks = 3;</code>
+     */
+    HdfsProtos.BlockProto getBlocks(int index);
+    /**
+     * <code>repeated .BlockProto blocks = 3;</code>
+     */
+    int getBlocksCount();
+    /**
+     * <code>repeated .BlockProto blocks = 3;</code>
+     */
+    java.util.List<? extends HdfsProtos.BlockProtoOrBuilder>
+        getBlocksOrBuilderList();
+    /**
+     * <code>repeated .BlockProto blocks = 3;</code>
+     */
+    HdfsProtos.BlockProtoOrBuilder getBlocksOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .DatanodeInfoProto targets = 4;</code>
+     */
+    java.util.List<HdfsProtos.DatanodeInfoProto>
+        getTargetsList();
+    /**
+     * <code>repeated .DatanodeInfoProto targets = 4;</code>
+     */
+    HdfsProtos.DatanodeInfoProto getTargets(int index);
+    /**
+     * <code>repeated .DatanodeInfoProto targets = 4;</code>
+     */
+    int getTargetsCount();
+    /**
+     * <code>repeated .DatanodeInfoProto targets = 4;</code>
+     */
+    java.util.List<? extends HdfsProtos.DatanodeInfoProtoOrBuilder>
+        getTargetsOrBuilderList();
+    /**
+     * <code>repeated .DatanodeInfoProto targets = 4;</code>
+     */
+    HdfsProtos.DatanodeInfoProtoOrBuilder getTargetsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated string storageUuids = 5;</code>
+     * @return A list containing the storageUuids.
+     */
+    java.util.List<String>
+        getStorageUuidsList();
+    /**
+     * <code>repeated string storageUuids = 5;</code>
+     * @return The count of storageUuids.
+     */
+    int getStorageUuidsCount();
+    /**
+     * <code>repeated string storageUuids = 5;</code>
+     * @param index The index of the element to return.
+     * @return The storageUuids at the given index.
+     */
+    String getStorageUuids(int index);
+    /**
+     * <code>repeated string storageUuids = 5;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the storageUuids at the given index.
+     */
+    com.google.protobuf.ByteString
+        getStorageUuidsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code BlockCommandProto}
+   */
+  public static final class BlockCommandProto extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:BlockCommandProto)
+      BlockCommandProtoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BlockCommandProto.newBuilder() to construct.
+    private BlockCommandProto(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BlockCommandProto() {
+      action_ = 0;
+      blockPoolId_ = "";
+      blocks_ = java.util.Collections.emptyList();
+      targets_ = java.util.Collections.emptyList();
+      storageUuids_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @Override
+    @SuppressWarnings({"unused"})
+    protected Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BlockCommandProto();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return DatanodeProtocol.internal_static_BlockCommandProto_descriptor;
+    }
+
+    @Override
+    protected FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return DatanodeProtocol.internal_static_BlockCommandProto_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              BlockCommandProto.class, Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code BlockCommandProto.Action}
+     */
+    public enum Action
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>TRANSFER = 0;</code>
+       */
+      TRANSFER(0),
+      /**
+       * <code>INVALIDATE = 1;</code>
+       */
+      INVALIDATE(1),
+      /**
+       * <code>SHUTDOWN = 2;</code>
+       */
+      SHUTDOWN(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>TRANSFER = 0;</code>
+       */
+      public static final int TRANSFER_VALUE = 0;
+      /**
+       * <code>INVALIDATE = 1;</code>
+       */
+      public static final int INVALIDATE_VALUE = 1;
+      /**
+       * <code>SHUTDOWN = 2;</code>
+       */
+      public static final int SHUTDOWN_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @Deprecated
+      public static Action valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Action forNumber(int value) {
+        switch (value) {
+          case 0: return TRANSFER;
+          case 1: return INVALIDATE;
+          case 2: return SHUTDOWN;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Action>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Action> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Action>() {
+              public Action findValueByNumber(int number) {
+                return Action.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return BlockCommandProto.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Action[] VALUES = values();
+
+      public static Action valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Action(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:BlockCommandProto.Action)
+    }
+
+    public static final int ACTION_FIELD_NUMBER = 1;
+    private int action_ = 0;
+    /**
+     * <code>.BlockCommandProto.Action action = 1;</code>
+     * @return The enum numeric value on the wire for action.
+     */
+    @Override public int getActionValue() {
+      return action_;
+    }
+    /**
+     * <code>.BlockCommandProto.Action action = 1;</code>
+     * @return The action.
+     */
+    @Override public Action getAction() {
+      Action result = Action.forNumber(action_);
+      return result == null ? Action.UNRECOGNIZED : result;
+    }
+
+    public static final int BLOCKPOOLID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile Object blockPoolId_ = "";
+    /**
+     * <code>string blockPoolId = 2;</code>
+     * @return The blockPoolId.
+     */
+    @Override
+    public String getBlockPoolId() {
+      Object ref = blockPoolId_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        blockPoolId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string blockPoolId = 2;</code>
+     * @return The bytes for blockPoolId.
+     */
+    @Override
+    public com.google.protobuf.ByteString
+        getBlockPoolIdBytes() {
+      Object ref = blockPoolId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (String) ref);
+        blockPoolId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BLOCKS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<HdfsProtos.BlockProto> blocks_;
+    /**
+     * <code>repeated .BlockProto blocks = 3;</code>
+     */
+    @Override
+    public java.util.List<HdfsProtos.BlockProto> getBlocksList() {
+      return blocks_;
+    }
+    /**
+     * <code>repeated .BlockProto blocks = 3;</code>
+     */
+    @Override
+    public java.util.List<? extends HdfsProtos.BlockProtoOrBuilder>
+        getBlocksOrBuilderList() {
+      return blocks_;
+    }
+    /**
+     * <code>repeated .BlockProto blocks = 3;</code>
+     */
+    @Override
+    public int getBlocksCount() {
+      return blocks_.size();
+    }
+    /**
+     * <code>repeated .BlockProto blocks = 3;</code>
+     */
+    @Override
+    public HdfsProtos.BlockProto getBlocks(int index) {
+      return blocks_.get(index);
+    }
+    /**
+     * <code>repeated .BlockProto blocks = 3;</code>
+     */
+    @Override
+    public HdfsProtos.BlockProtoOrBuilder getBlocksOrBuilder(
+        int index) {
+      return blocks_.get(index);
+    }
+
+    public static final int TARGETS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<HdfsProtos.DatanodeInfoProto> targets_;
+    /**
+     * <code>repeated .DatanodeInfoProto targets = 4;</code>
+     */
+    @Override
+    public java.util.List<HdfsProtos.DatanodeInfoProto> getTargetsList() {
+      return targets_;
+    }
+    /**
+     * <code>repeated .DatanodeInfoProto targets = 4;</code>
+     */
+    @Override
+    public java.util.List<? extends HdfsProtos.DatanodeInfoProtoOrBuilder>
+        getTargetsOrBuilderList() {
+      return targets_;
+    }
+    /**
+     * <code>repeated .DatanodeInfoProto targets = 4;</code>
+     */
+    @Override
+    public int getTargetsCount() {
+      return targets_.size();
+    }
+    /**
+     * <code>repeated .DatanodeInfoProto targets = 4;</code>
+     */
+    @Override
+    public HdfsProtos.DatanodeInfoProto getTargets(int index) {
+      return targets_.get(index);
+    }
+    /**
+     * <code>repeated .DatanodeInfoProto targets = 4;</code>
+     */
+    @Override
+    public HdfsProtos.DatanodeInfoProtoOrBuilder getTargetsOrBuilder(
+        int index) {
+      return targets_.get(index);
+    }
+
+    public static final int STORAGEUUIDS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList storageUuids_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string storageUuids = 5;</code>
+     * @return A list containing the storageUuids.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getStorageUuidsList() {
+      return storageUuids_;
+    }
+    /**
+     * <code>repeated string storageUuids = 5;</code>
+     * @return The count of storageUuids.
+     */
+    public int getStorageUuidsCount() {
+      return storageUuids_.size();
+    }
+    /**
+     * <code>repeated string storageUuids = 5;</code>
+     * @param index The index of the element to return.
+     * @return The storageUuids at the given index.
+     */
+    public String getStorageUuids(int index) {
+      return storageUuids_.get(index);
+    }
+    /**
+     * <code>repeated string storageUuids = 5;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the storageUuids at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getStorageUuidsBytes(int index) {
+      return storageUuids_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (action_ != Action.TRANSFER.getNumber()) {
+        output.writeEnum(1, action_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(blockPoolId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, blockPoolId_);
+      }
+      for (int i = 0; i < blocks_.size(); i++) {
+        output.writeMessage(3, blocks_.get(i));
+      }
+      for (int i = 0; i < targets_.size(); i++) {
+        output.writeMessage(4, targets_.get(i));
+      }
+      for (int i = 0; i < storageUuids_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, storageUuids_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (action_ != Action.TRANSFER.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, action_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(blockPoolId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, blockPoolId_);
+      }
+      for (int i = 0; i < blocks_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, blocks_.get(i));
+      }
+      for (int i = 0; i < targets_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, targets_.get(i));
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < storageUuids_.size(); i++) {
+          dataSize += computeStringSizeNoTag(storageUuids_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getStorageUuidsList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @Override
+    public boolean equals(final Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof BlockCommandProto)) {
+        return super.equals(obj);
+      }
+      BlockCommandProto other = (BlockCommandProto) obj;
+
+      if (action_ != other.action_) return false;
+      if (!getBlockPoolId()
+          .equals(other.getBlockPoolId())) return false;
+      if (!getBlocksList()
+          .equals(other.getBlocksList())) return false;
+      if (!getTargetsList()
+          .equals(other.getTargetsList())) return false;
+      if (!getStorageUuidsList()
+          .equals(other.getStorageUuidsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + action_;
+      hash = (37 * hash) + BLOCKPOOLID_FIELD_NUMBER;
+      hash = (53 * hash) + getBlockPoolId().hashCode();
+      if (getBlocksCount() > 0) {
+        hash = (37 * hash) + BLOCKS_FIELD_NUMBER;
+        hash = (53 * hash) + getBlocksList().hashCode();
+      }
+      if (getTargetsCount() > 0) {
+        hash = (37 * hash) + TARGETS_FIELD_NUMBER;
+        hash = (53 * hash) + getTargetsList().hashCode();
+      }
+      if (getStorageUuidsCount() > 0) {
+        hash = (37 * hash) + STORAGEUUIDS_FIELD_NUMBER;
+        hash = (53 * hash) + getStorageUuidsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static BlockCommandProto parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static BlockCommandProto parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static BlockCommandProto parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static BlockCommandProto parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static BlockCommandProto parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static BlockCommandProto parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static BlockCommandProto parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static BlockCommandProto parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static BlockCommandProto parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static BlockCommandProto parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static BlockCommandProto parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static BlockCommandProto parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(BlockCommandProto prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @Override
+    protected Builder newBuilderForType(
+        BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code BlockCommandProto}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:BlockCommandProto)
+        BlockCommandProtoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return DatanodeProtocol.internal_static_BlockCommandProto_descriptor;
+      }
+
+      @Override
+      protected FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return DatanodeProtocol.internal_static_BlockCommandProto_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                BlockCommandProto.class, Builder.class);
+      }
+
+      // Construct using org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockCommandProto.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          BuilderParent parent) {
+        super(parent);
+
+      }
+      @Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        action_ = 0;
+        blockPoolId_ = "";
+        if (blocksBuilder_ == null) {
+          blocks_ = java.util.Collections.emptyList();
+        } else {
+          blocks_ = null;
+          blocksBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (targetsBuilder_ == null) {
+          targets_ = java.util.Collections.emptyList();
+        } else {
+          targets_ = null;
+          targetsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        storageUuids_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return DatanodeProtocol.internal_static_BlockCommandProto_descriptor;
+      }
+
+      @Override
+      public BlockCommandProto getDefaultInstanceForType() {
+        return BlockCommandProto.getDefaultInstance();
+      }
+
+      @Override
+      public BlockCommandProto build() {
+        BlockCommandProto result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @Override
+      public BlockCommandProto buildPartial() {
+        BlockCommandProto result = new BlockCommandProto(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(BlockCommandProto result) {
+        if (blocksBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            blocks_ = java.util.Collections.unmodifiableList(blocks_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.blocks_ = blocks_;
+        } else {
+          result.blocks_ = blocksBuilder_.build();
+        }
+        if (targetsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            targets_ = java.util.Collections.unmodifiableList(targets_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.targets_ = targets_;
+        } else {
+          result.targets_ = targetsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(BlockCommandProto result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.action_ = action_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.blockPoolId_ = blockPoolId_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          storageUuids_.makeImmutable();
+          result.storageUuids_ = storageUuids_;
+        }
+      }
+
+      @Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return super.setField(field, value);
+      }
+      @Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof BlockCommandProto) {
+          return mergeFrom((BlockCommandProto)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(BlockCommandProto other) {
+        if (other == BlockCommandProto.getDefaultInstance()) return this;
+        if (other.action_ != 0) {
+          setActionValue(other.getActionValue());
+        }
+        if (!other.getBlockPoolId().isEmpty()) {
+          blockPoolId_ = other.blockPoolId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (blocksBuilder_ == null) {
+          if (!other.blocks_.isEmpty()) {
+            if (blocks_.isEmpty()) {
+              blocks_ = other.blocks_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureBlocksIsMutable();
+              blocks_.addAll(other.blocks_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.blocks_.isEmpty()) {
+            if (blocksBuilder_.isEmpty()) {
+              blocksBuilder_.dispose();
+              blocksBuilder_ = null;
+              blocks_ = other.blocks_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              blocksBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBlocksFieldBuilder() : null;
+            } else {
+              blocksBuilder_.addAllMessages(other.blocks_);
+            }
+          }
+        }
+        if (targetsBuilder_ == null) {
+          if (!other.targets_.isEmpty()) {
+            if (targets_.isEmpty()) {
+              targets_ = other.targets_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureTargetsIsMutable();
+              targets_.addAll(other.targets_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.targets_.isEmpty()) {
+            if (targetsBuilder_.isEmpty()) {
+              targetsBuilder_.dispose();
+              targetsBuilder_ = null;
+              targets_ = other.targets_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              targetsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTargetsFieldBuilder() : null;
+            } else {
+              targetsBuilder_.addAllMessages(other.targets_);
+            }
+          }
+        }
+        if (!other.storageUuids_.isEmpty()) {
+          if (storageUuids_.isEmpty()) {
+            storageUuids_ = other.storageUuids_;
+            bitField0_ |= 0x00000010;
+          } else {
+            ensureStorageUuidsIsMutable();
+            storageUuids_.addAll(other.storageUuids_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                action_ = input.readEnum();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                blockPoolId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                HdfsProtos.BlockProto m =
+                    input.readMessage(
+                        HdfsProtos.BlockProto.parser(),
+                        extensionRegistry);
+                if (blocksBuilder_ == null) {
+                  ensureBlocksIsMutable();
+                  blocks_.add(m);
+                } else {
+                  blocksBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                HdfsProtos.DatanodeInfoProto m =
+                    input.readMessage(
+                        HdfsProtos.DatanodeInfoProto.parser(),
+                        extensionRegistry);
+                if (targetsBuilder_ == null) {
+                  ensureTargetsIsMutable();
+                  targets_.add(m);
+                } else {
+                  targetsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                String s = input.readStringRequireUtf8();
+                ensureStorageUuidsIsMutable();
+                storageUuids_.add(s);
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int action_ = 0;
+      /**
+       * <code>.BlockCommandProto.Action action = 1;</code>
+       * @return The enum numeric value on the wire for action.
+       */
+      @Override public int getActionValue() {
+        return action_;
+      }
+      /**
+       * <code>.BlockCommandProto.Action action = 1;</code>
+       * @param value The enum numeric value on the wire for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionValue(int value) {
+        action_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.BlockCommandProto.Action action = 1;</code>
+       * @return The action.
+       */
+      @Override
+      public Action getAction() {
+        Action result = Action.forNumber(action_);
+        return result == null ? Action.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.BlockCommandProto.Action action = 1;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(Action value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        action_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.BlockCommandProto.Action action = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        action_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private Object blockPoolId_ = "";
+      /**
+       * <code>string blockPoolId = 2;</code>
+       * @return The blockPoolId.
+       */
+      public String getBlockPoolId() {
+        Object ref = blockPoolId_;
+        if (!(ref instanceof String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          String s = bs.toStringUtf8();
+          blockPoolId_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      /**
+       * <code>string blockPoolId = 2;</code>
+       * @return The bytes for blockPoolId.
+       */
+      public com.google.protobuf.ByteString
+          getBlockPoolIdBytes() {
+        Object ref = blockPoolId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
+          blockPoolId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string blockPoolId = 2;</code>
+       * @param value The blockPoolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBlockPoolId(
+          String value) {
+        if (value == null) { throw new NullPointerException(); }
+        blockPoolId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string blockPoolId = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBlockPoolId() {
+        blockPoolId_ = getDefaultInstance().getBlockPoolId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string blockPoolId = 2;</code>
+       * @param value The bytes for blockPoolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBlockPoolIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        blockPoolId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<HdfsProtos.BlockProto> blocks_ =
+        java.util.Collections.emptyList();
+      private void ensureBlocksIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          blocks_ = new java.util.ArrayList<HdfsProtos.BlockProto>(blocks_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          HdfsProtos.BlockProto, HdfsProtos.BlockProto.Builder, HdfsProtos.BlockProtoOrBuilder> blocksBuilder_;
+
+      /**
+       * <code>repeated .BlockProto blocks = 3;</code>
+       */
+      public java.util.List<HdfsProtos.BlockProto> getBlocksList() {
+        if (blocksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(blocks_);
+        } else {
+          return blocksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .BlockProto blocks = 3;</code>
+       */
+      public int getBlocksCount() {
+        if (blocksBuilder_ == null) {
+          return blocks_.size();
+        } else {
+          return blocksBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .BlockProto blocks = 3;</code>
+       */
+      public HdfsProtos.BlockProto getBlocks(int index) {
+        if (blocksBuilder_ == null) {
+          return blocks_.get(index);
+        } else {
+          return blocksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .BlockProto blocks = 3;</code>
+       */
+      public Builder setBlocks(
+          int index, HdfsProtos.BlockProto value) {
+        if (blocksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBlocksIsMutable();
+          blocks_.set(index, value);
+          onChanged();
+        } else {
+          blocksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BlockProto blocks = 3;</code>
+       */
+      public Builder setBlocks(
+          int index, HdfsProtos.BlockProto.Builder builderForValue) {
+        if (blocksBuilder_ == null) {
+          ensureBlocksIsMutable();
+          blocks_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          blocksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BlockProto blocks = 3;</code>
+       */
+      public Builder addBlocks(HdfsProtos.BlockProto value) {
+        if (blocksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBlocksIsMutable();
+          blocks_.add(value);
+          onChanged();
+        } else {
+          blocksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BlockProto blocks = 3;</code>
+       */
+      public Builder addBlocks(
+          int index, HdfsProtos.BlockProto value) {
+        if (blocksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBlocksIsMutable();
+          blocks_.add(index, value);
+          onChanged();
+        } else {
+          blocksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BlockProto blocks = 3;</code>
+       */
+      public Builder addBlocks(
+          HdfsProtos.BlockProto.Builder builderForValue) {
+        if (blocksBuilder_ == null) {
+          ensureBlocksIsMutable();
+          blocks_.add(builderForValue.build());
+          onChanged();
+        } else {
+          blocksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BlockProto blocks = 3;</code>
+       */
+      public Builder addBlocks(
+          int index, HdfsProtos.BlockProto.Builder builderForValue) {
+        if (blocksBuilder_ == null) {
+          ensureBlocksIsMutable();
+          blocks_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          blocksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BlockProto blocks = 3;</code>
+       */
+      public Builder addAllBlocks(
+          Iterable<? extends HdfsProtos.BlockProto> values) {
+        if (blocksBuilder_ == null) {
+          ensureBlocksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, blocks_);
+          onChanged();
+        } else {
+          blocksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BlockProto blocks = 3;</code>
+       */
+      public Builder clearBlocks() {
+        if (blocksBuilder_ == null) {
+          blocks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          blocksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BlockProto blocks = 3;</code>
+       */
+      public Builder removeBlocks(int index) {
+        if (blocksBuilder_ == null) {
+          ensureBlocksIsMutable();
+          blocks_.remove(index);
+          onChanged();
+        } else {
+          blocksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BlockProto blocks = 3;</code>
+       */
+      public HdfsProtos.BlockProto.Builder getBlocksBuilder(
+          int index) {
+        return getBlocksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .BlockProto blocks = 3;</code>
+       */
+      public HdfsProtos.BlockProtoOrBuilder getBlocksOrBuilder(
+          int index) {
+        if (blocksBuilder_ == null) {
+          return blocks_.get(index);  } else {
+          return blocksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .BlockProto blocks = 3;</code>
+       */
+      public java.util.List<? extends HdfsProtos.BlockProtoOrBuilder>
+           getBlocksOrBuilderList() {
+        if (blocksBuilder_ != null) {
+          return blocksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(blocks_);
+        }
+      }
+      /**
+       * <code>repeated .BlockProto blocks = 3;</code>
+       */
+      public HdfsProtos.BlockProto.Builder addBlocksBuilder() {
+        return getBlocksFieldBuilder().addBuilder(
+            HdfsProtos.BlockProto.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .BlockProto blocks = 3;</code>
+       */
+      public HdfsProtos.BlockProto.Builder addBlocksBuilder(
+          int index) {
+        return getBlocksFieldBuilder().addBuilder(
+            index, HdfsProtos.BlockProto.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .BlockProto blocks = 3;</code>
+       */
+      public java.util.List<HdfsProtos.BlockProto.Builder>
+           getBlocksBuilderList() {
+        return getBlocksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          HdfsProtos.BlockProto, HdfsProtos.BlockProto.Builder, HdfsProtos.BlockProtoOrBuilder>
+          getBlocksFieldBuilder() {
+        if (blocksBuilder_ == null) {
+          blocksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              HdfsProtos.BlockProto, HdfsProtos.BlockProto.Builder, HdfsProtos.BlockProtoOrBuilder>(
+                  blocks_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          blocks_ = null;
+        }
+        return blocksBuilder_;
+      }
+
+      private java.util.List<HdfsProtos.DatanodeInfoProto> targets_ =
+        java.util.Collections.emptyList();
+      private void ensureTargetsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          targets_ = new java.util.ArrayList<HdfsProtos.DatanodeInfoProto>(targets_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          HdfsProtos.DatanodeInfoProto, HdfsProtos.DatanodeInfoProto.Builder, HdfsProtos.DatanodeInfoProtoOrBuilder> targetsBuilder_;
+
+      /**
+       * <code>repeated .DatanodeInfoProto targets = 4;</code>
+       */
+      public java.util.List<HdfsProtos.DatanodeInfoProto> getTargetsList() {
+        if (targetsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(targets_);
+        } else {
+          return targetsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .DatanodeInfoProto targets = 4;</code>
+       */
+      public int getTargetsCount() {
+        if (targetsBuilder_ == null) {
+          return targets_.size();
+        } else {
+          return targetsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .DatanodeInfoProto targets = 4;</code>
+       */
+      public HdfsProtos.DatanodeInfoProto getTargets(int index) {
+        if (targetsBuilder_ == null) {
+          return targets_.get(index);
+        } else {
+          return targetsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .DatanodeInfoProto targets = 4;</code>
+       */
+      public Builder setTargets(
+          int index, HdfsProtos.DatanodeInfoProto value) {
+        if (targetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTargetsIsMutable();
+          targets_.set(index, value);
+          onChanged();
+        } else {
+          targetsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .DatanodeInfoProto targets = 4;</code>
+       */
+      public Builder setTargets(
+          int index, HdfsProtos.DatanodeInfoProto.Builder builderForValue) {
+        if (targetsBuilder_ == null) {
+          ensureTargetsIsMutable();
+          targets_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          targetsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .DatanodeInfoProto targets = 4;</code>
+       */
+      public Builder addTargets(HdfsProtos.DatanodeInfoProto value) {
+        if (targetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTargetsIsMutable();
+          targets_.add(value);
+          onChanged();
+        } else {
+          targetsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .DatanodeInfoProto targets = 4;</code>
+       */
+      public Builder addTargets(
+          int index, HdfsProtos.DatanodeInfoProto value) {
+        if (targetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTargetsIsMutable();
+          targets_.add(index, value);
+          onChanged();
+        } else {
+          targetsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .DatanodeInfoProto targets = 4;</code>
+       */
+      public Builder addTargets(
+          HdfsProtos.DatanodeInfoProto.Builder builderForValue) {
+        if (targetsBuilder_ == null) {
+          ensureTargetsIsMutable();
+          targets_.add(builderForValue.build());
+          onChanged();
+        } else {
+          targetsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .DatanodeInfoProto targets = 4;</code>
+       */
+      public Builder addTargets(
+          int index, HdfsProtos.DatanodeInfoProto.Builder builderForValue) {
+        if (targetsBuilder_ == null) {
+          ensureTargetsIsMutable();
+          targets_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          targetsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .DatanodeInfoProto targets = 4;</code>
+       */
+      public Builder addAllTargets(
+          Iterable<? extends HdfsProtos.DatanodeInfoProto> values) {
+        if (targetsBuilder_ == null) {
+          ensureTargetsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, targets_);
+          onChanged();
+        } else {
+          targetsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .DatanodeInfoProto targets = 4;</code>
+       */
+      public Builder clearTargets() {
+        if (targetsBuilder_ == null) {
+          targets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          targetsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .DatanodeInfoProto targets = 4;</code>
+       */
+      public Builder removeTargets(int index) {
+        if (targetsBuilder_ == null) {
+          ensureTargetsIsMutable();
+          targets_.remove(index);
+          onChanged();
+        } else {
+          targetsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .DatanodeInfoProto targets = 4;</code>
+       */
+      public HdfsProtos.DatanodeInfoProto.Builder getTargetsBuilder(
+          int index) {
+        return getTargetsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .DatanodeInfoProto targets = 4;</code>
+       */
+      public HdfsProtos.DatanodeInfoProtoOrBuilder getTargetsOrBuilder(
+          int index) {
+        if (targetsBuilder_ == null) {
+          return targets_.get(index);  } else {
+          return targetsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .DatanodeInfoProto targets = 4;</code>
+       */
+      public java.util.List<? extends HdfsProtos.DatanodeInfoProtoOrBuilder>
+           getTargetsOrBuilderList() {
+        if (targetsBuilder_ != null) {
+          return targetsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(targets_);
+        }
+      }
+      /**
+       * <code>repeated .DatanodeInfoProto targets = 4;</code>
+       */
+      public HdfsProtos.DatanodeInfoProto.Builder addTargetsBuilder() {
+        return getTargetsFieldBuilder().addBuilder(
+            HdfsProtos.DatanodeInfoProto.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .DatanodeInfoProto targets = 4;</code>
+       */
+      public HdfsProtos.DatanodeInfoProto.Builder addTargetsBuilder(
+          int index) {
+        return getTargetsFieldBuilder().addBuilder(
+            index, HdfsProtos.DatanodeInfoProto.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .DatanodeInfoProto targets = 4;</code>
+       */
+      public java.util.List<HdfsProtos.DatanodeInfoProto.Builder>
+           getTargetsBuilderList() {
+        return getTargetsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          HdfsProtos.DatanodeInfoProto, HdfsProtos.DatanodeInfoProto.Builder, HdfsProtos.DatanodeInfoProtoOrBuilder>
+          getTargetsFieldBuilder() {
+        if (targetsBuilder_ == null) {
+          targetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              HdfsProtos.DatanodeInfoProto, HdfsProtos.DatanodeInfoProto.Builder, HdfsProtos.DatanodeInfoProtoOrBuilder>(
+                  targets_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          targets_ = null;
+        }
+        return targetsBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringArrayList storageUuids_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureStorageUuidsIsMutable() {
+        if (!storageUuids_.isModifiable()) {
+          storageUuids_ = new com.google.protobuf.LazyStringArrayList(storageUuids_);
+        }
+        bitField0_ |= 0x00000010;
+      }
+      /**
+       * <code>repeated string storageUuids = 5;</code>
+       * @return A list containing the storageUuids.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getStorageUuidsList() {
+        storageUuids_.makeImmutable();
+        return storageUuids_;
+      }
+      /**
+       * <code>repeated string storageUuids = 5;</code>
+       * @return The count of storageUuids.
+       */
+      public int getStorageUuidsCount() {
+        return storageUuids_.size();
+      }
+      /**
+       * <code>repeated string storageUuids = 5;</code>
+       * @param index The index of the element to return.
+       * @return The storageUuids at the given index.
+       */
+      public String getStorageUuids(int index) {
+        return storageUuids_.get(index);
+      }
+      /**
+       * <code>repeated string storageUuids = 5;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the storageUuids at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getStorageUuidsBytes(int index) {
+        return storageUuids_.getByteString(index);
+      }
+      /**
+       * <code>repeated string storageUuids = 5;</code>
+       * @param index The index to set the value at.
+       * @param value The storageUuids to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStorageUuids(
+          int index, String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureStorageUuidsIsMutable();
+        storageUuids_.set(index, value);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string storageUuids = 5;</code>
+       * @param value The storageUuids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addStorageUuids(
+          String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureStorageUuidsIsMutable();
+        storageUuids_.add(value);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string storageUuids = 5;</code>
+       * @param values The storageUuids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllStorageUuids(
+          Iterable<String> values) {
+        ensureStorageUuidsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, storageUuids_);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string storageUuids = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStorageUuids() {
+        storageUuids_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string storageUuids = 5;</code>
+       * @param value The bytes of the storageUuids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addStorageUuidsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureStorageUuidsIsMutable();
+        storageUuids_.add(value);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:BlockCommandProto)
+    }
+
+    // @@protoc_insertion_point(class_scope:BlockCommandProto)
+    private static final BlockCommandProto DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new BlockCommandProto();
+    }
+
+    public static BlockCommandProto getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BlockCommandProto>
+        PARSER = new com.google.protobuf.AbstractParser<BlockCommandProto>() {
+      @Override
+      public BlockCommandProto parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<BlockCommandProto> parser() {
+      return PARSER;
+    }
+
+    @Override
+    public com.google.protobuf.Parser<BlockCommandProto> getParserForType() {
+      return PARSER;
+    }
+
+    @Override
+    public BlockCommandProto getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -839,11 +3395,11 @@ public final class DatanodeProtocol {
      * <code>.DatanodeRegistrationProto registration = 1;</code>
      * @return The registration.
      */
-    org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto getRegistration();
+    DatanodeRegistrationProto getRegistration();
     /**
      * <code>.DatanodeRegistrationProto registration = 1;</code>
      */
-    org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProtoOrBuilder getRegistrationOrBuilder();
+    DatanodeRegistrationProtoOrBuilder getRegistrationOrBuilder();
   }
   /**
    * Protobuf type {@code RegisterDatanodeRequestProto}
@@ -860,34 +3416,34 @@ public final class DatanodeProtocol {
     private RegisterDatanodeRequestProto() {
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
         UnusedPrivateParameter unused) {
       return new RegisterDatanodeRequestProto();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_RegisterDatanodeRequestProto_descriptor;
+      return DatanodeProtocol.internal_static_RegisterDatanodeRequestProto_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_RegisterDatanodeRequestProto_fieldAccessorTable
+      return DatanodeProtocol.internal_static_RegisterDatanodeRequestProto_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto.class, org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto.Builder.class);
+              RegisterDatanodeRequestProto.class, Builder.class);
     }
 
     private int bitField0_;
     public static final int REGISTRATION_FIELD_NUMBER = 1;
-    private org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto registration_;
+    private DatanodeRegistrationProto registration_;
     /**
      * <code>.DatanodeRegistrationProto registration = 1;</code>
      * @return Whether the registration field is set.
      */
-    @java.lang.Override
+    @Override
     public boolean hasRegistration() {
       return ((bitField0_ & 0x00000001) != 0);
     }
@@ -895,20 +3451,20 @@ public final class DatanodeProtocol {
      * <code>.DatanodeRegistrationProto registration = 1;</code>
      * @return The registration.
      */
-    @java.lang.Override
-    public org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto getRegistration() {
-      return registration_ == null ? org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.getDefaultInstance() : registration_;
+    @Override
+    public DatanodeRegistrationProto getRegistration() {
+      return registration_ == null ? DatanodeRegistrationProto.getDefaultInstance() : registration_;
     }
     /**
      * <code>.DatanodeRegistrationProto registration = 1;</code>
      */
-    @java.lang.Override
-    public org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProtoOrBuilder getRegistrationOrBuilder() {
-      return registration_ == null ? org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.getDefaultInstance() : registration_;
+    @Override
+    public DatanodeRegistrationProtoOrBuilder getRegistrationOrBuilder() {
+      return registration_ == null ? DatanodeRegistrationProto.getDefaultInstance() : registration_;
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -918,7 +3474,7 @@ public final class DatanodeProtocol {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (((bitField0_ & 0x00000001) != 0)) {
@@ -927,7 +3483,7 @@ public final class DatanodeProtocol {
       getUnknownFields().writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -942,15 +3498,15 @@ public final class DatanodeProtocol {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto)) {
+      if (!(obj instanceof RegisterDatanodeRequestProto)) {
         return super.equals(obj);
       }
-      org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto other = (org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto) obj;
+      RegisterDatanodeRequestProto other = (RegisterDatanodeRequestProto) obj;
 
       if (hasRegistration() != other.hasRegistration()) return false;
       if (hasRegistration()) {
@@ -961,7 +3517,7 @@ public final class DatanodeProtocol {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -977,44 +3533,44 @@ public final class DatanodeProtocol {
       return hash;
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto parseFrom(
+    public static RegisterDatanodeRequestProto parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto parseFrom(
+    public static RegisterDatanodeRequestProto parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto parseFrom(
+    public static RegisterDatanodeRequestProto parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto parseFrom(
+    public static RegisterDatanodeRequestProto parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto parseFrom(byte[] data)
+    public static RegisterDatanodeRequestProto parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto parseFrom(
+    public static RegisterDatanodeRequestProto parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto parseFrom(java.io.InputStream input)
+    public static RegisterDatanodeRequestProto parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto parseFrom(
+    public static RegisterDatanodeRequestProto parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1022,26 +3578,26 @@ public final class DatanodeProtocol {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto parseDelimitedFrom(java.io.InputStream input)
+    public static RegisterDatanodeRequestProto parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto parseDelimitedFrom(
+    public static RegisterDatanodeRequestProto parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto parseFrom(
+    public static RegisterDatanodeRequestProto parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto parseFrom(
+    public static RegisterDatanodeRequestProto parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1049,23 +3605,23 @@ public final class DatanodeProtocol {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto prototype) {
+    public static Builder newBuilder(RegisterDatanodeRequestProto prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1075,27 +3631,27 @@ public final class DatanodeProtocol {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:RegisterDatanodeRequestProto)
-        org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProtoOrBuilder {
+        RegisterDatanodeRequestProtoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_RegisterDatanodeRequestProto_descriptor;
+        return DatanodeProtocol.internal_static_RegisterDatanodeRequestProto_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_RegisterDatanodeRequestProto_fieldAccessorTable
+        return DatanodeProtocol.internal_static_RegisterDatanodeRequestProto_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto.class, org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto.Builder.class);
+                RegisterDatanodeRequestProto.class, Builder.class);
       }
 
-      // Construct using org.west2.clusterio.common.protocol.DatanodeProtocol.RegisterDatanodeRequestProto.newBuilder()
+      // Construct using org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1105,7 +3661,7 @@ public final class DatanodeProtocol {
           getRegistrationFieldBuilder();
         }
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
@@ -1117,35 +3673,35 @@ public final class DatanodeProtocol {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_RegisterDatanodeRequestProto_descriptor;
+        return DatanodeProtocol.internal_static_RegisterDatanodeRequestProto_descriptor;
       }
 
-      @java.lang.Override
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto getDefaultInstanceForType() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto.getDefaultInstance();
+      @Override
+      public RegisterDatanodeRequestProto getDefaultInstanceForType() {
+        return RegisterDatanodeRequestProto.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto build() {
-        org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto result = buildPartial();
+      @Override
+      public RegisterDatanodeRequestProto build() {
+        RegisterDatanodeRequestProto result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto buildPartial() {
-        org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto result = new org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto(this);
+      @Override
+      public RegisterDatanodeRequestProto buildPartial() {
+        RegisterDatanodeRequestProto result = new RegisterDatanodeRequestProto(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto result) {
+      private void buildPartial0(RegisterDatanodeRequestProto result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -1157,50 +3713,50 @@ public final class DatanodeProtocol {
         result.bitField0_ |= to_bitField0_;
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return super.clone();
       }
-      @java.lang.Override
+      @Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.setField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.addRepeatedField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto) {
-          return mergeFrom((org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto)other);
+        if (other instanceof RegisterDatanodeRequestProto) {
+          return mergeFrom((RegisterDatanodeRequestProto)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto other) {
-        if (other == org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto.getDefaultInstance()) return this;
+      public Builder mergeFrom(RegisterDatanodeRequestProto other) {
+        if (other == RegisterDatanodeRequestProto.getDefaultInstance()) return this;
         if (other.hasRegistration()) {
           mergeRegistration(other.getRegistration());
         }
@@ -1209,18 +3765,18 @@ public final class DatanodeProtocol {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException();
         }
         try {
           boolean done = false;
@@ -1254,9 +3810,9 @@ public final class DatanodeProtocol {
       }
       private int bitField0_;
 
-      private org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto registration_;
+      private DatanodeRegistrationProto registration_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto, org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.Builder, org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProtoOrBuilder> registrationBuilder_;
+          DatanodeRegistrationProto, DatanodeRegistrationProto.Builder, DatanodeRegistrationProtoOrBuilder> registrationBuilder_;
       /**
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        * @return Whether the registration field is set.
@@ -1268,9 +3824,9 @@ public final class DatanodeProtocol {
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        * @return The registration.
        */
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto getRegistration() {
+      public DatanodeRegistrationProto getRegistration() {
         if (registrationBuilder_ == null) {
-          return registration_ == null ? org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.getDefaultInstance() : registration_;
+          return registration_ == null ? DatanodeRegistrationProto.getDefaultInstance() : registration_;
         } else {
           return registrationBuilder_.getMessage();
         }
@@ -1278,7 +3834,7 @@ public final class DatanodeProtocol {
       /**
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        */
-      public Builder setRegistration(org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto value) {
+      public Builder setRegistration(DatanodeRegistrationProto value) {
         if (registrationBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1295,7 +3851,7 @@ public final class DatanodeProtocol {
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        */
       public Builder setRegistration(
-          org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.Builder builderForValue) {
+          DatanodeRegistrationProto.Builder builderForValue) {
         if (registrationBuilder_ == null) {
           registration_ = builderForValue.build();
         } else {
@@ -1308,11 +3864,11 @@ public final class DatanodeProtocol {
       /**
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        */
-      public Builder mergeRegistration(org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto value) {
+      public Builder mergeRegistration(DatanodeRegistrationProto value) {
         if (registrationBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0) &&
             registration_ != null &&
-            registration_ != org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.getDefaultInstance()) {
+            registration_ != DatanodeRegistrationProto.getDefaultInstance()) {
             getRegistrationBuilder().mergeFrom(value);
           } else {
             registration_ = value;
@@ -1342,7 +3898,7 @@ public final class DatanodeProtocol {
       /**
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        */
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.Builder getRegistrationBuilder() {
+      public DatanodeRegistrationProto.Builder getRegistrationBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getRegistrationFieldBuilder().getBuilder();
@@ -1350,23 +3906,23 @@ public final class DatanodeProtocol {
       /**
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        */
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProtoOrBuilder getRegistrationOrBuilder() {
+      public DatanodeRegistrationProtoOrBuilder getRegistrationOrBuilder() {
         if (registrationBuilder_ != null) {
           return registrationBuilder_.getMessageOrBuilder();
         } else {
           return registration_ == null ?
-              org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.getDefaultInstance() : registration_;
+              DatanodeRegistrationProto.getDefaultInstance() : registration_;
         }
       }
       /**
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto, org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.Builder, org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProtoOrBuilder>
+          DatanodeRegistrationProto, DatanodeRegistrationProto.Builder, DatanodeRegistrationProtoOrBuilder>
           getRegistrationFieldBuilder() {
         if (registrationBuilder_ == null) {
           registrationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto, org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.Builder, org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProtoOrBuilder>(
+              DatanodeRegistrationProto, DatanodeRegistrationProto.Builder, DatanodeRegistrationProtoOrBuilder>(
                   getRegistration(),
                   getParentForChildren(),
                   isClean());
@@ -1374,13 +3930,13 @@ public final class DatanodeProtocol {
         }
         return registrationBuilder_;
       }
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1391,18 +3947,18 @@ public final class DatanodeProtocol {
     }
 
     // @@protoc_insertion_point(class_scope:RegisterDatanodeRequestProto)
-    private static final org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto DEFAULT_INSTANCE;
+    private static final RegisterDatanodeRequestProto DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto();
+      DEFAULT_INSTANCE = new RegisterDatanodeRequestProto();
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto getDefaultInstance() {
+    public static RegisterDatanodeRequestProto getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<RegisterDatanodeRequestProto>
         PARSER = new com.google.protobuf.AbstractParser<RegisterDatanodeRequestProto>() {
-      @java.lang.Override
+      @Override
       public RegisterDatanodeRequestProto parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1426,13 +3982,13 @@ public final class DatanodeProtocol {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<RegisterDatanodeRequestProto> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRequestProto getDefaultInstanceForType() {
+    @Override
+    public RegisterDatanodeRequestProto getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1451,11 +4007,11 @@ public final class DatanodeProtocol {
      * <code>.DatanodeRegistrationProto registration = 1;</code>
      * @return The registration.
      */
-    org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto getRegistration();
+    DatanodeRegistrationProto getRegistration();
     /**
      * <code>.DatanodeRegistrationProto registration = 1;</code>
      */
-    org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProtoOrBuilder getRegistrationOrBuilder();
+    DatanodeRegistrationProtoOrBuilder getRegistrationOrBuilder();
   }
   /**
    * <pre>
@@ -1478,34 +4034,34 @@ public final class DatanodeProtocol {
     private RegisterDatanodeResponseProto() {
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
         UnusedPrivateParameter unused) {
       return new RegisterDatanodeResponseProto();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_RegisterDatanodeResponseProto_descriptor;
+      return DatanodeProtocol.internal_static_RegisterDatanodeResponseProto_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_RegisterDatanodeResponseProto_fieldAccessorTable
+      return DatanodeProtocol.internal_static_RegisterDatanodeResponseProto_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto.class, org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto.Builder.class);
+              RegisterDatanodeResponseProto.class, Builder.class);
     }
 
     private int bitField0_;
     public static final int REGISTRATION_FIELD_NUMBER = 1;
-    private org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto registration_;
+    private DatanodeRegistrationProto registration_;
     /**
      * <code>.DatanodeRegistrationProto registration = 1;</code>
      * @return Whether the registration field is set.
      */
-    @java.lang.Override
+    @Override
     public boolean hasRegistration() {
       return ((bitField0_ & 0x00000001) != 0);
     }
@@ -1513,20 +4069,20 @@ public final class DatanodeProtocol {
      * <code>.DatanodeRegistrationProto registration = 1;</code>
      * @return The registration.
      */
-    @java.lang.Override
-    public org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto getRegistration() {
-      return registration_ == null ? org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.getDefaultInstance() : registration_;
+    @Override
+    public DatanodeRegistrationProto getRegistration() {
+      return registration_ == null ? DatanodeRegistrationProto.getDefaultInstance() : registration_;
     }
     /**
      * <code>.DatanodeRegistrationProto registration = 1;</code>
      */
-    @java.lang.Override
-    public org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProtoOrBuilder getRegistrationOrBuilder() {
-      return registration_ == null ? org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.getDefaultInstance() : registration_;
+    @Override
+    public DatanodeRegistrationProtoOrBuilder getRegistrationOrBuilder() {
+      return registration_ == null ? DatanodeRegistrationProto.getDefaultInstance() : registration_;
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1536,7 +4092,7 @@ public final class DatanodeProtocol {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (((bitField0_ & 0x00000001) != 0)) {
@@ -1545,7 +4101,7 @@ public final class DatanodeProtocol {
       getUnknownFields().writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1560,15 +4116,15 @@ public final class DatanodeProtocol {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto)) {
+      if (!(obj instanceof RegisterDatanodeResponseProto)) {
         return super.equals(obj);
       }
-      org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto other = (org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto) obj;
+      RegisterDatanodeResponseProto other = (RegisterDatanodeResponseProto) obj;
 
       if (hasRegistration() != other.hasRegistration()) return false;
       if (hasRegistration()) {
@@ -1579,7 +4135,7 @@ public final class DatanodeProtocol {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -1595,44 +4151,44 @@ public final class DatanodeProtocol {
       return hash;
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto parseFrom(
+    public static RegisterDatanodeResponseProto parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto parseFrom(
+    public static RegisterDatanodeResponseProto parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto parseFrom(
+    public static RegisterDatanodeResponseProto parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto parseFrom(
+    public static RegisterDatanodeResponseProto parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto parseFrom(byte[] data)
+    public static RegisterDatanodeResponseProto parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto parseFrom(
+    public static RegisterDatanodeResponseProto parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto parseFrom(java.io.InputStream input)
+    public static RegisterDatanodeResponseProto parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto parseFrom(
+    public static RegisterDatanodeResponseProto parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1640,26 +4196,26 @@ public final class DatanodeProtocol {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto parseDelimitedFrom(java.io.InputStream input)
+    public static RegisterDatanodeResponseProto parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto parseDelimitedFrom(
+    public static RegisterDatanodeResponseProto parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto parseFrom(
+    public static RegisterDatanodeResponseProto parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto parseFrom(
+    public static RegisterDatanodeResponseProto parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1667,23 +4223,23 @@ public final class DatanodeProtocol {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto prototype) {
+    public static Builder newBuilder(RegisterDatanodeResponseProto prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1699,27 +4255,27 @@ public final class DatanodeProtocol {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:RegisterDatanodeResponseProto)
-        org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProtoOrBuilder {
+        RegisterDatanodeResponseProtoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_RegisterDatanodeResponseProto_descriptor;
+        return DatanodeProtocol.internal_static_RegisterDatanodeResponseProto_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_RegisterDatanodeResponseProto_fieldAccessorTable
+        return DatanodeProtocol.internal_static_RegisterDatanodeResponseProto_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto.class, org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto.Builder.class);
+                RegisterDatanodeResponseProto.class, Builder.class);
       }
 
-      // Construct using org.west2.clusterio.common.protocol.DatanodeProtocol.RegisterDatanodeResponseProto.newBuilder()
+      // Construct using org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1729,7 +4285,7 @@ public final class DatanodeProtocol {
           getRegistrationFieldBuilder();
         }
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
@@ -1741,35 +4297,35 @@ public final class DatanodeProtocol {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_RegisterDatanodeResponseProto_descriptor;
+        return DatanodeProtocol.internal_static_RegisterDatanodeResponseProto_descriptor;
       }
 
-      @java.lang.Override
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto getDefaultInstanceForType() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto.getDefaultInstance();
+      @Override
+      public RegisterDatanodeResponseProto getDefaultInstanceForType() {
+        return RegisterDatanodeResponseProto.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto build() {
-        org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto result = buildPartial();
+      @Override
+      public RegisterDatanodeResponseProto build() {
+        RegisterDatanodeResponseProto result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto buildPartial() {
-        org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto result = new org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto(this);
+      @Override
+      public RegisterDatanodeResponseProto buildPartial() {
+        RegisterDatanodeResponseProto result = new RegisterDatanodeResponseProto(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto result) {
+      private void buildPartial0(RegisterDatanodeResponseProto result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -1781,50 +4337,50 @@ public final class DatanodeProtocol {
         result.bitField0_ |= to_bitField0_;
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return super.clone();
       }
-      @java.lang.Override
+      @Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.setField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.addRepeatedField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto) {
-          return mergeFrom((org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto)other);
+        if (other instanceof RegisterDatanodeResponseProto) {
+          return mergeFrom((RegisterDatanodeResponseProto)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto other) {
-        if (other == org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto.getDefaultInstance()) return this;
+      public Builder mergeFrom(RegisterDatanodeResponseProto other) {
+        if (other == RegisterDatanodeResponseProto.getDefaultInstance()) return this;
         if (other.hasRegistration()) {
           mergeRegistration(other.getRegistration());
         }
@@ -1833,18 +4389,18 @@ public final class DatanodeProtocol {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException();
         }
         try {
           boolean done = false;
@@ -1878,9 +4434,9 @@ public final class DatanodeProtocol {
       }
       private int bitField0_;
 
-      private org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto registration_;
+      private DatanodeRegistrationProto registration_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto, org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.Builder, org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProtoOrBuilder> registrationBuilder_;
+          DatanodeRegistrationProto, DatanodeRegistrationProto.Builder, DatanodeRegistrationProtoOrBuilder> registrationBuilder_;
       /**
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        * @return Whether the registration field is set.
@@ -1892,9 +4448,9 @@ public final class DatanodeProtocol {
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        * @return The registration.
        */
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto getRegistration() {
+      public DatanodeRegistrationProto getRegistration() {
         if (registrationBuilder_ == null) {
-          return registration_ == null ? org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.getDefaultInstance() : registration_;
+          return registration_ == null ? DatanodeRegistrationProto.getDefaultInstance() : registration_;
         } else {
           return registrationBuilder_.getMessage();
         }
@@ -1902,7 +4458,7 @@ public final class DatanodeProtocol {
       /**
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        */
-      public Builder setRegistration(org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto value) {
+      public Builder setRegistration(DatanodeRegistrationProto value) {
         if (registrationBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1919,7 +4475,7 @@ public final class DatanodeProtocol {
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        */
       public Builder setRegistration(
-          org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.Builder builderForValue) {
+          DatanodeRegistrationProto.Builder builderForValue) {
         if (registrationBuilder_ == null) {
           registration_ = builderForValue.build();
         } else {
@@ -1932,11 +4488,11 @@ public final class DatanodeProtocol {
       /**
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        */
-      public Builder mergeRegistration(org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto value) {
+      public Builder mergeRegistration(DatanodeRegistrationProto value) {
         if (registrationBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0) &&
             registration_ != null &&
-            registration_ != org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.getDefaultInstance()) {
+            registration_ != DatanodeRegistrationProto.getDefaultInstance()) {
             getRegistrationBuilder().mergeFrom(value);
           } else {
             registration_ = value;
@@ -1966,7 +4522,7 @@ public final class DatanodeProtocol {
       /**
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        */
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.Builder getRegistrationBuilder() {
+      public DatanodeRegistrationProto.Builder getRegistrationBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getRegistrationFieldBuilder().getBuilder();
@@ -1974,23 +4530,23 @@ public final class DatanodeProtocol {
       /**
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        */
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProtoOrBuilder getRegistrationOrBuilder() {
+      public DatanodeRegistrationProtoOrBuilder getRegistrationOrBuilder() {
         if (registrationBuilder_ != null) {
           return registrationBuilder_.getMessageOrBuilder();
         } else {
           return registration_ == null ?
-              org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.getDefaultInstance() : registration_;
+              DatanodeRegistrationProto.getDefaultInstance() : registration_;
         }
       }
       /**
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto, org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.Builder, org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProtoOrBuilder>
+          DatanodeRegistrationProto, DatanodeRegistrationProto.Builder, DatanodeRegistrationProtoOrBuilder>
           getRegistrationFieldBuilder() {
         if (registrationBuilder_ == null) {
           registrationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto, org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.Builder, org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProtoOrBuilder>(
+              DatanodeRegistrationProto, DatanodeRegistrationProto.Builder, DatanodeRegistrationProtoOrBuilder>(
                   getRegistration(),
                   getParentForChildren(),
                   isClean());
@@ -1998,13 +4554,13 @@ public final class DatanodeProtocol {
         }
         return registrationBuilder_;
       }
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -2015,18 +4571,18 @@ public final class DatanodeProtocol {
     }
 
     // @@protoc_insertion_point(class_scope:RegisterDatanodeResponseProto)
-    private static final org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto DEFAULT_INSTANCE;
+    private static final RegisterDatanodeResponseProto DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto();
+      DEFAULT_INSTANCE = new RegisterDatanodeResponseProto();
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto getDefaultInstance() {
+    public static RegisterDatanodeResponseProto getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<RegisterDatanodeResponseProto>
         PARSER = new com.google.protobuf.AbstractParser<RegisterDatanodeResponseProto>() {
-      @java.lang.Override
+      @Override
       public RegisterDatanodeResponseProto parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2050,13 +4606,13 @@ public final class DatanodeProtocol {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<RegisterDatanodeResponseProto> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto getDefaultInstanceForType() {
+    @Override
+    public RegisterDatanodeResponseProto getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2075,47 +4631,60 @@ public final class DatanodeProtocol {
      * <code>.DatanodeRegistrationProto registration = 1;</code>
      * @return The registration.
      */
-    org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto getRegistration();
+    DatanodeRegistrationProto getRegistration();
     /**
      * <code>.DatanodeRegistrationProto registration = 1;</code>
      */
-    org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProtoOrBuilder getRegistrationOrBuilder();
+    DatanodeRegistrationProtoOrBuilder getRegistrationOrBuilder();
 
     /**
+     * <pre>
+     *uint64 cacheCapacity = 3;
+     *uint64 cacheUsed = 4;
+     * </pre>
+     *
      * <code>repeated .StorageReportProto reports = 2;</code>
      */
-    java.util.List<org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto>
+    java.util.List<HdfsProtos.StorageReportProto>
         getReportsList();
     /**
+     * <pre>
+     *uint64 cacheCapacity = 3;
+     *uint64 cacheUsed = 4;
+     * </pre>
+     *
      * <code>repeated .StorageReportProto reports = 2;</code>
      */
-    org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto getReports(int index);
+    HdfsProtos.StorageReportProto getReports(int index);
     /**
+     * <pre>
+     *uint64 cacheCapacity = 3;
+     *uint64 cacheUsed = 4;
+     * </pre>
+     *
      * <code>repeated .StorageReportProto reports = 2;</code>
      */
     int getReportsCount();
     /**
+     * <pre>
+     *uint64 cacheCapacity = 3;
+     *uint64 cacheUsed = 4;
+     * </pre>
+     *
      * <code>repeated .StorageReportProto reports = 2;</code>
      */
-    java.util.List<? extends org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProtoOrBuilder>
+    java.util.List<? extends HdfsProtos.StorageReportProtoOrBuilder>
         getReportsOrBuilderList();
     /**
+     * <pre>
+     *uint64 cacheCapacity = 3;
+     *uint64 cacheUsed = 4;
+     * </pre>
+     *
      * <code>repeated .StorageReportProto reports = 2;</code>
      */
-    org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProtoOrBuilder getReportsOrBuilder(
+    HdfsProtos.StorageReportProtoOrBuilder getReportsOrBuilder(
         int index);
-
-    /**
-     * <code>uint64 cacheCapacity = 3;</code>
-     * @return The cacheCapacity.
-     */
-    long getCacheCapacity();
-
-    /**
-     * <code>uint64 cacheUsed = 4;</code>
-     * @return The cacheUsed.
-     */
-    long getCacheUsed();
   }
   /**
    * Protobuf type {@code HeartbeatRequestProto}
@@ -2133,34 +4702,34 @@ public final class DatanodeProtocol {
       reports_ = java.util.Collections.emptyList();
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
         UnusedPrivateParameter unused) {
       return new HeartbeatRequestProto();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_HeartbeatRequestProto_descriptor;
+      return DatanodeProtocol.internal_static_HeartbeatRequestProto_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_HeartbeatRequestProto_fieldAccessorTable
+      return DatanodeProtocol.internal_static_HeartbeatRequestProto_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto.class, org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto.Builder.class);
+              HeartbeatRequestProto.class, Builder.class);
     }
 
     private int bitField0_;
     public static final int REGISTRATION_FIELD_NUMBER = 1;
-    private org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto registration_;
+    private DatanodeRegistrationProto registration_;
     /**
      * <code>.DatanodeRegistrationProto registration = 1;</code>
      * @return Whether the registration field is set.
      */
-    @java.lang.Override
+    @Override
     public boolean hasRegistration() {
       return ((bitField0_ & 0x00000001) != 0);
     }
@@ -2168,83 +4737,86 @@ public final class DatanodeProtocol {
      * <code>.DatanodeRegistrationProto registration = 1;</code>
      * @return The registration.
      */
-    @java.lang.Override
-    public org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto getRegistration() {
-      return registration_ == null ? org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.getDefaultInstance() : registration_;
+    @Override
+    public DatanodeRegistrationProto getRegistration() {
+      return registration_ == null ? DatanodeRegistrationProto.getDefaultInstance() : registration_;
     }
     /**
      * <code>.DatanodeRegistrationProto registration = 1;</code>
      */
-    @java.lang.Override
-    public org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProtoOrBuilder getRegistrationOrBuilder() {
-      return registration_ == null ? org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.getDefaultInstance() : registration_;
+    @Override
+    public DatanodeRegistrationProtoOrBuilder getRegistrationOrBuilder() {
+      return registration_ == null ? DatanodeRegistrationProto.getDefaultInstance() : registration_;
     }
 
     public static final int REPORTS_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private java.util.List<org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto> reports_;
+    private java.util.List<HdfsProtos.StorageReportProto> reports_;
     /**
+     * <pre>
+     *uint64 cacheCapacity = 3;
+     *uint64 cacheUsed = 4;
+     * </pre>
+     *
      * <code>repeated .StorageReportProto reports = 2;</code>
      */
-    @java.lang.Override
-    public java.util.List<org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto> getReportsList() {
+    @Override
+    public java.util.List<HdfsProtos.StorageReportProto> getReportsList() {
       return reports_;
     }
     /**
+     * <pre>
+     *uint64 cacheCapacity = 3;
+     *uint64 cacheUsed = 4;
+     * </pre>
+     *
      * <code>repeated .StorageReportProto reports = 2;</code>
      */
-    @java.lang.Override
-    public java.util.List<? extends org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProtoOrBuilder>
+    @Override
+    public java.util.List<? extends HdfsProtos.StorageReportProtoOrBuilder>
         getReportsOrBuilderList() {
       return reports_;
     }
     /**
+     * <pre>
+     *uint64 cacheCapacity = 3;
+     *uint64 cacheUsed = 4;
+     * </pre>
+     *
      * <code>repeated .StorageReportProto reports = 2;</code>
      */
-    @java.lang.Override
+    @Override
     public int getReportsCount() {
       return reports_.size();
     }
     /**
+     * <pre>
+     *uint64 cacheCapacity = 3;
+     *uint64 cacheUsed = 4;
+     * </pre>
+     *
      * <code>repeated .StorageReportProto reports = 2;</code>
      */
-    @java.lang.Override
-    public org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto getReports(int index) {
+    @Override
+    public HdfsProtos.StorageReportProto getReports(int index) {
       return reports_.get(index);
     }
     /**
+     * <pre>
+     *uint64 cacheCapacity = 3;
+     *uint64 cacheUsed = 4;
+     * </pre>
+     *
      * <code>repeated .StorageReportProto reports = 2;</code>
      */
-    @java.lang.Override
-    public org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProtoOrBuilder getReportsOrBuilder(
+    @Override
+    public HdfsProtos.StorageReportProtoOrBuilder getReportsOrBuilder(
         int index) {
       return reports_.get(index);
     }
 
-    public static final int CACHECAPACITY_FIELD_NUMBER = 3;
-    private long cacheCapacity_ = 0L;
-    /**
-     * <code>uint64 cacheCapacity = 3;</code>
-     * @return The cacheCapacity.
-     */
-    @java.lang.Override
-    public long getCacheCapacity() {
-      return cacheCapacity_;
-    }
-
-    public static final int CACHEUSED_FIELD_NUMBER = 4;
-    private long cacheUsed_ = 0L;
-    /**
-     * <code>uint64 cacheUsed = 4;</code>
-     * @return The cacheUsed.
-     */
-    @java.lang.Override
-    public long getCacheUsed() {
-      return cacheUsed_;
-    }
-
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2254,7 +4826,7 @@ public final class DatanodeProtocol {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (((bitField0_ & 0x00000001) != 0)) {
@@ -2263,16 +4835,10 @@ public final class DatanodeProtocol {
       for (int i = 0; i < reports_.size(); i++) {
         output.writeMessage(2, reports_.get(i));
       }
-      if (cacheCapacity_ != 0L) {
-        output.writeUInt64(3, cacheCapacity_);
-      }
-      if (cacheUsed_ != 0L) {
-        output.writeUInt64(4, cacheUsed_);
-      }
       getUnknownFields().writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2286,28 +4852,20 @@ public final class DatanodeProtocol {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, reports_.get(i));
       }
-      if (cacheCapacity_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(3, cacheCapacity_);
-      }
-      if (cacheUsed_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(4, cacheUsed_);
-      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto)) {
+      if (!(obj instanceof HeartbeatRequestProto)) {
         return super.equals(obj);
       }
-      org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto other = (org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto) obj;
+      HeartbeatRequestProto other = (HeartbeatRequestProto) obj;
 
       if (hasRegistration() != other.hasRegistration()) return false;
       if (hasRegistration()) {
@@ -2316,15 +4874,11 @@ public final class DatanodeProtocol {
       }
       if (!getReportsList()
           .equals(other.getReportsList())) return false;
-      if (getCacheCapacity()
-          != other.getCacheCapacity()) return false;
-      if (getCacheUsed()
-          != other.getCacheUsed()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -2339,55 +4893,49 @@ public final class DatanodeProtocol {
         hash = (37 * hash) + REPORTS_FIELD_NUMBER;
         hash = (53 * hash) + getReportsList().hashCode();
       }
-      hash = (37 * hash) + CACHECAPACITY_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getCacheCapacity());
-      hash = (37 * hash) + CACHEUSED_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getCacheUsed());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto parseFrom(
+    public static HeartbeatRequestProto parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto parseFrom(
+    public static HeartbeatRequestProto parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto parseFrom(
+    public static HeartbeatRequestProto parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto parseFrom(
+    public static HeartbeatRequestProto parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto parseFrom(byte[] data)
+    public static HeartbeatRequestProto parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto parseFrom(
+    public static HeartbeatRequestProto parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto parseFrom(java.io.InputStream input)
+    public static HeartbeatRequestProto parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto parseFrom(
+    public static HeartbeatRequestProto parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2395,26 +4943,26 @@ public final class DatanodeProtocol {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto parseDelimitedFrom(java.io.InputStream input)
+    public static HeartbeatRequestProto parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto parseDelimitedFrom(
+    public static HeartbeatRequestProto parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto parseFrom(
+    public static HeartbeatRequestProto parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto parseFrom(
+    public static HeartbeatRequestProto parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2422,23 +4970,23 @@ public final class DatanodeProtocol {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto prototype) {
+    public static Builder newBuilder(HeartbeatRequestProto prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -2448,27 +4996,27 @@ public final class DatanodeProtocol {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:HeartbeatRequestProto)
-        org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProtoOrBuilder {
+        HeartbeatRequestProtoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_HeartbeatRequestProto_descriptor;
+        return DatanodeProtocol.internal_static_HeartbeatRequestProto_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_HeartbeatRequestProto_fieldAccessorTable
+        return DatanodeProtocol.internal_static_HeartbeatRequestProto_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto.class, org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto.Builder.class);
+                HeartbeatRequestProto.class, Builder.class);
       }
 
-      // Construct using org.west2.clusterio.common.protocol.DatanodeProtocol.HeartbeatRequestProto.newBuilder()
+      // Construct using org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -2479,7 +5027,7 @@ public final class DatanodeProtocol {
           getReportsFieldBuilder();
         }
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
@@ -2495,41 +5043,39 @@ public final class DatanodeProtocol {
           reportsBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000002);
-        cacheCapacity_ = 0L;
-        cacheUsed_ = 0L;
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_HeartbeatRequestProto_descriptor;
+        return DatanodeProtocol.internal_static_HeartbeatRequestProto_descriptor;
       }
 
-      @java.lang.Override
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto getDefaultInstanceForType() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto.getDefaultInstance();
+      @Override
+      public HeartbeatRequestProto getDefaultInstanceForType() {
+        return HeartbeatRequestProto.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto build() {
-        org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto result = buildPartial();
+      @Override
+      public HeartbeatRequestProto build() {
+        HeartbeatRequestProto result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto buildPartial() {
-        org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto result = new org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto(this);
+      @Override
+      public HeartbeatRequestProto buildPartial() {
+        HeartbeatRequestProto result = new HeartbeatRequestProto(this);
         buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto result) {
+      private void buildPartialRepeatedFields(HeartbeatRequestProto result) {
         if (reportsBuilder_ == null) {
           if (((bitField0_ & 0x00000002) != 0)) {
             reports_ = java.util.Collections.unmodifiableList(reports_);
@@ -2541,7 +5087,7 @@ public final class DatanodeProtocol {
         }
       }
 
-      private void buildPartial0(org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto result) {
+      private void buildPartial0(HeartbeatRequestProto result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -2550,59 +5096,53 @@ public final class DatanodeProtocol {
               : registrationBuilder_.build();
           to_bitField0_ |= 0x00000001;
         }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.cacheCapacity_ = cacheCapacity_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.cacheUsed_ = cacheUsed_;
-        }
         result.bitField0_ |= to_bitField0_;
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return super.clone();
       }
-      @java.lang.Override
+      @Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.setField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.addRepeatedField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto) {
-          return mergeFrom((org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto)other);
+        if (other instanceof HeartbeatRequestProto) {
+          return mergeFrom((HeartbeatRequestProto)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto other) {
-        if (other == org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto.getDefaultInstance()) return this;
+      public Builder mergeFrom(HeartbeatRequestProto other) {
+        if (other == HeartbeatRequestProto.getDefaultInstance()) return this;
         if (other.hasRegistration()) {
           mergeRegistration(other.getRegistration());
         }
@@ -2632,29 +5172,23 @@ public final class DatanodeProtocol {
             }
           }
         }
-        if (other.getCacheCapacity() != 0L) {
-          setCacheCapacity(other.getCacheCapacity());
-        }
-        if (other.getCacheUsed() != 0L) {
-          setCacheUsed(other.getCacheUsed());
-        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException();
         }
         try {
           boolean done = false;
@@ -2672,9 +5206,9 @@ public final class DatanodeProtocol {
                 break;
               } // case 10
               case 18: {
-                org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto m =
+                HdfsProtos.StorageReportProto m =
                     input.readMessage(
-                        org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto.parser(),
+                        HdfsProtos.StorageReportProto.parser(),
                         extensionRegistry);
                 if (reportsBuilder_ == null) {
                   ensureReportsIsMutable();
@@ -2684,16 +5218,6 @@ public final class DatanodeProtocol {
                 }
                 break;
               } // case 18
-              case 24: {
-                cacheCapacity_ = input.readUInt64();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 24
-              case 32: {
-                cacheUsed_ = input.readUInt64();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 32
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2711,9 +5235,9 @@ public final class DatanodeProtocol {
       }
       private int bitField0_;
 
-      private org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto registration_;
+      private DatanodeRegistrationProto registration_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto, org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.Builder, org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProtoOrBuilder> registrationBuilder_;
+          DatanodeRegistrationProto, DatanodeRegistrationProto.Builder, DatanodeRegistrationProtoOrBuilder> registrationBuilder_;
       /**
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        * @return Whether the registration field is set.
@@ -2725,9 +5249,9 @@ public final class DatanodeProtocol {
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        * @return The registration.
        */
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto getRegistration() {
+      public DatanodeRegistrationProto getRegistration() {
         if (registrationBuilder_ == null) {
-          return registration_ == null ? org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.getDefaultInstance() : registration_;
+          return registration_ == null ? DatanodeRegistrationProto.getDefaultInstance() : registration_;
         } else {
           return registrationBuilder_.getMessage();
         }
@@ -2735,7 +5259,7 @@ public final class DatanodeProtocol {
       /**
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        */
-      public Builder setRegistration(org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto value) {
+      public Builder setRegistration(DatanodeRegistrationProto value) {
         if (registrationBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2752,7 +5276,7 @@ public final class DatanodeProtocol {
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        */
       public Builder setRegistration(
-          org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.Builder builderForValue) {
+          DatanodeRegistrationProto.Builder builderForValue) {
         if (registrationBuilder_ == null) {
           registration_ = builderForValue.build();
         } else {
@@ -2765,11 +5289,11 @@ public final class DatanodeProtocol {
       /**
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        */
-      public Builder mergeRegistration(org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto value) {
+      public Builder mergeRegistration(DatanodeRegistrationProto value) {
         if (registrationBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0) &&
             registration_ != null &&
-            registration_ != org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.getDefaultInstance()) {
+            registration_ != DatanodeRegistrationProto.getDefaultInstance()) {
             getRegistrationBuilder().mergeFrom(value);
           } else {
             registration_ = value;
@@ -2799,7 +5323,7 @@ public final class DatanodeProtocol {
       /**
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        */
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.Builder getRegistrationBuilder() {
+      public DatanodeRegistrationProto.Builder getRegistrationBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getRegistrationFieldBuilder().getBuilder();
@@ -2807,23 +5331,23 @@ public final class DatanodeProtocol {
       /**
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        */
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProtoOrBuilder getRegistrationOrBuilder() {
+      public DatanodeRegistrationProtoOrBuilder getRegistrationOrBuilder() {
         if (registrationBuilder_ != null) {
           return registrationBuilder_.getMessageOrBuilder();
         } else {
           return registration_ == null ?
-              org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.getDefaultInstance() : registration_;
+              DatanodeRegistrationProto.getDefaultInstance() : registration_;
         }
       }
       /**
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto, org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.Builder, org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProtoOrBuilder>
+          DatanodeRegistrationProto, DatanodeRegistrationProto.Builder, DatanodeRegistrationProtoOrBuilder>
           getRegistrationFieldBuilder() {
         if (registrationBuilder_ == null) {
           registrationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto, org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.Builder, org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProtoOrBuilder>(
+              DatanodeRegistrationProto, DatanodeRegistrationProto.Builder, DatanodeRegistrationProtoOrBuilder>(
                   getRegistration(),
                   getParentForChildren(),
                   isClean());
@@ -2832,22 +5356,27 @@ public final class DatanodeProtocol {
         return registrationBuilder_;
       }
 
-      private java.util.List<org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto> reports_ =
+      private java.util.List<HdfsProtos.StorageReportProto> reports_ =
         java.util.Collections.emptyList();
       private void ensureReportsIsMutable() {
         if (!((bitField0_ & 0x00000002) != 0)) {
-          reports_ = new java.util.ArrayList<org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto>(reports_);
+          reports_ = new java.util.ArrayList<HdfsProtos.StorageReportProto>(reports_);
           bitField0_ |= 0x00000002;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto, org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto.Builder, org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProtoOrBuilder> reportsBuilder_;
+          HdfsProtos.StorageReportProto, HdfsProtos.StorageReportProto.Builder, HdfsProtos.StorageReportProtoOrBuilder> reportsBuilder_;
 
       /**
+       * <pre>
+       *uint64 cacheCapacity = 3;
+       *uint64 cacheUsed = 4;
+       * </pre>
+       *
        * <code>repeated .StorageReportProto reports = 2;</code>
        */
-      public java.util.List<org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto> getReportsList() {
+      public java.util.List<HdfsProtos.StorageReportProto> getReportsList() {
         if (reportsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(reports_);
         } else {
@@ -2855,6 +5384,11 @@ public final class DatanodeProtocol {
         }
       }
       /**
+       * <pre>
+       *uint64 cacheCapacity = 3;
+       *uint64 cacheUsed = 4;
+       * </pre>
+       *
        * <code>repeated .StorageReportProto reports = 2;</code>
        */
       public int getReportsCount() {
@@ -2865,9 +5399,14 @@ public final class DatanodeProtocol {
         }
       }
       /**
+       * <pre>
+       *uint64 cacheCapacity = 3;
+       *uint64 cacheUsed = 4;
+       * </pre>
+       *
        * <code>repeated .StorageReportProto reports = 2;</code>
        */
-      public org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto getReports(int index) {
+      public HdfsProtos.StorageReportProto getReports(int index) {
         if (reportsBuilder_ == null) {
           return reports_.get(index);
         } else {
@@ -2875,10 +5414,15 @@ public final class DatanodeProtocol {
         }
       }
       /**
+       * <pre>
+       *uint64 cacheCapacity = 3;
+       *uint64 cacheUsed = 4;
+       * </pre>
+       *
        * <code>repeated .StorageReportProto reports = 2;</code>
        */
       public Builder setReports(
-          int index, org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto value) {
+          int index, HdfsProtos.StorageReportProto value) {
         if (reportsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2892,10 +5436,15 @@ public final class DatanodeProtocol {
         return this;
       }
       /**
+       * <pre>
+       *uint64 cacheCapacity = 3;
+       *uint64 cacheUsed = 4;
+       * </pre>
+       *
        * <code>repeated .StorageReportProto reports = 2;</code>
        */
       public Builder setReports(
-          int index, org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto.Builder builderForValue) {
+          int index, HdfsProtos.StorageReportProto.Builder builderForValue) {
         if (reportsBuilder_ == null) {
           ensureReportsIsMutable();
           reports_.set(index, builderForValue.build());
@@ -2906,9 +5455,14 @@ public final class DatanodeProtocol {
         return this;
       }
       /**
+       * <pre>
+       *uint64 cacheCapacity = 3;
+       *uint64 cacheUsed = 4;
+       * </pre>
+       *
        * <code>repeated .StorageReportProto reports = 2;</code>
        */
-      public Builder addReports(org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto value) {
+      public Builder addReports(HdfsProtos.StorageReportProto value) {
         if (reportsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2922,10 +5476,15 @@ public final class DatanodeProtocol {
         return this;
       }
       /**
+       * <pre>
+       *uint64 cacheCapacity = 3;
+       *uint64 cacheUsed = 4;
+       * </pre>
+       *
        * <code>repeated .StorageReportProto reports = 2;</code>
        */
       public Builder addReports(
-          int index, org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto value) {
+          int index, HdfsProtos.StorageReportProto value) {
         if (reportsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2939,10 +5498,15 @@ public final class DatanodeProtocol {
         return this;
       }
       /**
+       * <pre>
+       *uint64 cacheCapacity = 3;
+       *uint64 cacheUsed = 4;
+       * </pre>
+       *
        * <code>repeated .StorageReportProto reports = 2;</code>
        */
       public Builder addReports(
-          org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto.Builder builderForValue) {
+          HdfsProtos.StorageReportProto.Builder builderForValue) {
         if (reportsBuilder_ == null) {
           ensureReportsIsMutable();
           reports_.add(builderForValue.build());
@@ -2953,10 +5517,15 @@ public final class DatanodeProtocol {
         return this;
       }
       /**
+       * <pre>
+       *uint64 cacheCapacity = 3;
+       *uint64 cacheUsed = 4;
+       * </pre>
+       *
        * <code>repeated .StorageReportProto reports = 2;</code>
        */
       public Builder addReports(
-          int index, org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto.Builder builderForValue) {
+          int index, HdfsProtos.StorageReportProto.Builder builderForValue) {
         if (reportsBuilder_ == null) {
           ensureReportsIsMutable();
           reports_.add(index, builderForValue.build());
@@ -2967,10 +5536,15 @@ public final class DatanodeProtocol {
         return this;
       }
       /**
+       * <pre>
+       *uint64 cacheCapacity = 3;
+       *uint64 cacheUsed = 4;
+       * </pre>
+       *
        * <code>repeated .StorageReportProto reports = 2;</code>
        */
       public Builder addAllReports(
-          java.lang.Iterable<? extends org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto> values) {
+          Iterable<? extends HdfsProtos.StorageReportProto> values) {
         if (reportsBuilder_ == null) {
           ensureReportsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -2982,6 +5556,11 @@ public final class DatanodeProtocol {
         return this;
       }
       /**
+       * <pre>
+       *uint64 cacheCapacity = 3;
+       *uint64 cacheUsed = 4;
+       * </pre>
+       *
        * <code>repeated .StorageReportProto reports = 2;</code>
        */
       public Builder clearReports() {
@@ -2995,6 +5574,11 @@ public final class DatanodeProtocol {
         return this;
       }
       /**
+       * <pre>
+       *uint64 cacheCapacity = 3;
+       *uint64 cacheUsed = 4;
+       * </pre>
+       *
        * <code>repeated .StorageReportProto reports = 2;</code>
        */
       public Builder removeReports(int index) {
@@ -3008,16 +5592,26 @@ public final class DatanodeProtocol {
         return this;
       }
       /**
+       * <pre>
+       *uint64 cacheCapacity = 3;
+       *uint64 cacheUsed = 4;
+       * </pre>
+       *
        * <code>repeated .StorageReportProto reports = 2;</code>
        */
-      public org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto.Builder getReportsBuilder(
+      public HdfsProtos.StorageReportProto.Builder getReportsBuilder(
           int index) {
         return getReportsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       *uint64 cacheCapacity = 3;
+       *uint64 cacheUsed = 4;
+       * </pre>
+       *
        * <code>repeated .StorageReportProto reports = 2;</code>
        */
-      public org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProtoOrBuilder getReportsOrBuilder(
+      public HdfsProtos.StorageReportProtoOrBuilder getReportsOrBuilder(
           int index) {
         if (reportsBuilder_ == null) {
           return reports_.get(index);  } else {
@@ -3025,9 +5619,14 @@ public final class DatanodeProtocol {
         }
       }
       /**
+       * <pre>
+       *uint64 cacheCapacity = 3;
+       *uint64 cacheUsed = 4;
+       * </pre>
+       *
        * <code>repeated .StorageReportProto reports = 2;</code>
        */
-      public java.util.List<? extends org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProtoOrBuilder>
+      public java.util.List<? extends HdfsProtos.StorageReportProtoOrBuilder>
            getReportsOrBuilderList() {
         if (reportsBuilder_ != null) {
           return reportsBuilder_.getMessageOrBuilderList();
@@ -3036,33 +5635,48 @@ public final class DatanodeProtocol {
         }
       }
       /**
+       * <pre>
+       *uint64 cacheCapacity = 3;
+       *uint64 cacheUsed = 4;
+       * </pre>
+       *
        * <code>repeated .StorageReportProto reports = 2;</code>
        */
-      public org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto.Builder addReportsBuilder() {
+      public HdfsProtos.StorageReportProto.Builder addReportsBuilder() {
         return getReportsFieldBuilder().addBuilder(
-            org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto.getDefaultInstance());
+            HdfsProtos.StorageReportProto.getDefaultInstance());
       }
       /**
+       * <pre>
+       *uint64 cacheCapacity = 3;
+       *uint64 cacheUsed = 4;
+       * </pre>
+       *
        * <code>repeated .StorageReportProto reports = 2;</code>
        */
-      public org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto.Builder addReportsBuilder(
+      public HdfsProtos.StorageReportProto.Builder addReportsBuilder(
           int index) {
         return getReportsFieldBuilder().addBuilder(
-            index, org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto.getDefaultInstance());
+            index, HdfsProtos.StorageReportProto.getDefaultInstance());
       }
       /**
+       * <pre>
+       *uint64 cacheCapacity = 3;
+       *uint64 cacheUsed = 4;
+       * </pre>
+       *
        * <code>repeated .StorageReportProto reports = 2;</code>
        */
-      public java.util.List<org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto.Builder>
+      public java.util.List<HdfsProtos.StorageReportProto.Builder>
            getReportsBuilderList() {
         return getReportsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto, org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto.Builder, org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProtoOrBuilder>
+          HdfsProtos.StorageReportProto, HdfsProtos.StorageReportProto.Builder, HdfsProtos.StorageReportProtoOrBuilder>
           getReportsFieldBuilder() {
         if (reportsBuilder_ == null) {
           reportsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto, org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto.Builder, org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProtoOrBuilder>(
+              HdfsProtos.StorageReportProto, HdfsProtos.StorageReportProto.Builder, HdfsProtos.StorageReportProtoOrBuilder>(
                   reports_,
                   ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
@@ -3071,77 +5685,13 @@ public final class DatanodeProtocol {
         }
         return reportsBuilder_;
       }
-
-      private long cacheCapacity_ ;
-      /**
-       * <code>uint64 cacheCapacity = 3;</code>
-       * @return The cacheCapacity.
-       */
-      @java.lang.Override
-      public long getCacheCapacity() {
-        return cacheCapacity_;
-      }
-      /**
-       * <code>uint64 cacheCapacity = 3;</code>
-       * @param value The cacheCapacity to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCacheCapacity(long value) {
-
-        cacheCapacity_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint64 cacheCapacity = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCacheCapacity() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        cacheCapacity_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private long cacheUsed_ ;
-      /**
-       * <code>uint64 cacheUsed = 4;</code>
-       * @return The cacheUsed.
-       */
-      @java.lang.Override
-      public long getCacheUsed() {
-        return cacheUsed_;
-      }
-      /**
-       * <code>uint64 cacheUsed = 4;</code>
-       * @param value The cacheUsed to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCacheUsed(long value) {
-
-        cacheUsed_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint64 cacheUsed = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCacheUsed() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        cacheUsed_ = 0L;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -3152,18 +5702,18 @@ public final class DatanodeProtocol {
     }
 
     // @@protoc_insertion_point(class_scope:HeartbeatRequestProto)
-    private static final org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto DEFAULT_INSTANCE;
+    private static final HeartbeatRequestProto DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto();
+      DEFAULT_INSTANCE = new HeartbeatRequestProto();
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto getDefaultInstance() {
+    public static HeartbeatRequestProto getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<HeartbeatRequestProto>
         PARSER = new com.google.protobuf.AbstractParser<HeartbeatRequestProto>() {
-      @java.lang.Override
+      @Override
       public HeartbeatRequestProto parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3187,13 +5737,13 @@ public final class DatanodeProtocol {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<HeartbeatRequestProto> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatRequestProto getDefaultInstanceForType() {
+    @Override
+    public HeartbeatRequestProto getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3202,6 +5752,30 @@ public final class DatanodeProtocol {
   public interface HeartbeatResponseProtoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:HeartbeatResponseProto)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .DatanodeCommandProto cmds = 1;</code>
+     */
+    java.util.List<DatanodeCommandProto>
+        getCmdsList();
+    /**
+     * <code>repeated .DatanodeCommandProto cmds = 1;</code>
+     */
+    DatanodeCommandProto getCmds(int index);
+    /**
+     * <code>repeated .DatanodeCommandProto cmds = 1;</code>
+     */
+    int getCmdsCount();
+    /**
+     * <code>repeated .DatanodeCommandProto cmds = 1;</code>
+     */
+    java.util.List<? extends DatanodeCommandProtoOrBuilder>
+        getCmdsOrBuilderList();
+    /**
+     * <code>repeated .DatanodeCommandProto cmds = 1;</code>
+     */
+    DatanodeCommandProtoOrBuilder getCmdsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code HeartbeatResponseProto}
@@ -3216,30 +5790,72 @@ public final class DatanodeProtocol {
       super(builder);
     }
     private HeartbeatResponseProto() {
+      cmds_ = java.util.Collections.emptyList();
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
         UnusedPrivateParameter unused) {
       return new HeartbeatResponseProto();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_HeartbeatResponseProto_descriptor;
+      return DatanodeProtocol.internal_static_HeartbeatResponseProto_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_HeartbeatResponseProto_fieldAccessorTable
+      return DatanodeProtocol.internal_static_HeartbeatResponseProto_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto.class, org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto.Builder.class);
+              HeartbeatResponseProto.class, Builder.class);
+    }
+
+    public static final int CMDS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<DatanodeCommandProto> cmds_;
+    /**
+     * <code>repeated .DatanodeCommandProto cmds = 1;</code>
+     */
+    @Override
+    public java.util.List<DatanodeCommandProto> getCmdsList() {
+      return cmds_;
+    }
+    /**
+     * <code>repeated .DatanodeCommandProto cmds = 1;</code>
+     */
+    @Override
+    public java.util.List<? extends DatanodeCommandProtoOrBuilder>
+        getCmdsOrBuilderList() {
+      return cmds_;
+    }
+    /**
+     * <code>repeated .DatanodeCommandProto cmds = 1;</code>
+     */
+    @Override
+    public int getCmdsCount() {
+      return cmds_.size();
+    }
+    /**
+     * <code>repeated .DatanodeCommandProto cmds = 1;</code>
+     */
+    @Override
+    public DatanodeCommandProto getCmds(int index) {
+      return cmds_.get(index);
+    }
+    /**
+     * <code>repeated .DatanodeCommandProto cmds = 1;</code>
+     */
+    @Override
+    public DatanodeCommandProtoOrBuilder getCmdsOrBuilder(
+        int index) {
+      return cmds_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -3249,87 +5865,100 @@ public final class DatanodeProtocol {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      for (int i = 0; i < cmds_.size(); i++) {
+        output.writeMessage(1, cmds_.get(i));
+      }
       getUnknownFields().writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
+      for (int i = 0; i < cmds_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, cmds_.get(i));
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto)) {
+      if (!(obj instanceof HeartbeatResponseProto)) {
         return super.equals(obj);
       }
-      org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto other = (org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto) obj;
+      HeartbeatResponseProto other = (HeartbeatResponseProto) obj;
 
+      if (!getCmdsList()
+          .equals(other.getCmdsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (getCmdsCount() > 0) {
+        hash = (37 * hash) + CMDS_FIELD_NUMBER;
+        hash = (53 * hash) + getCmdsList().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto parseFrom(
+    public static HeartbeatResponseProto parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto parseFrom(
+    public static HeartbeatResponseProto parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto parseFrom(
+    public static HeartbeatResponseProto parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto parseFrom(
+    public static HeartbeatResponseProto parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto parseFrom(byte[] data)
+    public static HeartbeatResponseProto parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto parseFrom(
+    public static HeartbeatResponseProto parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto parseFrom(java.io.InputStream input)
+    public static HeartbeatResponseProto parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto parseFrom(
+    public static HeartbeatResponseProto parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3337,26 +5966,26 @@ public final class DatanodeProtocol {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto parseDelimitedFrom(java.io.InputStream input)
+    public static HeartbeatResponseProto parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto parseDelimitedFrom(
+    public static HeartbeatResponseProto parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto parseFrom(
+    public static HeartbeatResponseProto parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto parseFrom(
+    public static HeartbeatResponseProto parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3364,23 +5993,23 @@ public final class DatanodeProtocol {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto prototype) {
+    public static Builder newBuilder(HeartbeatResponseProto prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -3390,124 +6019,176 @@ public final class DatanodeProtocol {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:HeartbeatResponseProto)
-        org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProtoOrBuilder {
+        HeartbeatResponseProtoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_HeartbeatResponseProto_descriptor;
+        return DatanodeProtocol.internal_static_HeartbeatResponseProto_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_HeartbeatResponseProto_fieldAccessorTable
+        return DatanodeProtocol.internal_static_HeartbeatResponseProto_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto.class, org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto.Builder.class);
+                HeartbeatResponseProto.class, Builder.class);
       }
 
-      // Construct using org.west2.clusterio.common.protocol.DatanodeProtocol.HeartbeatResponseProto.newBuilder()
+      // Construct using org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto.newBuilder()
       private Builder() {
 
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
 
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
+        if (cmdsBuilder_ == null) {
+          cmds_ = java.util.Collections.emptyList();
+        } else {
+          cmds_ = null;
+          cmdsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_HeartbeatResponseProto_descriptor;
+        return DatanodeProtocol.internal_static_HeartbeatResponseProto_descriptor;
       }
 
-      @java.lang.Override
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto getDefaultInstanceForType() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto.getDefaultInstance();
+      @Override
+      public HeartbeatResponseProto getDefaultInstanceForType() {
+        return HeartbeatResponseProto.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto build() {
-        org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto result = buildPartial();
+      @Override
+      public HeartbeatResponseProto build() {
+        HeartbeatResponseProto result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto buildPartial() {
-        org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto result = new org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto(this);
+      @Override
+      public HeartbeatResponseProto buildPartial() {
+        HeartbeatResponseProto result = new HeartbeatResponseProto(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
+      private void buildPartialRepeatedFields(HeartbeatResponseProto result) {
+        if (cmdsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            cmds_ = java.util.Collections.unmodifiableList(cmds_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.cmds_ = cmds_;
+        } else {
+          result.cmds_ = cmdsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(HeartbeatResponseProto result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @Override
       public Builder clone() {
         return super.clone();
       }
-      @java.lang.Override
+      @Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.setField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.addRepeatedField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto) {
-          return mergeFrom((org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto)other);
+        if (other instanceof HeartbeatResponseProto) {
+          return mergeFrom((HeartbeatResponseProto)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto other) {
-        if (other == org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto.getDefaultInstance()) return this;
+      public Builder mergeFrom(HeartbeatResponseProto other) {
+        if (other == HeartbeatResponseProto.getDefaultInstance()) return this;
+        if (cmdsBuilder_ == null) {
+          if (!other.cmds_.isEmpty()) {
+            if (cmds_.isEmpty()) {
+              cmds_ = other.cmds_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureCmdsIsMutable();
+              cmds_.addAll(other.cmds_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.cmds_.isEmpty()) {
+            if (cmdsBuilder_.isEmpty()) {
+              cmdsBuilder_.dispose();
+              cmdsBuilder_ = null;
+              cmds_ = other.cmds_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              cmdsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCmdsFieldBuilder() : null;
+            } else {
+              cmdsBuilder_.addAllMessages(other.cmds_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException();
         }
         try {
           boolean done = false;
@@ -3517,6 +6198,19 @@ public final class DatanodeProtocol {
               case 0:
                 done = true;
                 break;
+              case 10: {
+                DatanodeCommandProto m =
+                    input.readMessage(
+                        DatanodeCommandProto.parser(),
+                        extensionRegistry);
+                if (cmdsBuilder_ == null) {
+                  ensureCmdsIsMutable();
+                  cmds_.add(m);
+                } else {
+                  cmdsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3532,13 +6226,254 @@ public final class DatanodeProtocol {
         } // finally
         return this;
       }
-      @java.lang.Override
+      private int bitField0_;
+
+      private java.util.List<DatanodeCommandProto> cmds_ =
+        java.util.Collections.emptyList();
+      private void ensureCmdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          cmds_ = new java.util.ArrayList<DatanodeCommandProto>(cmds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          DatanodeCommandProto, DatanodeCommandProto.Builder, DatanodeCommandProtoOrBuilder> cmdsBuilder_;
+
+      /**
+       * <code>repeated .DatanodeCommandProto cmds = 1;</code>
+       */
+      public java.util.List<DatanodeCommandProto> getCmdsList() {
+        if (cmdsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(cmds_);
+        } else {
+          return cmdsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .DatanodeCommandProto cmds = 1;</code>
+       */
+      public int getCmdsCount() {
+        if (cmdsBuilder_ == null) {
+          return cmds_.size();
+        } else {
+          return cmdsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .DatanodeCommandProto cmds = 1;</code>
+       */
+      public DatanodeCommandProto getCmds(int index) {
+        if (cmdsBuilder_ == null) {
+          return cmds_.get(index);
+        } else {
+          return cmdsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .DatanodeCommandProto cmds = 1;</code>
+       */
+      public Builder setCmds(
+          int index, DatanodeCommandProto value) {
+        if (cmdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCmdsIsMutable();
+          cmds_.set(index, value);
+          onChanged();
+        } else {
+          cmdsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .DatanodeCommandProto cmds = 1;</code>
+       */
+      public Builder setCmds(
+          int index, DatanodeCommandProto.Builder builderForValue) {
+        if (cmdsBuilder_ == null) {
+          ensureCmdsIsMutable();
+          cmds_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          cmdsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .DatanodeCommandProto cmds = 1;</code>
+       */
+      public Builder addCmds(DatanodeCommandProto value) {
+        if (cmdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCmdsIsMutable();
+          cmds_.add(value);
+          onChanged();
+        } else {
+          cmdsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .DatanodeCommandProto cmds = 1;</code>
+       */
+      public Builder addCmds(
+          int index, DatanodeCommandProto value) {
+        if (cmdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCmdsIsMutable();
+          cmds_.add(index, value);
+          onChanged();
+        } else {
+          cmdsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .DatanodeCommandProto cmds = 1;</code>
+       */
+      public Builder addCmds(
+          DatanodeCommandProto.Builder builderForValue) {
+        if (cmdsBuilder_ == null) {
+          ensureCmdsIsMutable();
+          cmds_.add(builderForValue.build());
+          onChanged();
+        } else {
+          cmdsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .DatanodeCommandProto cmds = 1;</code>
+       */
+      public Builder addCmds(
+          int index, DatanodeCommandProto.Builder builderForValue) {
+        if (cmdsBuilder_ == null) {
+          ensureCmdsIsMutable();
+          cmds_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          cmdsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .DatanodeCommandProto cmds = 1;</code>
+       */
+      public Builder addAllCmds(
+          Iterable<? extends DatanodeCommandProto> values) {
+        if (cmdsBuilder_ == null) {
+          ensureCmdsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, cmds_);
+          onChanged();
+        } else {
+          cmdsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .DatanodeCommandProto cmds = 1;</code>
+       */
+      public Builder clearCmds() {
+        if (cmdsBuilder_ == null) {
+          cmds_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          cmdsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .DatanodeCommandProto cmds = 1;</code>
+       */
+      public Builder removeCmds(int index) {
+        if (cmdsBuilder_ == null) {
+          ensureCmdsIsMutable();
+          cmds_.remove(index);
+          onChanged();
+        } else {
+          cmdsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .DatanodeCommandProto cmds = 1;</code>
+       */
+      public DatanodeCommandProto.Builder getCmdsBuilder(
+          int index) {
+        return getCmdsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .DatanodeCommandProto cmds = 1;</code>
+       */
+      public DatanodeCommandProtoOrBuilder getCmdsOrBuilder(
+          int index) {
+        if (cmdsBuilder_ == null) {
+          return cmds_.get(index);  } else {
+          return cmdsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .DatanodeCommandProto cmds = 1;</code>
+       */
+      public java.util.List<? extends DatanodeCommandProtoOrBuilder>
+           getCmdsOrBuilderList() {
+        if (cmdsBuilder_ != null) {
+          return cmdsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(cmds_);
+        }
+      }
+      /**
+       * <code>repeated .DatanodeCommandProto cmds = 1;</code>
+       */
+      public DatanodeCommandProto.Builder addCmdsBuilder() {
+        return getCmdsFieldBuilder().addBuilder(
+            DatanodeCommandProto.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .DatanodeCommandProto cmds = 1;</code>
+       */
+      public DatanodeCommandProto.Builder addCmdsBuilder(
+          int index) {
+        return getCmdsFieldBuilder().addBuilder(
+            index, DatanodeCommandProto.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .DatanodeCommandProto cmds = 1;</code>
+       */
+      public java.util.List<DatanodeCommandProto.Builder>
+           getCmdsBuilderList() {
+        return getCmdsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          DatanodeCommandProto, DatanodeCommandProto.Builder, DatanodeCommandProtoOrBuilder>
+          getCmdsFieldBuilder() {
+        if (cmdsBuilder_ == null) {
+          cmdsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              DatanodeCommandProto, DatanodeCommandProto.Builder, DatanodeCommandProtoOrBuilder>(
+                  cmds_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          cmds_ = null;
+        }
+        return cmdsBuilder_;
+      }
+      @Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -3549,18 +6484,18 @@ public final class DatanodeProtocol {
     }
 
     // @@protoc_insertion_point(class_scope:HeartbeatResponseProto)
-    private static final org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto DEFAULT_INSTANCE;
+    private static final HeartbeatResponseProto DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto();
+      DEFAULT_INSTANCE = new HeartbeatResponseProto();
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto getDefaultInstance() {
+    public static HeartbeatResponseProto getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<HeartbeatResponseProto>
         PARSER = new com.google.protobuf.AbstractParser<HeartbeatResponseProto>() {
-      @java.lang.Override
+      @Override
       public HeartbeatResponseProto parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3584,13 +6519,13 @@ public final class DatanodeProtocol {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<HeartbeatResponseProto> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto getDefaultInstanceForType() {
+    @Override
+    public HeartbeatResponseProto getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3609,17 +6544,17 @@ public final class DatanodeProtocol {
      * <code>.DatanodeRegistrationProto registration = 1;</code>
      * @return The registration.
      */
-    org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto getRegistration();
+    DatanodeRegistrationProto getRegistration();
     /**
      * <code>.DatanodeRegistrationProto registration = 1;</code>
      */
-    org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProtoOrBuilder getRegistrationOrBuilder();
+    DatanodeRegistrationProtoOrBuilder getRegistrationOrBuilder();
 
     /**
      * <code>string blockPoolId = 2;</code>
      * @return The blockPoolId.
      */
-    java.lang.String getBlockPoolId();
+    String getBlockPoolId();
     /**
      * <code>string blockPoolId = 2;</code>
      * @return The bytes for blockPoolId.
@@ -3630,12 +6565,12 @@ public final class DatanodeProtocol {
     /**
      * <code>repeated .StorageReportProto reports = 3;</code>
      */
-    java.util.List<org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto>
+    java.util.List<HdfsProtos.StorageReportProto>
         getReportsList();
     /**
      * <code>repeated .StorageReportProto reports = 3;</code>
      */
-    org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto getReports(int index);
+    HdfsProtos.StorageReportProto getReports(int index);
     /**
      * <code>repeated .StorageReportProto reports = 3;</code>
      */
@@ -3643,12 +6578,12 @@ public final class DatanodeProtocol {
     /**
      * <code>repeated .StorageReportProto reports = 3;</code>
      */
-    java.util.List<? extends org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProtoOrBuilder>
+    java.util.List<? extends HdfsProtos.StorageReportProtoOrBuilder>
         getReportsOrBuilderList();
     /**
      * <code>repeated .StorageReportProto reports = 3;</code>
      */
-    org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProtoOrBuilder getReportsOrBuilder(
+    HdfsProtos.StorageReportProtoOrBuilder getReportsOrBuilder(
         int index);
 
     /**
@@ -3660,11 +6595,11 @@ public final class DatanodeProtocol {
      * <code>.BlockReportContextProto context = 4;</code>
      * @return The context.
      */
-    org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto getContext();
+    BlockReportContextProto getContext();
     /**
      * <code>.BlockReportContextProto context = 4;</code>
      */
-    org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProtoOrBuilder getContextOrBuilder();
+    BlockReportContextProtoOrBuilder getContextOrBuilder();
   }
   /**
    * Protobuf type {@code BlockReportRequestProto}
@@ -3683,34 +6618,34 @@ public final class DatanodeProtocol {
       reports_ = java.util.Collections.emptyList();
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
         UnusedPrivateParameter unused) {
       return new BlockReportRequestProto();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_BlockReportRequestProto_descriptor;
+      return DatanodeProtocol.internal_static_BlockReportRequestProto_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_BlockReportRequestProto_fieldAccessorTable
+      return DatanodeProtocol.internal_static_BlockReportRequestProto_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto.class, org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto.Builder.class);
+              BlockReportRequestProto.class, Builder.class);
     }
 
     private int bitField0_;
     public static final int REGISTRATION_FIELD_NUMBER = 1;
-    private org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto registration_;
+    private DatanodeRegistrationProto registration_;
     /**
      * <code>.DatanodeRegistrationProto registration = 1;</code>
      * @return Whether the registration field is set.
      */
-    @java.lang.Override
+    @Override
     public boolean hasRegistration() {
       return ((bitField0_ & 0x00000001) != 0);
     }
@@ -3718,34 +6653,34 @@ public final class DatanodeProtocol {
      * <code>.DatanodeRegistrationProto registration = 1;</code>
      * @return The registration.
      */
-    @java.lang.Override
-    public org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto getRegistration() {
-      return registration_ == null ? org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.getDefaultInstance() : registration_;
+    @Override
+    public DatanodeRegistrationProto getRegistration() {
+      return registration_ == null ? DatanodeRegistrationProto.getDefaultInstance() : registration_;
     }
     /**
      * <code>.DatanodeRegistrationProto registration = 1;</code>
      */
-    @java.lang.Override
-    public org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProtoOrBuilder getRegistrationOrBuilder() {
-      return registration_ == null ? org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.getDefaultInstance() : registration_;
+    @Override
+    public DatanodeRegistrationProtoOrBuilder getRegistrationOrBuilder() {
+      return registration_ == null ? DatanodeRegistrationProto.getDefaultInstance() : registration_;
     }
 
     public static final int BLOCKPOOLID_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object blockPoolId_ = "";
+    private volatile Object blockPoolId_ = "";
     /**
      * <code>string blockPoolId = 2;</code>
      * @return The blockPoolId.
      */
-    @java.lang.Override
-    public java.lang.String getBlockPoolId() {
-      java.lang.Object ref = blockPoolId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    @Override
+    public String getBlockPoolId() {
+      Object ref = blockPoolId_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         blockPoolId_ = s;
         return s;
       }
@@ -3754,14 +6689,14 @@ public final class DatanodeProtocol {
      * <code>string blockPoolId = 2;</code>
      * @return The bytes for blockPoolId.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString
         getBlockPoolIdBytes() {
-      java.lang.Object ref = blockPoolId_;
-      if (ref instanceof java.lang.String) {
+      Object ref = blockPoolId_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         blockPoolId_ = b;
         return b;
       } else {
@@ -3771,52 +6706,52 @@ public final class DatanodeProtocol {
 
     public static final int REPORTS_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private java.util.List<org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto> reports_;
+    private java.util.List<HdfsProtos.StorageReportProto> reports_;
     /**
      * <code>repeated .StorageReportProto reports = 3;</code>
      */
-    @java.lang.Override
-    public java.util.List<org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto> getReportsList() {
+    @Override
+    public java.util.List<HdfsProtos.StorageReportProto> getReportsList() {
       return reports_;
     }
     /**
      * <code>repeated .StorageReportProto reports = 3;</code>
      */
-    @java.lang.Override
-    public java.util.List<? extends org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProtoOrBuilder>
+    @Override
+    public java.util.List<? extends HdfsProtos.StorageReportProtoOrBuilder>
         getReportsOrBuilderList() {
       return reports_;
     }
     /**
      * <code>repeated .StorageReportProto reports = 3;</code>
      */
-    @java.lang.Override
+    @Override
     public int getReportsCount() {
       return reports_.size();
     }
     /**
      * <code>repeated .StorageReportProto reports = 3;</code>
      */
-    @java.lang.Override
-    public org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto getReports(int index) {
+    @Override
+    public HdfsProtos.StorageReportProto getReports(int index) {
       return reports_.get(index);
     }
     /**
      * <code>repeated .StorageReportProto reports = 3;</code>
      */
-    @java.lang.Override
-    public org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProtoOrBuilder getReportsOrBuilder(
+    @Override
+    public HdfsProtos.StorageReportProtoOrBuilder getReportsOrBuilder(
         int index) {
       return reports_.get(index);
     }
 
     public static final int CONTEXT_FIELD_NUMBER = 4;
-    private org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto context_;
+    private BlockReportContextProto context_;
     /**
      * <code>.BlockReportContextProto context = 4;</code>
      * @return Whether the context field is set.
      */
-    @java.lang.Override
+    @Override
     public boolean hasContext() {
       return ((bitField0_ & 0x00000002) != 0);
     }
@@ -3824,20 +6759,20 @@ public final class DatanodeProtocol {
      * <code>.BlockReportContextProto context = 4;</code>
      * @return The context.
      */
-    @java.lang.Override
-    public org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto getContext() {
-      return context_ == null ? org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto.getDefaultInstance() : context_;
+    @Override
+    public BlockReportContextProto getContext() {
+      return context_ == null ? BlockReportContextProto.getDefaultInstance() : context_;
     }
     /**
      * <code>.BlockReportContextProto context = 4;</code>
      */
-    @java.lang.Override
-    public org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProtoOrBuilder getContextOrBuilder() {
-      return context_ == null ? org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto.getDefaultInstance() : context_;
+    @Override
+    public BlockReportContextProtoOrBuilder getContextOrBuilder() {
+      return context_ == null ? BlockReportContextProto.getDefaultInstance() : context_;
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -3847,7 +6782,7 @@ public final class DatanodeProtocol {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (((bitField0_ & 0x00000001) != 0)) {
@@ -3865,7 +6800,7 @@ public final class DatanodeProtocol {
       getUnknownFields().writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -3891,15 +6826,15 @@ public final class DatanodeProtocol {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto)) {
+      if (!(obj instanceof BlockReportRequestProto)) {
         return super.equals(obj);
       }
-      org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto other = (org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto) obj;
+      BlockReportRequestProto other = (BlockReportRequestProto) obj;
 
       if (hasRegistration() != other.hasRegistration()) return false;
       if (hasRegistration()) {
@@ -3919,7 +6854,7 @@ public final class DatanodeProtocol {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -3945,44 +6880,44 @@ public final class DatanodeProtocol {
       return hash;
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto parseFrom(
+    public static BlockReportRequestProto parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto parseFrom(
+    public static BlockReportRequestProto parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto parseFrom(
+    public static BlockReportRequestProto parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto parseFrom(
+    public static BlockReportRequestProto parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto parseFrom(byte[] data)
+    public static BlockReportRequestProto parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto parseFrom(
+    public static BlockReportRequestProto parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto parseFrom(java.io.InputStream input)
+    public static BlockReportRequestProto parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto parseFrom(
+    public static BlockReportRequestProto parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3990,26 +6925,26 @@ public final class DatanodeProtocol {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto parseDelimitedFrom(java.io.InputStream input)
+    public static BlockReportRequestProto parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto parseDelimitedFrom(
+    public static BlockReportRequestProto parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto parseFrom(
+    public static BlockReportRequestProto parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto parseFrom(
+    public static BlockReportRequestProto parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4017,23 +6952,23 @@ public final class DatanodeProtocol {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto prototype) {
+    public static Builder newBuilder(BlockReportRequestProto prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -4043,27 +6978,27 @@ public final class DatanodeProtocol {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:BlockReportRequestProto)
-        org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProtoOrBuilder {
+        BlockReportRequestProtoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_BlockReportRequestProto_descriptor;
+        return DatanodeProtocol.internal_static_BlockReportRequestProto_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_BlockReportRequestProto_fieldAccessorTable
+        return DatanodeProtocol.internal_static_BlockReportRequestProto_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto.class, org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto.Builder.class);
+                BlockReportRequestProto.class, Builder.class);
       }
 
-      // Construct using org.west2.clusterio.common.protocol.DatanodeProtocol.BlockReportRequestProto.newBuilder()
+      // Construct using org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -4075,7 +7010,7 @@ public final class DatanodeProtocol {
           getContextFieldBuilder();
         }
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
@@ -4100,36 +7035,36 @@ public final class DatanodeProtocol {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_BlockReportRequestProto_descriptor;
+        return DatanodeProtocol.internal_static_BlockReportRequestProto_descriptor;
       }
 
-      @java.lang.Override
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto getDefaultInstanceForType() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto.getDefaultInstance();
+      @Override
+      public BlockReportRequestProto getDefaultInstanceForType() {
+        return BlockReportRequestProto.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto build() {
-        org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto result = buildPartial();
+      @Override
+      public BlockReportRequestProto build() {
+        BlockReportRequestProto result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto buildPartial() {
-        org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto result = new org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto(this);
+      @Override
+      public BlockReportRequestProto buildPartial() {
+        BlockReportRequestProto result = new BlockReportRequestProto(this);
         buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto result) {
+      private void buildPartialRepeatedFields(BlockReportRequestProto result) {
         if (reportsBuilder_ == null) {
           if (((bitField0_ & 0x00000004) != 0)) {
             reports_ = java.util.Collections.unmodifiableList(reports_);
@@ -4141,7 +7076,7 @@ public final class DatanodeProtocol {
         }
       }
 
-      private void buildPartial0(org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto result) {
+      private void buildPartial0(BlockReportRequestProto result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -4162,50 +7097,50 @@ public final class DatanodeProtocol {
         result.bitField0_ |= to_bitField0_;
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return super.clone();
       }
-      @java.lang.Override
+      @Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.setField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.addRepeatedField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto) {
-          return mergeFrom((org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto)other);
+        if (other instanceof BlockReportRequestProto) {
+          return mergeFrom((BlockReportRequestProto)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto other) {
-        if (other == org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto.getDefaultInstance()) return this;
+      public Builder mergeFrom(BlockReportRequestProto other) {
+        if (other == BlockReportRequestProto.getDefaultInstance()) return this;
         if (other.hasRegistration()) {
           mergeRegistration(other.getRegistration());
         }
@@ -4248,18 +7183,18 @@ public final class DatanodeProtocol {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException();
         }
         try {
           boolean done = false;
@@ -4282,9 +7217,9 @@ public final class DatanodeProtocol {
                 break;
               } // case 18
               case 26: {
-                org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto m =
+                HdfsProtos.StorageReportProto m =
                     input.readMessage(
-                        org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto.parser(),
+                        HdfsProtos.StorageReportProto.parser(),
                         extensionRegistry);
                 if (reportsBuilder_ == null) {
                   ensureReportsIsMutable();
@@ -4318,9 +7253,9 @@ public final class DatanodeProtocol {
       }
       private int bitField0_;
 
-      private org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto registration_;
+      private DatanodeRegistrationProto registration_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto, org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.Builder, org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProtoOrBuilder> registrationBuilder_;
+          DatanodeRegistrationProto, DatanodeRegistrationProto.Builder, DatanodeRegistrationProtoOrBuilder> registrationBuilder_;
       /**
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        * @return Whether the registration field is set.
@@ -4332,9 +7267,9 @@ public final class DatanodeProtocol {
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        * @return The registration.
        */
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto getRegistration() {
+      public DatanodeRegistrationProto getRegistration() {
         if (registrationBuilder_ == null) {
-          return registration_ == null ? org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.getDefaultInstance() : registration_;
+          return registration_ == null ? DatanodeRegistrationProto.getDefaultInstance() : registration_;
         } else {
           return registrationBuilder_.getMessage();
         }
@@ -4342,7 +7277,7 @@ public final class DatanodeProtocol {
       /**
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        */
-      public Builder setRegistration(org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto value) {
+      public Builder setRegistration(DatanodeRegistrationProto value) {
         if (registrationBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4359,7 +7294,7 @@ public final class DatanodeProtocol {
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        */
       public Builder setRegistration(
-          org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.Builder builderForValue) {
+          DatanodeRegistrationProto.Builder builderForValue) {
         if (registrationBuilder_ == null) {
           registration_ = builderForValue.build();
         } else {
@@ -4372,11 +7307,11 @@ public final class DatanodeProtocol {
       /**
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        */
-      public Builder mergeRegistration(org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto value) {
+      public Builder mergeRegistration(DatanodeRegistrationProto value) {
         if (registrationBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0) &&
             registration_ != null &&
-            registration_ != org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.getDefaultInstance()) {
+            registration_ != DatanodeRegistrationProto.getDefaultInstance()) {
             getRegistrationBuilder().mergeFrom(value);
           } else {
             registration_ = value;
@@ -4406,7 +7341,7 @@ public final class DatanodeProtocol {
       /**
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        */
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.Builder getRegistrationBuilder() {
+      public DatanodeRegistrationProto.Builder getRegistrationBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getRegistrationFieldBuilder().getBuilder();
@@ -4414,23 +7349,23 @@ public final class DatanodeProtocol {
       /**
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        */
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProtoOrBuilder getRegistrationOrBuilder() {
+      public DatanodeRegistrationProtoOrBuilder getRegistrationOrBuilder() {
         if (registrationBuilder_ != null) {
           return registrationBuilder_.getMessageOrBuilder();
         } else {
           return registration_ == null ?
-              org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.getDefaultInstance() : registration_;
+              DatanodeRegistrationProto.getDefaultInstance() : registration_;
         }
       }
       /**
        * <code>.DatanodeRegistrationProto registration = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto, org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.Builder, org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProtoOrBuilder>
+          DatanodeRegistrationProto, DatanodeRegistrationProto.Builder, DatanodeRegistrationProtoOrBuilder>
           getRegistrationFieldBuilder() {
         if (registrationBuilder_ == null) {
           registrationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto, org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto.Builder, org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProtoOrBuilder>(
+              DatanodeRegistrationProto, DatanodeRegistrationProto.Builder, DatanodeRegistrationProtoOrBuilder>(
                   getRegistration(),
                   getParentForChildren(),
                   isClean());
@@ -4439,21 +7374,21 @@ public final class DatanodeProtocol {
         return registrationBuilder_;
       }
 
-      private java.lang.Object blockPoolId_ = "";
+      private Object blockPoolId_ = "";
       /**
        * <code>string blockPoolId = 2;</code>
        * @return The blockPoolId.
        */
-      public java.lang.String getBlockPoolId() {
-        java.lang.Object ref = blockPoolId_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getBlockPoolId() {
+        Object ref = blockPoolId_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           blockPoolId_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -4462,11 +7397,11 @@ public final class DatanodeProtocol {
        */
       public com.google.protobuf.ByteString
           getBlockPoolIdBytes() {
-        java.lang.Object ref = blockPoolId_;
+        Object ref = blockPoolId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           blockPoolId_ = b;
           return b;
         } else {
@@ -4479,7 +7414,7 @@ public final class DatanodeProtocol {
        * @return This builder for chaining.
        */
       public Builder setBlockPoolId(
-          java.lang.String value) {
+          String value) {
         if (value == null) { throw new NullPointerException(); }
         blockPoolId_ = value;
         bitField0_ |= 0x00000002;
@@ -4511,22 +7446,22 @@ public final class DatanodeProtocol {
         return this;
       }
 
-      private java.util.List<org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto> reports_ =
+      private java.util.List<HdfsProtos.StorageReportProto> reports_ =
         java.util.Collections.emptyList();
       private void ensureReportsIsMutable() {
         if (!((bitField0_ & 0x00000004) != 0)) {
-          reports_ = new java.util.ArrayList<org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto>(reports_);
+          reports_ = new java.util.ArrayList<HdfsProtos.StorageReportProto>(reports_);
           bitField0_ |= 0x00000004;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto, org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto.Builder, org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProtoOrBuilder> reportsBuilder_;
+          HdfsProtos.StorageReportProto, HdfsProtos.StorageReportProto.Builder, HdfsProtos.StorageReportProtoOrBuilder> reportsBuilder_;
 
       /**
        * <code>repeated .StorageReportProto reports = 3;</code>
        */
-      public java.util.List<org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto> getReportsList() {
+      public java.util.List<HdfsProtos.StorageReportProto> getReportsList() {
         if (reportsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(reports_);
         } else {
@@ -4546,7 +7481,7 @@ public final class DatanodeProtocol {
       /**
        * <code>repeated .StorageReportProto reports = 3;</code>
        */
-      public org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto getReports(int index) {
+      public HdfsProtos.StorageReportProto getReports(int index) {
         if (reportsBuilder_ == null) {
           return reports_.get(index);
         } else {
@@ -4557,7 +7492,7 @@ public final class DatanodeProtocol {
        * <code>repeated .StorageReportProto reports = 3;</code>
        */
       public Builder setReports(
-          int index, org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto value) {
+          int index, HdfsProtos.StorageReportProto value) {
         if (reportsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4574,7 +7509,7 @@ public final class DatanodeProtocol {
        * <code>repeated .StorageReportProto reports = 3;</code>
        */
       public Builder setReports(
-          int index, org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto.Builder builderForValue) {
+          int index, HdfsProtos.StorageReportProto.Builder builderForValue) {
         if (reportsBuilder_ == null) {
           ensureReportsIsMutable();
           reports_.set(index, builderForValue.build());
@@ -4587,7 +7522,7 @@ public final class DatanodeProtocol {
       /**
        * <code>repeated .StorageReportProto reports = 3;</code>
        */
-      public Builder addReports(org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto value) {
+      public Builder addReports(HdfsProtos.StorageReportProto value) {
         if (reportsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4604,7 +7539,7 @@ public final class DatanodeProtocol {
        * <code>repeated .StorageReportProto reports = 3;</code>
        */
       public Builder addReports(
-          int index, org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto value) {
+          int index, HdfsProtos.StorageReportProto value) {
         if (reportsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4621,7 +7556,7 @@ public final class DatanodeProtocol {
        * <code>repeated .StorageReportProto reports = 3;</code>
        */
       public Builder addReports(
-          org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto.Builder builderForValue) {
+          HdfsProtos.StorageReportProto.Builder builderForValue) {
         if (reportsBuilder_ == null) {
           ensureReportsIsMutable();
           reports_.add(builderForValue.build());
@@ -4635,7 +7570,7 @@ public final class DatanodeProtocol {
        * <code>repeated .StorageReportProto reports = 3;</code>
        */
       public Builder addReports(
-          int index, org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto.Builder builderForValue) {
+          int index, HdfsProtos.StorageReportProto.Builder builderForValue) {
         if (reportsBuilder_ == null) {
           ensureReportsIsMutable();
           reports_.add(index, builderForValue.build());
@@ -4649,7 +7584,7 @@ public final class DatanodeProtocol {
        * <code>repeated .StorageReportProto reports = 3;</code>
        */
       public Builder addAllReports(
-          java.lang.Iterable<? extends org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto> values) {
+          Iterable<? extends HdfsProtos.StorageReportProto> values) {
         if (reportsBuilder_ == null) {
           ensureReportsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -4689,14 +7624,14 @@ public final class DatanodeProtocol {
       /**
        * <code>repeated .StorageReportProto reports = 3;</code>
        */
-      public org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto.Builder getReportsBuilder(
+      public HdfsProtos.StorageReportProto.Builder getReportsBuilder(
           int index) {
         return getReportsFieldBuilder().getBuilder(index);
       }
       /**
        * <code>repeated .StorageReportProto reports = 3;</code>
        */
-      public org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProtoOrBuilder getReportsOrBuilder(
+      public HdfsProtos.StorageReportProtoOrBuilder getReportsOrBuilder(
           int index) {
         if (reportsBuilder_ == null) {
           return reports_.get(index);  } else {
@@ -4706,7 +7641,7 @@ public final class DatanodeProtocol {
       /**
        * <code>repeated .StorageReportProto reports = 3;</code>
        */
-      public java.util.List<? extends org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProtoOrBuilder>
+      public java.util.List<? extends HdfsProtos.StorageReportProtoOrBuilder>
            getReportsOrBuilderList() {
         if (reportsBuilder_ != null) {
           return reportsBuilder_.getMessageOrBuilderList();
@@ -4717,31 +7652,31 @@ public final class DatanodeProtocol {
       /**
        * <code>repeated .StorageReportProto reports = 3;</code>
        */
-      public org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto.Builder addReportsBuilder() {
+      public HdfsProtos.StorageReportProto.Builder addReportsBuilder() {
         return getReportsFieldBuilder().addBuilder(
-            org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto.getDefaultInstance());
+            HdfsProtos.StorageReportProto.getDefaultInstance());
       }
       /**
        * <code>repeated .StorageReportProto reports = 3;</code>
        */
-      public org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto.Builder addReportsBuilder(
+      public HdfsProtos.StorageReportProto.Builder addReportsBuilder(
           int index) {
         return getReportsFieldBuilder().addBuilder(
-            index, org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto.getDefaultInstance());
+            index, HdfsProtos.StorageReportProto.getDefaultInstance());
       }
       /**
        * <code>repeated .StorageReportProto reports = 3;</code>
        */
-      public java.util.List<org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto.Builder>
+      public java.util.List<HdfsProtos.StorageReportProto.Builder>
            getReportsBuilderList() {
         return getReportsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto, org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto.Builder, org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProtoOrBuilder>
+          HdfsProtos.StorageReportProto, HdfsProtos.StorageReportProto.Builder, HdfsProtos.StorageReportProtoOrBuilder>
           getReportsFieldBuilder() {
         if (reportsBuilder_ == null) {
           reportsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto, org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto.Builder, org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProtoOrBuilder>(
+              HdfsProtos.StorageReportProto, HdfsProtos.StorageReportProto.Builder, HdfsProtos.StorageReportProtoOrBuilder>(
                   reports_,
                   ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
@@ -4751,9 +7686,9 @@ public final class DatanodeProtocol {
         return reportsBuilder_;
       }
 
-      private org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto context_;
+      private BlockReportContextProto context_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto, org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto.Builder, org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProtoOrBuilder> contextBuilder_;
+          BlockReportContextProto, BlockReportContextProto.Builder, BlockReportContextProtoOrBuilder> contextBuilder_;
       /**
        * <code>.BlockReportContextProto context = 4;</code>
        * @return Whether the context field is set.
@@ -4765,9 +7700,9 @@ public final class DatanodeProtocol {
        * <code>.BlockReportContextProto context = 4;</code>
        * @return The context.
        */
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto getContext() {
+      public BlockReportContextProto getContext() {
         if (contextBuilder_ == null) {
-          return context_ == null ? org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto.getDefaultInstance() : context_;
+          return context_ == null ? BlockReportContextProto.getDefaultInstance() : context_;
         } else {
           return contextBuilder_.getMessage();
         }
@@ -4775,7 +7710,7 @@ public final class DatanodeProtocol {
       /**
        * <code>.BlockReportContextProto context = 4;</code>
        */
-      public Builder setContext(org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto value) {
+      public Builder setContext(BlockReportContextProto value) {
         if (contextBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4792,7 +7727,7 @@ public final class DatanodeProtocol {
        * <code>.BlockReportContextProto context = 4;</code>
        */
       public Builder setContext(
-          org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto.Builder builderForValue) {
+          BlockReportContextProto.Builder builderForValue) {
         if (contextBuilder_ == null) {
           context_ = builderForValue.build();
         } else {
@@ -4805,11 +7740,11 @@ public final class DatanodeProtocol {
       /**
        * <code>.BlockReportContextProto context = 4;</code>
        */
-      public Builder mergeContext(org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto value) {
+      public Builder mergeContext(BlockReportContextProto value) {
         if (contextBuilder_ == null) {
           if (((bitField0_ & 0x00000008) != 0) &&
             context_ != null &&
-            context_ != org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto.getDefaultInstance()) {
+            context_ != BlockReportContextProto.getDefaultInstance()) {
             getContextBuilder().mergeFrom(value);
           } else {
             context_ = value;
@@ -4839,7 +7774,7 @@ public final class DatanodeProtocol {
       /**
        * <code>.BlockReportContextProto context = 4;</code>
        */
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto.Builder getContextBuilder() {
+      public BlockReportContextProto.Builder getContextBuilder() {
         bitField0_ |= 0x00000008;
         onChanged();
         return getContextFieldBuilder().getBuilder();
@@ -4847,23 +7782,23 @@ public final class DatanodeProtocol {
       /**
        * <code>.BlockReportContextProto context = 4;</code>
        */
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProtoOrBuilder getContextOrBuilder() {
+      public BlockReportContextProtoOrBuilder getContextOrBuilder() {
         if (contextBuilder_ != null) {
           return contextBuilder_.getMessageOrBuilder();
         } else {
           return context_ == null ?
-              org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto.getDefaultInstance() : context_;
+              BlockReportContextProto.getDefaultInstance() : context_;
         }
       }
       /**
        * <code>.BlockReportContextProto context = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto, org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto.Builder, org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProtoOrBuilder>
+          BlockReportContextProto, BlockReportContextProto.Builder, BlockReportContextProtoOrBuilder>
           getContextFieldBuilder() {
         if (contextBuilder_ == null) {
           contextBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto, org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto.Builder, org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProtoOrBuilder>(
+              BlockReportContextProto, BlockReportContextProto.Builder, BlockReportContextProtoOrBuilder>(
                   getContext(),
                   getParentForChildren(),
                   isClean());
@@ -4871,13 +7806,13 @@ public final class DatanodeProtocol {
         }
         return contextBuilder_;
       }
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -4888,18 +7823,18 @@ public final class DatanodeProtocol {
     }
 
     // @@protoc_insertion_point(class_scope:BlockReportRequestProto)
-    private static final org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto DEFAULT_INSTANCE;
+    private static final BlockReportRequestProto DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto();
+      DEFAULT_INSTANCE = new BlockReportRequestProto();
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto getDefaultInstance() {
+    public static BlockReportRequestProto getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<BlockReportRequestProto>
         PARSER = new com.google.protobuf.AbstractParser<BlockReportRequestProto>() {
-      @java.lang.Override
+      @Override
       public BlockReportRequestProto parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4923,13 +7858,13 @@ public final class DatanodeProtocol {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<BlockReportRequestProto> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequestProto getDefaultInstanceForType() {
+    @Override
+    public BlockReportRequestProto getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4980,24 +7915,24 @@ public final class DatanodeProtocol {
     private BlockReportContextProto() {
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
         UnusedPrivateParameter unused) {
       return new BlockReportContextProto();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_BlockReportContextProto_descriptor;
+      return DatanodeProtocol.internal_static_BlockReportContextProto_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_BlockReportContextProto_fieldAccessorTable
+      return DatanodeProtocol.internal_static_BlockReportContextProto_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto.class, org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto.Builder.class);
+              BlockReportContextProto.class, Builder.class);
     }
 
     public static final int TOTALPIECES_FIELD_NUMBER = 1;
@@ -5006,7 +7941,7 @@ public final class DatanodeProtocol {
      * <code>int32 totalPieces = 1;</code>
      * @return The totalPieces.
      */
-    @java.lang.Override
+    @Override
     public int getTotalPieces() {
       return totalPieces_;
     }
@@ -5021,7 +7956,7 @@ public final class DatanodeProtocol {
      * <code>int32 curRpc = 2;</code>
      * @return The curRpc.
      */
-    @java.lang.Override
+    @Override
     public int getCurRpc() {
       return curRpc_;
     }
@@ -5036,13 +7971,13 @@ public final class DatanodeProtocol {
      * <code>int64 id = 3;</code>
      * @return The id.
      */
-    @java.lang.Override
+    @Override
     public long getId() {
       return id_;
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -5052,7 +7987,7 @@ public final class DatanodeProtocol {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (totalPieces_ != 0) {
@@ -5067,7 +8002,7 @@ public final class DatanodeProtocol {
       getUnknownFields().writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -5090,15 +8025,15 @@ public final class DatanodeProtocol {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto)) {
+      if (!(obj instanceof BlockReportContextProto)) {
         return super.equals(obj);
       }
-      org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto other = (org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto) obj;
+      BlockReportContextProto other = (BlockReportContextProto) obj;
 
       if (getTotalPieces()
           != other.getTotalPieces()) return false;
@@ -5110,7 +8045,7 @@ public final class DatanodeProtocol {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -5129,44 +8064,44 @@ public final class DatanodeProtocol {
       return hash;
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto parseFrom(
+    public static BlockReportContextProto parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto parseFrom(
+    public static BlockReportContextProto parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto parseFrom(
+    public static BlockReportContextProto parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto parseFrom(
+    public static BlockReportContextProto parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto parseFrom(byte[] data)
+    public static BlockReportContextProto parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto parseFrom(
+    public static BlockReportContextProto parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto parseFrom(java.io.InputStream input)
+    public static BlockReportContextProto parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto parseFrom(
+    public static BlockReportContextProto parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5174,26 +8109,26 @@ public final class DatanodeProtocol {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto parseDelimitedFrom(java.io.InputStream input)
+    public static BlockReportContextProto parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto parseDelimitedFrom(
+    public static BlockReportContextProto parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto parseFrom(
+    public static BlockReportContextProto parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto parseFrom(
+    public static BlockReportContextProto parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5201,23 +8136,23 @@ public final class DatanodeProtocol {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto prototype) {
+    public static Builder newBuilder(BlockReportContextProto prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -5227,31 +8162,31 @@ public final class DatanodeProtocol {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:BlockReportContextProto)
-        org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProtoOrBuilder {
+        BlockReportContextProtoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_BlockReportContextProto_descriptor;
+        return DatanodeProtocol.internal_static_BlockReportContextProto_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_BlockReportContextProto_fieldAccessorTable
+        return DatanodeProtocol.internal_static_BlockReportContextProto_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto.class, org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto.Builder.class);
+                BlockReportContextProto.class, Builder.class);
       }
 
-      // Construct using org.west2.clusterio.common.protocol.DatanodeProtocol.BlockReportContextProto.newBuilder()
+      // Construct using org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto.newBuilder()
       private Builder() {
 
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
 
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
@@ -5261,35 +8196,35 @@ public final class DatanodeProtocol {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_BlockReportContextProto_descriptor;
+        return DatanodeProtocol.internal_static_BlockReportContextProto_descriptor;
       }
 
-      @java.lang.Override
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto getDefaultInstanceForType() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto.getDefaultInstance();
+      @Override
+      public BlockReportContextProto getDefaultInstanceForType() {
+        return BlockReportContextProto.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto build() {
-        org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto result = buildPartial();
+      @Override
+      public BlockReportContextProto build() {
+        BlockReportContextProto result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto buildPartial() {
-        org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto result = new org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto(this);
+      @Override
+      public BlockReportContextProto buildPartial() {
+        BlockReportContextProto result = new BlockReportContextProto(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto result) {
+      private void buildPartial0(BlockReportContextProto result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.totalPieces_ = totalPieces_;
@@ -5302,50 +8237,50 @@ public final class DatanodeProtocol {
         }
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return super.clone();
       }
-      @java.lang.Override
+      @Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.setField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.addRepeatedField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto) {
-          return mergeFrom((org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto)other);
+        if (other instanceof BlockReportContextProto) {
+          return mergeFrom((BlockReportContextProto)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto other) {
-        if (other == org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto.getDefaultInstance()) return this;
+      public Builder mergeFrom(BlockReportContextProto other) {
+        if (other == BlockReportContextProto.getDefaultInstance()) return this;
         if (other.getTotalPieces() != 0) {
           setTotalPieces(other.getTotalPieces());
         }
@@ -5360,18 +8295,18 @@ public final class DatanodeProtocol {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException();
         }
         try {
           boolean done = false;
@@ -5418,7 +8353,7 @@ public final class DatanodeProtocol {
        * <code>int32 totalPieces = 1;</code>
        * @return The totalPieces.
        */
-      @java.lang.Override
+      @Override
       public int getTotalPieces() {
         return totalPieces_;
       }
@@ -5454,7 +8389,7 @@ public final class DatanodeProtocol {
        * <code>int32 curRpc = 2;</code>
        * @return The curRpc.
        */
-      @java.lang.Override
+      @Override
       public int getCurRpc() {
         return curRpc_;
       }
@@ -5498,7 +8433,7 @@ public final class DatanodeProtocol {
        * <code>int64 id = 3;</code>
        * @return The id.
        */
-      @java.lang.Override
+      @Override
       public long getId() {
         return id_;
       }
@@ -5532,13 +8467,13 @@ public final class DatanodeProtocol {
         onChanged();
         return this;
       }
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -5549,18 +8484,18 @@ public final class DatanodeProtocol {
     }
 
     // @@protoc_insertion_point(class_scope:BlockReportContextProto)
-    private static final org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto DEFAULT_INSTANCE;
+    private static final BlockReportContextProto DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto();
+      DEFAULT_INSTANCE = new BlockReportContextProto();
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto getDefaultInstance() {
+    public static BlockReportContextProto getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<BlockReportContextProto>
         PARSER = new com.google.protobuf.AbstractParser<BlockReportContextProto>() {
-      @java.lang.Override
+      @Override
       public BlockReportContextProto parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5584,13 +8519,13 @@ public final class DatanodeProtocol {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<BlockReportContextProto> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto getDefaultInstanceForType() {
+    @Override
+    public BlockReportContextProto getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5604,7 +8539,7 @@ public final class DatanodeProtocol {
      * <code>string storageUuid = 1;</code>
      * @return The storageUuid.
      */
-    java.lang.String getStorageUuid();
+    String getStorageUuid();
     /**
      * <code>string storageUuid = 1;</code>
      * @return The bytes for storageUuid.
@@ -5616,7 +8551,7 @@ public final class DatanodeProtocol {
      * <code>repeated uint64 blocks = 2;</code>
      * @return A list containing the blocks.
      */
-    java.util.List<java.lang.Long> getBlocksList();
+    java.util.List<Long> getBlocksList();
     /**
      * <code>repeated uint64 blocks = 2;</code>
      * @return The count of blocks.
@@ -5674,42 +8609,42 @@ public final class DatanodeProtocol {
       blocksBuffers_ = emptyList(com.google.protobuf.ByteString.class);
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
         UnusedPrivateParameter unused) {
       return new StorageBlockReportProto();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_StorageBlockReportProto_descriptor;
+      return DatanodeProtocol.internal_static_StorageBlockReportProto_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_StorageBlockReportProto_fieldAccessorTable
+      return DatanodeProtocol.internal_static_StorageBlockReportProto_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto.class, org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto.Builder.class);
+              StorageBlockReportProto.class, Builder.class);
     }
 
     public static final int STORAGEUUID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object storageUuid_ = "";
+    private volatile Object storageUuid_ = "";
     /**
      * <code>string storageUuid = 1;</code>
      * @return The storageUuid.
      */
-    @java.lang.Override
-    public java.lang.String getStorageUuid() {
-      java.lang.Object ref = storageUuid_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    @Override
+    public String getStorageUuid() {
+      Object ref = storageUuid_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         storageUuid_ = s;
         return s;
       }
@@ -5718,14 +8653,14 @@ public final class DatanodeProtocol {
      * <code>string storageUuid = 1;</code>
      * @return The bytes for storageUuid.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString
         getStorageUuidBytes() {
-      java.lang.Object ref = storageUuid_;
-      if (ref instanceof java.lang.String) {
+      Object ref = storageUuid_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         storageUuid_ = b;
         return b;
       } else {
@@ -5741,8 +8676,8 @@ public final class DatanodeProtocol {
      * <code>repeated uint64 blocks = 2;</code>
      * @return A list containing the blocks.
      */
-    @java.lang.Override
-    public java.util.List<java.lang.Long>
+    @Override
+    public java.util.List<Long>
         getBlocksList() {
       return blocks_;
     }
@@ -5773,7 +8708,7 @@ public final class DatanodeProtocol {
      * <code>uint64 numberOfBlocks = 3;</code>
      * @return The numberOfBlocks.
      */
-    @java.lang.Override
+    @Override
     public long getNumberOfBlocks() {
       return numberOfBlocks_;
     }
@@ -5786,7 +8721,7 @@ public final class DatanodeProtocol {
      * <code>repeated bytes blocksBuffers = 4;</code>
      * @return A list containing the blocksBuffers.
      */
-    @java.lang.Override
+    @Override
     public java.util.List<com.google.protobuf.ByteString>
         getBlocksBuffersList() {
       return blocksBuffers_;
@@ -5808,7 +8743,7 @@ public final class DatanodeProtocol {
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -5818,7 +8753,7 @@ public final class DatanodeProtocol {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -5841,7 +8776,7 @@ public final class DatanodeProtocol {
       getUnknownFields().writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -5882,15 +8817,15 @@ public final class DatanodeProtocol {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto)) {
+      if (!(obj instanceof StorageBlockReportProto)) {
         return super.equals(obj);
       }
-      org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto other = (org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto) obj;
+      StorageBlockReportProto other = (StorageBlockReportProto) obj;
 
       if (!getStorageUuid()
           .equals(other.getStorageUuid())) return false;
@@ -5904,7 +8839,7 @@ public final class DatanodeProtocol {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -5929,44 +8864,44 @@ public final class DatanodeProtocol {
       return hash;
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto parseFrom(
+    public static StorageBlockReportProto parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto parseFrom(
+    public static StorageBlockReportProto parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto parseFrom(
+    public static StorageBlockReportProto parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto parseFrom(
+    public static StorageBlockReportProto parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto parseFrom(byte[] data)
+    public static StorageBlockReportProto parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto parseFrom(
+    public static StorageBlockReportProto parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto parseFrom(java.io.InputStream input)
+    public static StorageBlockReportProto parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto parseFrom(
+    public static StorageBlockReportProto parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5974,26 +8909,26 @@ public final class DatanodeProtocol {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto parseDelimitedFrom(java.io.InputStream input)
+    public static StorageBlockReportProto parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto parseDelimitedFrom(
+    public static StorageBlockReportProto parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto parseFrom(
+    public static StorageBlockReportProto parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto parseFrom(
+    public static StorageBlockReportProto parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -6001,23 +8936,23 @@ public final class DatanodeProtocol {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto prototype) {
+    public static Builder newBuilder(StorageBlockReportProto prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -6027,31 +8962,31 @@ public final class DatanodeProtocol {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:StorageBlockReportProto)
-        org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProtoOrBuilder {
+        StorageBlockReportProtoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_StorageBlockReportProto_descriptor;
+        return DatanodeProtocol.internal_static_StorageBlockReportProto_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_StorageBlockReportProto_fieldAccessorTable
+        return DatanodeProtocol.internal_static_StorageBlockReportProto_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto.class, org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto.Builder.class);
+                StorageBlockReportProto.class, Builder.class);
       }
 
-      // Construct using org.west2.clusterio.common.protocol.DatanodeProtocol.StorageBlockReportProto.newBuilder()
+      // Construct using org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto.newBuilder()
       private Builder() {
 
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
 
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
@@ -6062,35 +8997,35 @@ public final class DatanodeProtocol {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_StorageBlockReportProto_descriptor;
+        return DatanodeProtocol.internal_static_StorageBlockReportProto_descriptor;
       }
 
-      @java.lang.Override
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto getDefaultInstanceForType() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto.getDefaultInstance();
+      @Override
+      public StorageBlockReportProto getDefaultInstanceForType() {
+        return StorageBlockReportProto.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto build() {
-        org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto result = buildPartial();
+      @Override
+      public StorageBlockReportProto build() {
+        StorageBlockReportProto result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto buildPartial() {
-        org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto result = new org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto(this);
+      @Override
+      public StorageBlockReportProto buildPartial() {
+        StorageBlockReportProto result = new StorageBlockReportProto(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto result) {
+      private void buildPartial0(StorageBlockReportProto result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.storageUuid_ = storageUuid_;
@@ -6108,50 +9043,50 @@ public final class DatanodeProtocol {
         }
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return super.clone();
       }
-      @java.lang.Override
+      @Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.setField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.addRepeatedField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto) {
-          return mergeFrom((org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto)other);
+        if (other instanceof StorageBlockReportProto) {
+          return mergeFrom((StorageBlockReportProto)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto other) {
-        if (other == org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto.getDefaultInstance()) return this;
+      public Builder mergeFrom(StorageBlockReportProto other) {
+        if (other == StorageBlockReportProto.getDefaultInstance()) return this;
         if (!other.getStorageUuid().isEmpty()) {
           storageUuid_ = other.storageUuid_;
           bitField0_ |= 0x00000001;
@@ -6187,18 +9122,18 @@ public final class DatanodeProtocol {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException();
         }
         try {
           boolean done = false;
@@ -6257,21 +9192,21 @@ public final class DatanodeProtocol {
       }
       private int bitField0_;
 
-      private java.lang.Object storageUuid_ = "";
+      private Object storageUuid_ = "";
       /**
        * <code>string storageUuid = 1;</code>
        * @return The storageUuid.
        */
-      public java.lang.String getStorageUuid() {
-        java.lang.Object ref = storageUuid_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getStorageUuid() {
+        Object ref = storageUuid_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           storageUuid_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -6280,11 +9215,11 @@ public final class DatanodeProtocol {
        */
       public com.google.protobuf.ByteString
           getStorageUuidBytes() {
-        java.lang.Object ref = storageUuid_;
+        Object ref = storageUuid_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           storageUuid_ = b;
           return b;
         } else {
@@ -6297,7 +9232,7 @@ public final class DatanodeProtocol {
        * @return This builder for chaining.
        */
       public Builder setStorageUuid(
-          java.lang.String value) {
+          String value) {
         if (value == null) { throw new NullPointerException(); }
         storageUuid_ = value;
         bitField0_ |= 0x00000001;
@@ -6340,7 +9275,7 @@ public final class DatanodeProtocol {
        * <code>repeated uint64 blocks = 2;</code>
        * @return A list containing the blocks.
        */
-      public java.util.List<java.lang.Long>
+      public java.util.List<Long>
           getBlocksList() {
         blocks_.makeImmutable();
         return blocks_;
@@ -6394,7 +9329,7 @@ public final class DatanodeProtocol {
        * @return This builder for chaining.
        */
       public Builder addAllBlocks(
-          java.lang.Iterable<? extends java.lang.Long> values) {
+          Iterable<? extends Long> values) {
         ensureBlocksIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, blocks_);
@@ -6422,7 +9357,7 @@ public final class DatanodeProtocol {
        * <code>uint64 numberOfBlocks = 3;</code>
        * @return The numberOfBlocks.
        */
-      @java.lang.Override
+      @Override
       public long getNumberOfBlocks() {
         return numberOfBlocks_;
       }
@@ -6522,7 +9457,7 @@ public final class DatanodeProtocol {
        * @return This builder for chaining.
        */
       public Builder addAllBlocksBuffers(
-          java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+          Iterable<? extends com.google.protobuf.ByteString> values) {
         ensureBlocksBuffersIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, blocksBuffers_);
@@ -6540,13 +9475,13 @@ public final class DatanodeProtocol {
         onChanged();
         return this;
       }
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -6557,18 +9492,18 @@ public final class DatanodeProtocol {
     }
 
     // @@protoc_insertion_point(class_scope:StorageBlockReportProto)
-    private static final org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto DEFAULT_INSTANCE;
+    private static final StorageBlockReportProto DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto();
+      DEFAULT_INSTANCE = new StorageBlockReportProto();
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto getDefaultInstance() {
+    public static StorageBlockReportProto getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<StorageBlockReportProto>
         PARSER = new com.google.protobuf.AbstractParser<StorageBlockReportProto>() {
-      @java.lang.Override
+      @Override
       public StorageBlockReportProto parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6592,13 +9527,13 @@ public final class DatanodeProtocol {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<StorageBlockReportProto> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto getDefaultInstanceForType() {
+    @Override
+    public StorageBlockReportProto getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6623,28 +9558,28 @@ public final class DatanodeProtocol {
     private BlockReportResponseProto() {
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
         UnusedPrivateParameter unused) {
       return new BlockReportResponseProto();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_BlockReportResponseProto_descriptor;
+      return DatanodeProtocol.internal_static_BlockReportResponseProto_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_BlockReportResponseProto_fieldAccessorTable
+      return DatanodeProtocol.internal_static_BlockReportResponseProto_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto.class, org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto.Builder.class);
+              BlockReportResponseProto.class, Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -6654,13 +9589,13 @@ public final class DatanodeProtocol {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getUnknownFields().writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -6671,21 +9606,21 @@ public final class DatanodeProtocol {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto)) {
+      if (!(obj instanceof BlockReportResponseProto)) {
         return super.equals(obj);
       }
-      org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto other = (org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto) obj;
+      BlockReportResponseProto other = (BlockReportResponseProto) obj;
 
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -6697,44 +9632,44 @@ public final class DatanodeProtocol {
       return hash;
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto parseFrom(
+    public static BlockReportResponseProto parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto parseFrom(
+    public static BlockReportResponseProto parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto parseFrom(
+    public static BlockReportResponseProto parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto parseFrom(
+    public static BlockReportResponseProto parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto parseFrom(byte[] data)
+    public static BlockReportResponseProto parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto parseFrom(
+    public static BlockReportResponseProto parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto parseFrom(java.io.InputStream input)
+    public static BlockReportResponseProto parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto parseFrom(
+    public static BlockReportResponseProto parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -6742,26 +9677,26 @@ public final class DatanodeProtocol {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto parseDelimitedFrom(java.io.InputStream input)
+    public static BlockReportResponseProto parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto parseDelimitedFrom(
+    public static BlockReportResponseProto parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto parseFrom(
+    public static BlockReportResponseProto parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto parseFrom(
+    public static BlockReportResponseProto parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -6769,23 +9704,23 @@ public final class DatanodeProtocol {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto prototype) {
+    public static Builder newBuilder(BlockReportResponseProto prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -6795,124 +9730,124 @@ public final class DatanodeProtocol {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:BlockReportResponseProto)
-        org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProtoOrBuilder {
+        BlockReportResponseProtoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_BlockReportResponseProto_descriptor;
+        return DatanodeProtocol.internal_static_BlockReportResponseProto_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_BlockReportResponseProto_fieldAccessorTable
+        return DatanodeProtocol.internal_static_BlockReportResponseProto_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto.class, org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto.Builder.class);
+                BlockReportResponseProto.class, Builder.class);
       }
 
-      // Construct using org.west2.clusterio.common.protocol.DatanodeProtocol.BlockReportResponseProto.newBuilder()
+      // Construct using org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto.newBuilder()
       private Builder() {
 
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
 
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.internal_static_BlockReportResponseProto_descriptor;
+        return DatanodeProtocol.internal_static_BlockReportResponseProto_descriptor;
       }
 
-      @java.lang.Override
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto getDefaultInstanceForType() {
-        return org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto.getDefaultInstance();
+      @Override
+      public BlockReportResponseProto getDefaultInstanceForType() {
+        return BlockReportResponseProto.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto build() {
-        org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto result = buildPartial();
+      @Override
+      public BlockReportResponseProto build() {
+        BlockReportResponseProto result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto buildPartial() {
-        org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto result = new org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto(this);
+      @Override
+      public BlockReportResponseProto buildPartial() {
+        BlockReportResponseProto result = new BlockReportResponseProto(this);
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return super.clone();
       }
-      @java.lang.Override
+      @Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.setField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return super.addRepeatedField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto) {
-          return mergeFrom((org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto)other);
+        if (other instanceof BlockReportResponseProto) {
+          return mergeFrom((BlockReportResponseProto)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto other) {
-        if (other == org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto.getDefaultInstance()) return this;
+      public Builder mergeFrom(BlockReportResponseProto other) {
+        if (other == BlockReportResponseProto.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException();
         }
         try {
           boolean done = false;
@@ -6937,13 +9872,13 @@ public final class DatanodeProtocol {
         } // finally
         return this;
       }
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -6954,18 +9889,18 @@ public final class DatanodeProtocol {
     }
 
     // @@protoc_insertion_point(class_scope:BlockReportResponseProto)
-    private static final org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto DEFAULT_INSTANCE;
+    private static final BlockReportResponseProto DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto();
+      DEFAULT_INSTANCE = new BlockReportResponseProto();
     }
 
-    public static org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto getDefaultInstance() {
+    public static BlockReportResponseProto getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<BlockReportResponseProto>
         PARSER = new com.google.protobuf.AbstractParser<BlockReportResponseProto>() {
-      @java.lang.Override
+      @Override
       public BlockReportResponseProto parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6989,13 +9924,13 @@ public final class DatanodeProtocol {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<BlockReportResponseProto> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto getDefaultInstanceForType() {
+    @Override
+    public BlockReportResponseProto getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7006,6 +9941,16 @@ public final class DatanodeProtocol {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_DatanodeRegistrationProto_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_DatanodeCommandProto_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_DatanodeCommandProto_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_BlockCommandProto_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_BlockCommandProto_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_RegisterDatanodeRequestProto_descriptor;
   private static final 
@@ -7054,98 +9999,119 @@ public final class DatanodeProtocol {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    java.lang.String[] descriptorData = {
+    String[] descriptorData = {
       "\n\016Datanode.proto\032\nhdfs.proto\"j\n\031Datanode" +
       "RegistrationProto\022$\n\ndatanodeId\030\001 \001(\0132\020." +
       "DatanodeIDProto\022\'\n\013storageInfo\030\002 \001(\0132\022.S" +
-      "torageInfoProtoc\"P\n\034RegisterDatanodeRequ" +
+      "torageInfoProtoc\"\201\001\n\024DatanodeCommandProt" +
+      "o\022+\n\007cmdType\030\001 \001(\0162\032.DatanodeCommandProt" +
+      "o.Type\022\"\n\006blkCmd\030\002 \001(\0132\022.BlockCommandPro" +
+      "to\"\030\n\004Type\022\020\n\014BlockCommand\020\000\"\341\001\n\021BlockCo" +
+      "mmandProto\022)\n\006action\030\001 \001(\0162\031.BlockComman" +
+      "dProto.Action\022\023\n\013blockPoolId\030\002 \001(\t\022\033\n\006bl" +
+      "ocks\030\003 \003(\0132\013.BlockProto\022#\n\007targets\030\004 \003(\013" +
+      "2\022.DatanodeInfoProto\022\024\n\014storageUuids\030\005 \003" +
+      "(\t\"4\n\006Action\022\014\n\010TRANSFER\020\000\022\016\n\nINVALIDATE" +
+      "\020\001\022\014\n\010SHUTDOWN\020\002\"P\n\034RegisterDatanodeRequ" +
       "estProto\0220\n\014registration\030\001 \001(\0132\032.Datanod" +
       "eRegistrationProto\"Q\n\035RegisterDatanodeRe" +
       "sponseProto\0220\n\014registration\030\001 \001(\0132\032.Data" +
-      "nodeRegistrationProto\"\231\001\n\025HeartbeatReque" +
-      "stProto\0220\n\014registration\030\001 \001(\0132\032.Datanode" +
-      "RegistrationProto\022$\n\007reports\030\002 \003(\0132\023.Sto" +
-      "rageReportProto\022\025\n\rcacheCapacity\030\003 \001(\004\022\021" +
-      "\n\tcacheUsed\030\004 \001(\004\"\030\n\026HeartbeatResponsePr" +
-      "oto\"\261\001\n\027BlockReportRequestProto\0220\n\014regis" +
-      "tration\030\001 \001(\0132\032.DatanodeRegistrationProt" +
-      "o\022\023\n\013blockPoolId\030\002 \001(\t\022$\n\007reports\030\003 \003(\0132" +
-      "\023.StorageReportProto\022)\n\007context\030\004 \001(\0132\030." +
-      "BlockReportContextProto\"J\n\027BlockReportCo" +
-      "ntextProto\022\023\n\013totalPieces\030\001 \001(\005\022\016\n\006curRp" +
-      "c\030\002 \001(\005\022\n\n\002id\030\003 \001(\003\"m\n\027StorageBlockRepor" +
-      "tProto\022\023\n\013storageUuid\030\001 \001(\t\022\016\n\006blocks\030\002 " +
-      "\003(\004\022\026\n\016numberOfBlocks\030\003 \001(\004\022\025\n\rblocksBuf" +
-      "fers\030\004 \003(\014\"\032\n\030BlockReportResponseProto2\346" +
-      "\001\n\017DatanodeService\022Q\n\020registerDatanode\022\035" +
-      ".RegisterDatanodeRequestProto\032\036.Register" +
-      "DatanodeResponseProto\022<\n\theartbeat\022\026.Hea" +
-      "rtbeatRequestProto\032\027.HeartbeatResponsePr" +
-      "oto\022B\n\013blockReport\022\030.BlockReportRequestP" +
-      "roto\032\031.BlockReportResponseProtoB7\n#org.w" +
-      "est2.clusterio.common.protocolB\020Datanode" +
-      "Protocolb\006proto3"
+      "nodeRegistrationProto\"o\n\025HeartbeatReques" +
+      "tProto\0220\n\014registration\030\001 \001(\0132\032.DatanodeR" +
+      "egistrationProto\022$\n\007reports\030\002 \003(\0132\023.Stor" +
+      "ageReportProto\"=\n\026HeartbeatResponseProto" +
+      "\022#\n\004cmds\030\001 \003(\0132\025.DatanodeCommandProto\"\261\001" +
+      "\n\027BlockReportRequestProto\0220\n\014registratio" +
+      "n\030\001 \001(\0132\032.DatanodeRegistrationProto\022\023\n\013b" +
+      "lockPoolId\030\002 \001(\t\022$\n\007reports\030\003 \003(\0132\023.Stor" +
+      "ageReportProto\022)\n\007context\030\004 \001(\0132\030.BlockR" +
+      "eportContextProto\"J\n\027BlockReportContextP" +
+      "roto\022\023\n\013totalPieces\030\001 \001(\005\022\016\n\006curRpc\030\002 \001(" +
+      "\005\022\n\n\002id\030\003 \001(\003\"m\n\027StorageBlockReportProto" +
+      "\022\023\n\013storageUuid\030\001 \001(\t\022\016\n\006blocks\030\002 \003(\004\022\026\n" +
+      "\016numberOfBlocks\030\003 \001(\004\022\025\n\rblocksBuffers\030\004" +
+      " \003(\014\"\032\n\030BlockReportResponseProto2\346\001\n\017Dat" +
+      "anodeService\022Q\n\020registerDatanode\022\035.Regis" +
+      "terDatanodeRequestProto\032\036.RegisterDatano" +
+      "deResponseProto\022<\n\theartbeat\022\026.Heartbeat" +
+      "RequestProto\032\027.HeartbeatResponseProto\022B\n" +
+      "\013blockReport\022\030.BlockReportRequestProto\032\031" +
+      ".BlockReportResponseProtoB9\n%org.west2.c" +
+      "lusterio.common.protocolPBB\020DatanodeProt" +
+      "ocolb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          org.west2.clusterio.common.protocolPB.HdfsProtos.getDescriptor(),
+          HdfsProtos.getDescriptor(),
         });
     internal_static_DatanodeRegistrationProto_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_DatanodeRegistrationProto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_DatanodeRegistrationProto_descriptor,
-        new java.lang.String[] { "DatanodeId", "StorageInfo", });
-    internal_static_RegisterDatanodeRequestProto_descriptor =
+        new String[] { "DatanodeId", "StorageInfo", });
+    internal_static_DatanodeCommandProto_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_DatanodeCommandProto_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_DatanodeCommandProto_descriptor,
+        new String[] { "CmdType", "BlkCmd", });
+    internal_static_BlockCommandProto_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_BlockCommandProto_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_BlockCommandProto_descriptor,
+        new String[] { "Action", "BlockPoolId", "Blocks", "Targets", "StorageUuids", });
+    internal_static_RegisterDatanodeRequestProto_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_RegisterDatanodeRequestProto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_RegisterDatanodeRequestProto_descriptor,
-        new java.lang.String[] { "Registration", });
+        new String[] { "Registration", });
     internal_static_RegisterDatanodeResponseProto_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_RegisterDatanodeResponseProto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_RegisterDatanodeResponseProto_descriptor,
-        new java.lang.String[] { "Registration", });
+        new String[] { "Registration", });
     internal_static_HeartbeatRequestProto_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_HeartbeatRequestProto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_HeartbeatRequestProto_descriptor,
-        new java.lang.String[] { "Registration", "Reports", "CacheCapacity", "CacheUsed", });
+        new String[] { "Registration", "Reports", });
     internal_static_HeartbeatResponseProto_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_HeartbeatResponseProto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_HeartbeatResponseProto_descriptor,
-        new java.lang.String[] { });
+        new String[] { "Cmds", });
     internal_static_BlockReportRequestProto_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_BlockReportRequestProto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_BlockReportRequestProto_descriptor,
-        new java.lang.String[] { "Registration", "BlockPoolId", "Reports", "Context", });
+        new String[] { "Registration", "BlockPoolId", "Reports", "Context", });
     internal_static_BlockReportContextProto_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_BlockReportContextProto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_BlockReportContextProto_descriptor,
-        new java.lang.String[] { "TotalPieces", "CurRpc", "Id", });
+        new String[] { "TotalPieces", "CurRpc", "Id", });
     internal_static_StorageBlockReportProto_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_StorageBlockReportProto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_StorageBlockReportProto_descriptor,
-        new java.lang.String[] { "StorageUuid", "Blocks", "NumberOfBlocks", "BlocksBuffers", });
+        new String[] { "StorageUuid", "Blocks", "NumberOfBlocks", "BlocksBuffers", });
     internal_static_BlockReportResponseProto_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_BlockReportResponseProto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_BlockReportResponseProto_descriptor,
-        new java.lang.String[] { });
-    org.west2.clusterio.common.protocolPB.HdfsProtos.getDescriptor();
+        new String[] { });
+    HdfsProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

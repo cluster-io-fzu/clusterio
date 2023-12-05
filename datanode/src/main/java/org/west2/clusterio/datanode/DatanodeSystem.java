@@ -1,8 +1,8 @@
 package org.west2.clusterio.datanode;
 
-import org.west2.clusterio.common.protocol.DatanodeID;
-import org.west2.clusterio.common.protocol.DatanodeInfo;
-import org.west2.clusterio.common.protocol.DatanodeRegistration;
+import org.west2.clusterio.datanode.protocol.DatanodeID;
+import org.west2.clusterio.datanode.protocol.DatanodeInfo;
+import org.west2.clusterio.datanode.protocol.DatanodeRegistration;
 
 public class DatanodeSystem {
     private static DatanodeSystem sys = new DatanodeSystem();
