@@ -44,7 +44,7 @@ message RegisterDatanodeResponseProto{
 
 message HeartbeatRequestProto{
   DatanodeRegistrationProto registration = 1;
-  repeated StorageReportProto reports = 2;
+  repeated StorageReportProto reports = 2; //current there is only one storage
   //uint64 cacheCapacity = 3;
   //uint64 cacheUsed = 4;
 }

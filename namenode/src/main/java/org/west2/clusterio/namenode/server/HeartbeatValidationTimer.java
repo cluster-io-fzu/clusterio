@@ -10,9 +10,9 @@ import java.util.Map;
 import java.util.Set;
 
 public class HeartbeatValidationTimer implements Runnable {
+    private final DatanodeManager manager = DatanodeManager.getManager();
     @Override
     public void run() {
-        DatanodeManager manager = DatanodeManager.getManager();
         Map<String, DatanodeInfo> registry = manager.getRegistry();
         Set<String> keySet = registry.keySet();
         Iterator<String> iterator = keySet.iterator();

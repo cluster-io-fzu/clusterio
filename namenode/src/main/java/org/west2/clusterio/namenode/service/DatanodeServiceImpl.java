@@ -1,6 +1,7 @@
 package org.west2.clusterio.namenode.service;
 
 import io.grpc.stub.StreamObserver;
+import org.west2.clusterio.datanode.protocol.DatanodeCommand;
 import org.west2.clusterio.datanode.protocol.DatanodeID;
 import org.west2.clusterio.datanode.protocol.DatanodeInfo;
 import org.west2.clusterio.datanode.protocol.DatanodeRegistration;
@@ -52,7 +53,7 @@ public class DatanodeServiceImpl extends DatanodeServiceGrpc.DatanodeServiceImpl
         HdfsProtos.StorageReportProto report = request.getReports(0);
         setInfoProperties(datanodeInfo, report);
         //TODO put command as response to datanode
-        Command command = manager.heartbeat(datanodeID.getDatanodeUuid(), datanodeInfo);
+        DatanodeCommand command = manager.heartbeat(datanodeID.getDatanodeUuid(), datanodeInfo);
 //        responseObserver.onNext();
         responseObserver.onCompleted();
     }

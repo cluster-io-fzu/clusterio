@@ -10,6 +10,7 @@ import org.west2.clusterio.datanode.client.DatanodeClient;
 public class DataNodeStartUp {
     public static void main(String[] args) {
         DatanodeClient client = new DatanodeClient();
+        //For test
         DatanodeID idTest = new DatanodeID("1", NetworkUtil.getLocalAddress(), "DatanodeTest", 9097);
         StorageInfo storageInfo = new StorageInfo("1", 1, 1, "1", System.currentTimeMillis());
         DatanodeRegistration datanodeRegistration = new DatanodeRegistration(idTest, storageInfo);
@@ -17,5 +18,6 @@ public class DataNodeStartUp {
         sys.setReg(datanodeRegistration);
         client.initChannel("127.0.0.1",9096);
         client.register();
+
     }
 }
