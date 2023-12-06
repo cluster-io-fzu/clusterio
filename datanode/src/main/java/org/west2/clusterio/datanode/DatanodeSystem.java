@@ -3,9 +3,18 @@ package org.west2.clusterio.datanode;
 import org.west2.clusterio.datanode.protocol.DatanodeID;
 import org.west2.clusterio.datanode.protocol.DatanodeInfo;
 import org.west2.clusterio.datanode.protocol.DatanodeRegistration;
+import org.west2.clusterio.datanode.protocol.StorageReport;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * This is the base class of the datanode, every init and
+ * specific instances will be stored and got at here (current idea)
+ */
 
 public class DatanodeSystem {
-    private static DatanodeSystem sys = new DatanodeSystem();
+    private static final DatanodeSystem sys = new DatanodeSystem();
     private DatanodeID id;
     private DatanodeInfo info;
     private DatanodeRegistration reg;
@@ -17,6 +26,21 @@ public class DatanodeSystem {
         this.id = id;
         this.info = info;
         this.reg = reg;
+    }
+
+    public List<StorageReport> getStorageReport(){
+        ArrayList<StorageReport> reports = new ArrayList<>();
+        //TODO blockPool parameter should be handled later
+        StorageReport report = new StorageReport(info.getDatanodeUuid(), isAlive(), info.getCapacity(),
+                info.getDfsUsed(), info.getRemaining(), info.getDfsUsed());
+        reports.add(report);
+        return reports;
+    }
+
+
+
+    public boolean isAlive(){
+        return true;
     }
 
     public static DatanodeSystem getSystem(){

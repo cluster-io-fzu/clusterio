@@ -14,4 +14,5 @@ public class RegisterDatanodeRequest {
         return DatanodeProtocol.RegisterDatanodeRequestProto.newBuilder()
                 .setRegistration(registrationProto).build();
     }
+
 }
