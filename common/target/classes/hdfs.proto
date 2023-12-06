@@ -1,0 +1,64 @@
+syntax = "proto3";
+
+option java_package = "org.west2.clusterio.common.protocolPB";
+option java_outer_classname = "HdfsProtos";
+
+
+message StorageInfoProtoc{
+  string storageUuid = 1;
+  uint32 layoutVersion = 2;
+  uint64 namespaceID = 3;
+  string clusterID = 4;
+  uint64 cTime = 5;
+}
+
+message DatanodeIDProto{
+  string ipAddr = 1;
+  string hostName = 2;
+  string datanodeUuid = 3;
+  uint32 port = 4;
+}
+
+
+message StorageReportProto{
+  string storageUuid = 1;
+  bool failed = 2;
+  uint64 capacity = 3;
+  uint64 used = 4;
+  uint64 remaining = 5;
+  uint64 blockPoolUsed = 6;
+}
+
+message DatanodeInfoProto{
+  DatanodeIDProto id = 1;
+  uint64 capacity = 2;
+  uint64 dfsUsed = 3;
+  uint64 remaining = 4;
+  uint64 nonDfsUsed = 5;
+  uint64 lastUpdated = 6;
+  uint32 numBlocks = 7;
+  uint64 lastBlockReportTime = 8;
+}
+
+message DatanodeInfosProto{
+  repeated DatanodeInfoProto datanodes = 1;
+}
+
+message BlockProto{
+  uint64 blockId = 1;
+  uint64 genStamp = 2;
+  uint64 numBytes = 3;
+}
+
+
+message BlockWithLocationProto{
+  BlockProto block = 1;
+  repeated string datanodeUuids = 2;
+  repeated string storageUuids = 3;
+  bytes indices = 4;
+  uint32 dataBlockNum = 5;
+  uint32 cellSize = 6;
+}
+
+
+
