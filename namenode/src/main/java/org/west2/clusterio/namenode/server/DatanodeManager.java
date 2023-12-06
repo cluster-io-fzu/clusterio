@@ -1,71 +1,81 @@
 package org.west2.clusterio.namenode.server;
 
 import org.west2.clusterio.common.constant.Constants;
-import org.west2.clusterio.datanode.protocol.DatanodeCommand;
-import org.west2.clusterio.datanode.protocol.DatanodeInfo;
-import org.west2.clusterio.datanode.protocol.DatanodeStatus;
+import org.west2.clusterio.common.protocol.Block;
+import org.west2.clusterio.common.utils.HashUtil;
+import org.west2.clusterio.datanode.protocol.*;
 
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 public class DatanodeManager {
-    private static DatanodeManager manager = new DatanodeManager();
+    //Test
+    private static DatanodeManager manager;
     //Datanode uuid(temporary) => DatanodeInfo
     private final Map<String, DatanodeInfo> registry = new HashMap<>();
     private int size;
     //TODO config init
-    private int namespaceID ;
+    private long namespaceID;
     private String clusterID;
-    private DatanodeManager(){}
-    public static DatanodeManager getManager(){
+
+    public DatanodeManager(long namespaceID, String clusterID) {
+        if (manager == null) {
+            this.namespaceID = namespaceID;
+            this.clusterID = clusterID;
+            manager = this;
+        }
+    }
+
+    public static DatanodeManager getManager() {
         return manager;
     }
 
-    public final boolean register(String uuid, DatanodeInfo info){
-        if (registry.containsKey(uuid)){
+    public final boolean register(String uuid, DatanodeInfo info) {
+        if (registry.containsKey(uuid)) {
             return false;
         }
-        registry.put(uuid,info);
+        registry.put(uuid, info);
         return true;
     }
 
-    public void heartbeatInitialize(){
+    public void heartbeatInitialize() {
         ScheduledExecutorService executor = Executors.newSingleThreadScheduledExecutor();
-        executor.scheduleAtFixedRate(new HeartbeatValidationTimer(),0, Constants.DEFAULT_HEARTBEAT_INTERVAL, TimeUnit.MILLISECONDS);
+        executor.scheduleAtFixedRate(new HeartbeatValidationTimer(), 0, Constants.DEFAULT_HEARTBEAT_INTERVAL, TimeUnit.MILLISECONDS);
     }
 
-    public final DatanodeCommand heartbeat(String uuid, DatanodeInfo info){
+    public final DatanodeCommand heartbeat(String uuid, DatanodeInfo info) {
         DatanodeInfo datanodeInfo = registry.get(uuid);
         datanodeInfo.update(info);
-
-        //TODO when datanode send a heartbeat put a related command as its response
-        return null;
+        //TODO Store the command and get here
+        Block block = new Block(1, 1024, System.currentTimeMillis());
+        Block[] blks = {block};
+        BlockCommand blockCommand = new BlockCommand(DatanodeProtocol.DNA_TRANSFER, "1", blks);
+        return blockCommand;
     }
 
-    public void heartbeatExpiration(String uuid){
+    public void heartbeatExpiration(String uuid) {
         DatanodeStatus status = getDatanodeStatus(uuid);
-        if (status == DatanodeStatus.ACTIVE){
-            setDatanodeStatus(uuid,DatanodeStatus.AMBIGUITY);
+        if (status == DatanodeStatus.ACTIVE) {
+            setDatanodeStatus(uuid, DatanodeStatus.AMBIGUITY);
         }
     }
 
-    public void datanodeDown(String uuid){
+    public void datanodeDown(String uuid) {
         DatanodeStatus status = getDatanodeStatus(uuid);
-        if (status == DatanodeStatus.AMBIGUITY){
-            setDatanodeStatus(uuid,DatanodeStatus.DOWN);
+        if (status == DatanodeStatus.AMBIGUITY) {
+            setDatanodeStatus(uuid, DatanodeStatus.DOWN);
         }
         //TODO rearrange its replicas
     }
 
-    private DatanodeStatus getDatanodeStatus(String uuid){
+    private DatanodeStatus getDatanodeStatus(String uuid) {
         return registry.get(uuid).getStatus();
     }
 
-    private void setDatanodeStatus(String uuid,DatanodeStatus status){
+    private void setDatanodeStatus(String uuid, DatanodeStatus status) {
         registry.get(uuid).setStatus(status);
     }
 
@@ -81,7 +91,7 @@ public class DatanodeManager {
         this.size = size;
     }
 
-    public int getNamespaceID() {
+    public long getNamespaceID() {
         return namespaceID;
     }
 

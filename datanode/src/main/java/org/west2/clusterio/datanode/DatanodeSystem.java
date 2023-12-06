@@ -31,11 +31,13 @@ public class DatanodeSystem {
     public List<StorageReport> getStorageReport(){
         ArrayList<StorageReport> reports = new ArrayList<>();
         //TODO blockPool parameter should be handled later
-        StorageReport report = new StorageReport(id.getDatanodeUuid(), isAlive(), info.getCapacity(),
+        StorageReport report = new StorageReport(info.getDatanodeUuid(), isAlive(), info.getCapacity(),
                 info.getDfsUsed(), info.getRemaining(), info.getDfsUsed());
         reports.add(report);
         return reports;
     }
+
+
 
     public boolean isAlive(){
         return true;

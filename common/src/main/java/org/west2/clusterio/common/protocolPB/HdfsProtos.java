@@ -37,10 +37,10 @@ public final class HdfsProtos {
     int getLayoutVersion();
 
     /**
-     * <code>uint32 namespaceID = 3;</code>
+     * <code>uint64 namespaceID = 3;</code>
      * @return The namespaceID.
      */
-    int getNamespaceID();
+    long getNamespaceID();
 
     /**
      * <code>string clusterID = 4;</code>
@@ -148,13 +148,13 @@ public final class HdfsProtos {
     }
 
     public static final int NAMESPACEID_FIELD_NUMBER = 3;
-    private int namespaceID_ = 0;
+    private long namespaceID_ = 0L;
     /**
-     * <code>uint32 namespaceID = 3;</code>
+     * <code>uint64 namespaceID = 3;</code>
      * @return The namespaceID.
      */
     @Override
-    public int getNamespaceID() {
+    public long getNamespaceID() {
       return namespaceID_;
     }
 
@@ -228,8 +228,8 @@ public final class HdfsProtos {
       if (layoutVersion_ != 0) {
         output.writeUInt32(2, layoutVersion_);
       }
-      if (namespaceID_ != 0) {
-        output.writeUInt32(3, namespaceID_);
+      if (namespaceID_ != 0L) {
+        output.writeUInt64(3, namespaceID_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterID_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, clusterID_);
@@ -253,9 +253,9 @@ public final class HdfsProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(2, layoutVersion_);
       }
-      if (namespaceID_ != 0) {
+      if (namespaceID_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, namespaceID_);
+          .computeUInt64Size(3, namespaceID_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterID_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, clusterID_);
@@ -305,7 +305,8 @@ public final class HdfsProtos {
       hash = (37 * hash) + LAYOUTVERSION_FIELD_NUMBER;
       hash = (53 * hash) + getLayoutVersion();
       hash = (37 * hash) + NAMESPACEID_FIELD_NUMBER;
-      hash = (53 * hash) + getNamespaceID();
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getNamespaceID());
       hash = (37 * hash) + CLUSTERID_FIELD_NUMBER;
       hash = (53 * hash) + getClusterID().hashCode();
       hash = (37 * hash) + CTIME_FIELD_NUMBER;
@@ -444,7 +445,7 @@ public final class HdfsProtos {
         bitField0_ = 0;
         storageUuid_ = "";
         layoutVersion_ = 0;
-        namespaceID_ = 0;
+        namespaceID_ = 0L;
         clusterID_ = "";
         cTime_ = 0L;
         return this;
@@ -549,7 +550,7 @@ public final class HdfsProtos {
         if (other.getLayoutVersion() != 0) {
           setLayoutVersion(other.getLayoutVersion());
         }
-        if (other.getNamespaceID() != 0) {
+        if (other.getNamespaceID() != 0L) {
           setNamespaceID(other.getNamespaceID());
         }
         if (!other.getClusterID().isEmpty()) {
@@ -597,7 +598,7 @@ public final class HdfsProtos {
                 break;
               } // case 16
               case 24: {
-                namespaceID_ = input.readUInt32();
+                namespaceID_ = input.readUInt64();
                 bitField0_ |= 0x00000004;
                 break;
               } // case 24
@@ -732,21 +733,21 @@ public final class HdfsProtos {
         return this;
       }
 
-      private int namespaceID_ ;
+      private long namespaceID_ ;
       /**
-       * <code>uint32 namespaceID = 3;</code>
+       * <code>uint64 namespaceID = 3;</code>
        * @return The namespaceID.
        */
       @Override
-      public int getNamespaceID() {
+      public long getNamespaceID() {
         return namespaceID_;
       }
       /**
-       * <code>uint32 namespaceID = 3;</code>
+       * <code>uint64 namespaceID = 3;</code>
        * @param value The namespaceID to set.
        * @return This builder for chaining.
        */
-      public Builder setNamespaceID(int value) {
+      public Builder setNamespaceID(long value) {
 
         namespaceID_ = value;
         bitField0_ |= 0x00000004;
@@ -754,12 +755,12 @@ public final class HdfsProtos {
         return this;
       }
       /**
-       * <code>uint32 namespaceID = 3;</code>
+       * <code>uint64 namespaceID = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearNamespaceID() {
         bitField0_ = (bitField0_ & ~0x00000004);
-        namespaceID_ = 0;
+        namespaceID_ = 0L;
         onChanged();
         return this;
       }
@@ -6598,7 +6599,7 @@ public final class HdfsProtos {
     String[] descriptorData = {
       "\n\nhdfs.proto\"v\n\021StorageInfoProtoc\022\023\n\013sto" +
       "rageUuid\030\001 \001(\t\022\025\n\rlayoutVersion\030\002 \001(\r\022\023\n" +
-      "\013namespaceID\030\003 \001(\r\022\021\n\tclusterID\030\004 \001(\t\022\r\n" +
+      "\013namespaceID\030\003 \001(\004\022\021\n\tclusterID\030\004 \001(\t\022\r\n" +
       "\005cTime\030\005 \001(\004\"W\n\017DatanodeIDProto\022\016\n\006ipAdd" +
       "r\030\001 \001(\t\022\020\n\010hostName\030\002 \001(\t\022\024\n\014datanodeUui" +
       "d\030\003 \001(\t\022\014\n\004port\030\004 \001(\r\"\203\001\n\022StorageReportP" +

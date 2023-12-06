@@ -20,7 +20,7 @@ public class HeartbeatRequest {
                 = DatanodeProtocol.HeartbeatRequestProto.newBuilder();
         builder.setRegistration(reg.parseDatanodeReg());
         for (int i = 0;i < reports.size();i++){
-            builder.setReports(i,reports.get(i).parse());
+            builder.addReports(reports.get(i).parse());
         }
         return builder.build();
     }

@@ -1,21 +1,26 @@
 package org.west2.clusterio.namenode.service;
 
 import io.grpc.stub.StreamObserver;
-import org.west2.clusterio.datanode.protocol.DatanodeCommand;
-import org.west2.clusterio.datanode.protocol.DatanodeID;
-import org.west2.clusterio.datanode.protocol.DatanodeInfo;
-import org.west2.clusterio.datanode.protocol.DatanodeRegistration;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.west2.clusterio.common.protocolPB.HdfsProtos;
+import org.west2.clusterio.common.protocolPB.HdfsProtos.StorageInfoProtoc;
+import org.west2.clusterio.datanode.protocol.*;
 import org.west2.clusterio.namenode.server.Command;
 import org.west2.clusterio.namenode.server.DatanodeManager;
 import org.west2.clusterio.common.protocolPB.DatanodeProtocol;
-import org.west2.clusterio.common.protocolPB.HdfsProtos;
+import org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto;
 import org.west2.clusterio.common.protocolPB.service.DatanodeServiceGrpc;
+
+import java.util.ArrayList;
 
 /**
  * Datanode related rpc service on a namenode
  */
 
 public class DatanodeServiceImpl extends DatanodeServiceGrpc.DatanodeServiceImplBase {
+    private static final Logger log = LoggerFactory.getLogger(DatanodeServiceImpl.class.getName());
     private final DatanodeManager manager = DatanodeManager.getManager();
 
     //datanode register itself to namenode
@@ -29,7 +34,7 @@ public class DatanodeServiceImpl extends DatanodeServiceGrpc.DatanodeServiceImpl
         DatanodeProtocol.RegisterDatanodeResponseProto.Builder respBuilder = DatanodeProtocol.RegisterDatanodeResponseProto.newBuilder();
         if (success) {
             //layoutVersion haven't been added
-            HdfsProtos.StorageInfoProtoc build = HdfsProtos.StorageInfoProtoc.newBuilder()
+            StorageInfoProtoc build = StorageInfoProtoc.newBuilder()
                     .setStorageUuid(info.getDatanodeUuid()).setClusterID(manager.getClusterID())
                     .setNamespaceID(manager.getNamespaceID()).build();
             DatanodeProtocol.DatanodeRegistrationProto regProto = regBuilder.setStorageInfo(build).build();
@@ -46,15 +51,19 @@ public class DatanodeServiceImpl extends DatanodeServiceGrpc.DatanodeServiceImpl
     //otherwise the namenode will rearrange the blocks on it
     @Override
     public void heartbeat(DatanodeProtocol.HeartbeatRequestProto request, StreamObserver<DatanodeProtocol.HeartbeatResponseProto> responseObserver) {
+        log.info("Heartbeat received");
         DatanodeRegistration registration = new DatanodeRegistration(request.getRegistration());
         DatanodeID datanodeID = new DatanodeID(registration);
         //for now, each datanode have one storage which means report could parse to datanodeInfo
         DatanodeInfo datanodeInfo = new DatanodeInfo(datanodeID);
-        HdfsProtos.StorageReportProto report = request.getReports(0);
+        StorageReportProto report = request.getReports(0);
         setInfoProperties(datanodeInfo, report);
         //TODO put command as response to datanode
         DatanodeCommand command = manager.heartbeat(datanodeID.getDatanodeUuid(), datanodeInfo);
-//        responseObserver.onNext();
+        ArrayList<DatanodeCommand> cmds = new ArrayList<>();
+        cmds.add(command);//Test
+        HeartbeatResponse heartbeatResponse = new HeartbeatResponse(cmds);
+        responseObserver.onNext(PBHelper.convert(heartbeatResponse));
         responseObserver.onCompleted();
     }
 

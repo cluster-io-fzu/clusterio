@@ -5,7 +5,7 @@ import org.west2.clusterio.common.protocolPB.HdfsProtos;
 public class StorageInfo {
     private String storageUuid;
     private int layoutVersion;
-    private int namespaceID;
+    private long namespaceID;
     private String clusterID;
     private long cTime;
 
