@@ -11,6 +11,5 @@ public class HeartbeatClientTimer implements Runnable{
         }catch (Exception e){
             e.printStackTrace();
         }
-        System.out.println("Heart one time");
     }
 }
