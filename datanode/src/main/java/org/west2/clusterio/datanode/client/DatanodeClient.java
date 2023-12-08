@@ -46,7 +46,7 @@ public class DatanodeClient {
     public void startHeartbeat() {
         executor = Executors.newSingleThreadScheduledExecutor();
         executor.scheduleAtFixedRate(new HeartbeatClientTimer(), 0,
-                TimeUnit.SECONDS.toMillis(1), TimeUnit.MILLISECONDS);
+                Constants.DEFAULT_HEARTBEAT_INTERVAL, TimeUnit.MILLISECONDS);
     }
 
     public void stopHeartbeat() {

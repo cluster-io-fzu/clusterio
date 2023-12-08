@@ -51,7 +51,6 @@ public class DatanodeServiceImpl extends DatanodeServiceGrpc.DatanodeServiceImpl
     //otherwise the namenode will rearrange the blocks on it
     @Override
     public void heartbeat(DatanodeProtocol.HeartbeatRequestProto request, StreamObserver<DatanodeProtocol.HeartbeatResponseProto> responseObserver) {
-        log.info("Heartbeat received");
         DatanodeRegistration registration = new DatanodeRegistration(request.getRegistration());
         DatanodeID datanodeID = new DatanodeID(registration);
         //for now, each datanode have one storage which means report could parse to datanodeInfo
