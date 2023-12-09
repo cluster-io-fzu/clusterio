@@ -9,6 +9,7 @@ public class DatanodeInfo extends DatanodeID {
     private int numBlocks;
     private long lastBlockReportTime;
     private DatanodeStatus status;
+    public static final DatanodeInfo[] EMPTY_ARRAY = {};
     public DatanodeInfo(DatanodeID id){
         super(id);
         setLastUpdated(System.currentTimeMillis());

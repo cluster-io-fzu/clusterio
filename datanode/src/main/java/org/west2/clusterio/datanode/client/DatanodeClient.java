@@ -47,7 +47,7 @@ public class DatanodeClient {
 
     public boolean processCmd(DatanodeCommand cmd){
         //TODO handle the cmd here from daemon thread
-
+        log.info("process CMD");
         return true;
     }
 

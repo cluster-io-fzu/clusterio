@@ -24,11 +24,13 @@ public class HeartbeatValidationTimer implements Runnable {
             Iterator<String> iterator = keySet.iterator();
             while (iterator.hasNext()) {
                 DatanodeInfo datanodeInfo = registry.get(iterator.next());
+                if (datanodeInfo.getStatus() == DatanodeStatus.DOWN) continue;
                 long lastUpdated = datanodeInfo.getLastUpdated();
                 if (lastUpdated + Constants.DEFAULT_HEARTBEAT_TIMEOUT < System.currentTimeMillis()
                         && datanodeInfo.getStatus() == DatanodeStatus.AMBIGUITY) {
                     manager.datanodeDown(datanodeInfo.getDatanodeUuid());
-                } else if (lastUpdated + Constants.DEFAULT_HEARTBEAT_INTERVAL * 1.5 < System.currentTimeMillis()) {
+                } else if (lastUpdated + Constants.DEFAULT_HEARTBEAT_INTERVAL * 1.5 < System.currentTimeMillis()
+                        && datanodeInfo.getStatus() == DatanodeStatus.ACTIVE) {
                     manager.heartbeatExpiration(datanodeInfo.getDatanodeUuid());
                 }
             }

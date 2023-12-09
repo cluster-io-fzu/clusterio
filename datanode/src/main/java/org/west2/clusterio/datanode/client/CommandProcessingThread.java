@@ -6,13 +6,13 @@ import java.util.List;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
+//Maybe an inner class will be better?
 public class CommandProcessingThread extends Thread{
     private final BlockingQueue<Runnable> queue;
-    private final DatanodeClient client;
+    private DatanodeClient client;
     protected CommandProcessingThread(){
         super("Command processor");
         this.queue = new LinkedBlockingQueue<>();
-        this.client = DatanodeClient.getInstance();
         setDaemon(true);
     }
 
@@ -21,7 +21,7 @@ public class CommandProcessingThread extends Thread{
         try {
             processQueue();
         }catch (Throwable t){
-
+            t.printStackTrace();
         }
     }
 
@@ -33,6 +33,7 @@ public class CommandProcessingThread extends Thread{
             }catch (InterruptedException e){
                 Thread.currentThread().interrupt();
                 if (Thread.interrupted()){
+                    System.out.println("thread failed");
                     break;
                 }
             }
@@ -42,6 +43,9 @@ public class CommandProcessingThread extends Thread{
 
     private boolean processCommand(DatanodeCommand[] cmds){
         if (cmds != null){
+            if (client == null){
+                client = DatanodeClient.getInstance();
+            }
             for(DatanodeCommand cmd:cmds){
                 if (!client.processCmd(cmd)){
                     return false;
