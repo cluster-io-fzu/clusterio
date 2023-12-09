@@ -1,8 +1,9 @@
 package org.west2.clusterio.namenode.server;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.west2.clusterio.common.constant.Constants;
 import org.west2.clusterio.common.protocol.Block;
-import org.west2.clusterio.common.utils.HashUtil;
 import org.west2.clusterio.datanode.protocol.*;
 
 
@@ -12,6 +13,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 public class DatanodeManager {
+    private static final Logger log = LoggerFactory.getLogger(DatanodeManager.class.getName());
     //Test
     private static DatanodeManager manager;
     //Datanode uuid(temporary) => DatanodeInfo
@@ -20,7 +22,7 @@ public class DatanodeManager {
     //TODO config init
     private long namespaceID;
     private String clusterID;
-
+    private boolean isFirstHeartbeat = false;
     public DatanodeManager(long namespaceID, String clusterID) {
         if (manager == null) {
             this.namespaceID = namespaceID;
@@ -49,14 +51,20 @@ public class DatanodeManager {
     public final DatanodeCommand heartbeat(String uuid, DatanodeInfo info) {
         DatanodeInfo datanodeInfo = registry.get(uuid);
         datanodeInfo.update(info);
+        setDatanodeStatus(uuid,DatanodeStatus.ACTIVE);
         //TODO Store the command and get here
         Block block = new Block(1, 1024, System.currentTimeMillis());
         Block[] blks = {block};
         BlockCommand blockCommand = new BlockCommand(DatanodeProtocol.DNA_TRANSFER, "1", blks);
+        if (!isFirstHeartbeat){
+            isFirstHeartbeat = true;
+            heartbeatInitialize();
+        }
         return blockCommand;
     }
 
     public void heartbeatExpiration(String uuid) {
+        log.info("datanode heartbeat expiration");
         DatanodeStatus status = getDatanodeStatus(uuid);
         if (status == DatanodeStatus.ACTIVE) {
             setDatanodeStatus(uuid, DatanodeStatus.AMBIGUITY);
@@ -64,6 +72,7 @@ public class DatanodeManager {
     }
 
     public void datanodeDown(String uuid) {
+        log.warn("datanode is down");
         DatanodeStatus status = getDatanodeStatus(uuid);
         if (status == DatanodeStatus.AMBIGUITY) {
             setDatanodeStatus(uuid, DatanodeStatus.DOWN);

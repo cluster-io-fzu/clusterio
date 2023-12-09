@@ -7,13 +7,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.west2.clusterio.common.constant.Constants;
 import org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeCommandProto;
-import org.west2.clusterio.datanode.protocol.DatanodeRegistration;
-import org.west2.clusterio.datanode.protocol.HeartbeatRequest;
-import org.west2.clusterio.datanode.protocol.PBHelper;
-import org.west2.clusterio.datanode.protocol.RegisterDatanodeRequest;
+import org.west2.clusterio.common.protocolPB.service.DatanodeServiceGrpc;
+import org.west2.clusterio.datanode.protocol.*;
 import org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto;
 import org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto;
-import org.west2.clusterio.common.protocolPB.service.DatanodeServiceGrpc;
+import org.west2.clusterio.common.protocolPB.service.DatanodeServiceGrpc.DatanodeServiceBlockingStub;
 import org.west2.clusterio.datanode.DatanodeSystem;
 
 import java.util.List;
@@ -31,8 +29,12 @@ public class DatanodeClient {
     private static final DatanodeClient client = new DatanodeClient();
     private final DatanodeSystem sys = DatanodeSystem.getSystem();
     private ScheduledExecutorService executor ;
-    private DatanodeServiceGrpc.DatanodeServiceBlockingStub blockingStub;
-    private DatanodeClient(){}
+    private DatanodeServiceBlockingStub blockingStub;
+    private final CommandProcessingThread commandProcessingThread;
+    private DatanodeClient(){
+        this.commandProcessingThread = new CommandProcessingThread();
+        commandProcessingThread.start();
+    }
     //May modify in the future
     public static DatanodeClient getInstance(){
         return client;
@@ -43,10 +45,17 @@ public class DatanodeClient {
                 .negotiationType(NegotiationType.PLAINTEXT).build();
     }
 
+    public boolean processCmd(DatanodeCommand cmd){
+        //TODO handle the cmd here from daemon thread
+        log.info("process CMD");
+        return true;
+    }
+
+
     public void startHeartbeat() {
         executor = Executors.newSingleThreadScheduledExecutor();
         executor.scheduleAtFixedRate(new HeartbeatClientTimer(), 0,
-                TimeUnit.SECONDS.toMillis(1), TimeUnit.MILLISECONDS);
+                Constants.DEFAULT_HEARTBEAT_INTERVAL, TimeUnit.MILLISECONDS);
     }
 
     public void stopHeartbeat() {
@@ -66,7 +75,7 @@ public class DatanodeClient {
         startHeartbeat();
     }
 
-    public void sendBlockingHeartbeat() {
+    public void sendBlockingHeartbeat() throws InterruptedException {
         if (blockingStub == null) {
             creatBlockingStub();
         }
@@ -74,7 +83,7 @@ public class DatanodeClient {
                 = blockingStub.heartbeat(createHeartbeatRequest().parse());
         List<DatanodeCommandProto> cmds = resp.getCmdsList();
         for (int i = 0; i < cmds.size(); i++) {
-            log.info("Datanode Command: ",PBHelper.convert(cmds.get(i)));
+           commandProcessingThread.enqueue(PBHelper.convert(cmds.get(i)));
         }
     }
 

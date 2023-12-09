@@ -1,9 +1,16 @@
 package org.west2.clusterio.common.protocol;
 
+import java.util.regex.Pattern;
+
 public class Block {
+    public static final String BLOCK_FILE_PREFIX = "blk_";
+    public static final String METADATA_EXTENSION = ".meta";
     private long blockId;
     private long numBytes;
     private long generationStamp;
+
+    public static final Pattern blockFilePattern
+            = Pattern.compile(BLOCK_FILE_PREFIX+"(-??\\d++)$");
 
     public Block(){
         this(0,0,0);
