@@ -9,7 +9,7 @@ public class StorageInfo {
     private String clusterID;
     private long cTime;
 
-    public StorageInfo(String storageUuid, int layoutVersion, int namespaceID, String clusterID, long cTime) {
+    public StorageInfo(String storageUuid, int layoutVersion, long namespaceID, String clusterID, long cTime) {
         this.storageUuid = storageUuid;
         this.layoutVersion = layoutVersion;
         this.namespaceID = namespaceID;
@@ -30,5 +30,25 @@ public class StorageInfo {
                 .setClusterID(this.clusterID)
                 .setLayoutVersion(this.layoutVersion)
                 .setCTime(this.cTime).build();
+    }
+
+    public String getStorageUuid() {
+        return storageUuid;
+    }
+
+    public int getLayoutVersion() {
+        return layoutVersion;
+    }
+
+    public long getNamespaceID() {
+        return namespaceID;
+    }
+
+    public String getClusterID() {
+        return clusterID;
+    }
+
+    public long getcTime() {
+        return cTime;
     }
 }
