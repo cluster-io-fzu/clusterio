@@ -56,7 +56,7 @@ message HeartbeatResponseProto{
 message BlockReportRequestProto{
   DatanodeRegistrationProto registration = 1;
   string blockPoolId = 2;
-  repeated StorageReportProto reports = 3;
+  repeated StorageBlockReportProto reports = 3;
   BlockReportContextProto context = 4;
 }
 
