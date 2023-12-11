@@ -21,5 +21,6 @@ public class DataNodeStartUp {
         sys.setReg(datanodeRegistration);
         client.initChannel("127.0.0.1",9096);
         client.register();
+
     }
 }
