@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 
 public class DatanodeManager {
     private static final Logger log = LoggerFactory.getLogger(DatanodeManager.class.getName());
-    //Test
+    //TODO This singleton is wrong
     private static DatanodeManager manager;
     //Datanode uuid(temporary) => DatanodeInfo
     private final Map<String, DatanodeInfo> registry = new HashMap<>();

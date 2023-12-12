@@ -1,16 +1,27 @@
 package org.west2.clusterio.datanode.protocol;
 
+import com.google.protobuf.ByteString;
+import org.west2.clusterio.common.protocol.Block;
+
 public class StorageBlockReport {
     private String storageUuid;
-    private long[] blocks;
+    private Block[] blocks;
     private long numberOfBlocks;
-    private byte[] blocksBuffers;
+//    private ByteString[] blocksBuffers;
 
-    public StorageBlockReport(String storageUuid, long[] blocks, long numberOfBlocks, byte[] blocksBuffers) {
+
+    public StorageBlockReport(String storageUuid, Block[] blocks, long numberOfBlocks) {
         this.storageUuid = storageUuid;
         this.blocks = blocks;
         this.numberOfBlocks = numberOfBlocks;
-        this.blocksBuffers = blocksBuffers;
+    }
+
+    public Block[] getBlocks() {
+        return blocks;
+    }
+
+    public void setBlocks(Block[] blocks) {
+        this.blocks = blocks;
     }
 
     public String getStorageUuid() {
@@ -21,13 +32,7 @@ public class StorageBlockReport {
         this.storageUuid = storageUuid;
     }
 
-    public long[] getBlocks() {
-        return blocks;
-    }
 
-    public void setBlocks(long[] blocks) {
-        this.blocks = blocks;
-    }
 
     public long getNumberOfBlocks() {
         return numberOfBlocks;
@@ -37,11 +42,5 @@ public class StorageBlockReport {
         this.numberOfBlocks = numberOfBlocks;
     }
 
-    public byte[] getBlocksBuffers() {
-        return blocksBuffers;
-    }
 
-    public void setBlocksBuffers(byte[] blocksBuffers) {
-        this.blocksBuffers = blocksBuffers;
-    }
 }

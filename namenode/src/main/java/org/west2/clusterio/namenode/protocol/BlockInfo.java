@@ -19,6 +19,10 @@ public class BlockInfo extends Block {
      */
     private DatanodeInfo info;
 
+    public BlockInfo(Block block){
+        super(block);
+    }
+
     public BlockInfo(short size){
         this.bcId = -1;
         this.replication = size;

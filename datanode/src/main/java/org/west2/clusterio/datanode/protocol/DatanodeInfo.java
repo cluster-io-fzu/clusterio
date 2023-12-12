@@ -8,7 +8,7 @@ public class DatanodeInfo extends DatanodeID {
     private long lastUpdated;
     private int numBlocks;
     private long lastBlockReportTime;
-    private DatanodeStatus status;
+    private DatanodeStatus status;giyt
     public static final DatanodeInfo[] EMPTY_ARRAY = {};
     public DatanodeInfo(DatanodeID id){
         super(id);

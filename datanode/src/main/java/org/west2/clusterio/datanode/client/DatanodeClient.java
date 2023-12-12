@@ -6,6 +6,7 @@ import io.grpc.netty.shaded.io.grpc.netty.NettyChannelBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.west2.clusterio.common.constant.Constants;
+import org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto;
 import org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeCommandProto;
 import org.west2.clusterio.common.protocolPB.service.DatanodeServiceGrpc;
 import org.west2.clusterio.datanode.protocol.*;
@@ -68,11 +69,12 @@ public class DatanodeClient {
         }
         RegisterDatanodeResponseProto registerProto
                 = blockingStub.registerDatanode(createRegisterRequest().parse());
-        DatanodeRegistration datanodeRegistration = new DatanodeRegistration(registerProto.getRegistration());
+        DatanodeRegistration datanodeRegistration = PBHelper.convert(registerProto.getRegistration());
         sys.setReg(datanodeRegistration);
         //When registration complete start heartbeat
         log.info("Datanode Registration success");
         startHeartbeat();
+        sendFirstBlocReport();
     }
 
     public void sendBlockingHeartbeat() throws InterruptedException {
@@ -87,6 +89,15 @@ public class DatanodeClient {
         }
     }
 
+    protected void sendFirstBlocReport(){
+        if (blockingStub == null){
+            creatBlockingStub();
+        }
+        BlockReportResponseProto resp
+                = blockingStub.blockReport(PBHelper.convert(createFirstBlockReport()));
+    }
+
+
     private void creatBlockingStub() {
 //        if (channel == null){
 //            initChannel();
@@ -100,5 +111,11 @@ public class DatanodeClient {
 
     private HeartbeatRequest createHeartbeatRequest() {
         return new HeartbeatRequest(sys.getReg(), sys.getStorageReport());
+    }
+
+    private BlockReportRequest createFirstBlockReport(){
+        //TODO first block need  scan op's file system to know blocks we have
+        //For now it just for testing
+        return new BlockReportRequest(sys.getReg(),"1",new StorageBlockReport[0],new BlockReportContext(1,1,1));
     }
 }
