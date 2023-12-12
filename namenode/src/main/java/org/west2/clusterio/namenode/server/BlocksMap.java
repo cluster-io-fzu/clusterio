@@ -8,15 +8,33 @@ import java.util.*;
 
 public class BlocksMap {
     private final int capacity;
+    //TODO needs replication factor to confirm the length of linkedlist
     private HashMap<Long, LinkedList<BlockInfo>> blocks;
     BlocksMap(int capacity){
         this.capacity = capacity;
         this.blocks = new HashMap<>();
     }
 
-    public void insertBlockInfo(Block blk,BlockInfo blockInfo){
-        LinkedList<BlockInfo> infos = blocks.get(blk);
+    public boolean insertBlockInfo(long bid,BlockInfo blockInfo){
+        if (!blocks.containsKey(bid)){
+            return false;
+        }
+        LinkedList<BlockInfo> infos = blocks.get(bid);
         infos.offer(blockInfo);
+        return true;
+    }
+
+    public void removeDatanodeBlocks(long blockId,String datanodeUuid){
+        if (blocks.containsKey(blockId)){
+            LinkedList<BlockInfo> blockInfos = blocks.get(blockId);
+            Iterator<BlockInfo> iterator = blockInfos.iterator();
+            while (iterator.hasNext()){
+                BlockInfo blockInfo = iterator.next();
+                if (blockInfo.getInfo().getDatanodeUuid().equals(datanodeUuid)){
+                    blockInfos.remove(blockInfo);
+                }
+            }
+        }
     }
 
     public List<BlockInfo> getInfosByBid(long blockId){

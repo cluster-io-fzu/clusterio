@@ -7,13 +7,16 @@ import org.slf4j.LoggerFactory;
 import org.west2.clusterio.common.protocolPB.HdfsProtos;
 import org.west2.clusterio.common.protocolPB.HdfsProtos.StorageInfoProtoc;
 import org.west2.clusterio.datanode.protocol.*;
+import org.west2.clusterio.namenode.server.BlockManager;
 import org.west2.clusterio.namenode.server.Command;
 import org.west2.clusterio.namenode.server.DatanodeManager;
+import org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto;
 import org.west2.clusterio.common.protocolPB.DatanodeProtocol;
 import org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto;
 import org.west2.clusterio.common.protocolPB.service.DatanodeServiceGrpc;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Datanode related rpc service on a namenode
@@ -21,12 +24,13 @@ import java.util.ArrayList;
 
 public class DatanodeServiceImpl extends DatanodeServiceGrpc.DatanodeServiceImplBase {
     private static final Logger log = LoggerFactory.getLogger(DatanodeServiceImpl.class.getName());
+    //TODO here has a need for unified management of all managers(NameSystem)
     private final DatanodeManager manager = DatanodeManager.getManager();
 
     //datanode register itself to namenode
     @Override
     public void registerDatanode(DatanodeProtocol.RegisterDatanodeRequestProto request, StreamObserver<DatanodeProtocol.RegisterDatanodeResponseProto> responseObserver) {
-        DatanodeRegistration registration = new DatanodeRegistration(request.getRegistration());
+        DatanodeRegistration registration = PBHelper.convert(request.getRegistration());
         DatanodeID datanodeID = new DatanodeID(registration);
         DatanodeInfo info = new DatanodeInfo(datanodeID);
         boolean success = manager.register(info.getDatanodeUuid(), info);
@@ -51,7 +55,7 @@ public class DatanodeServiceImpl extends DatanodeServiceGrpc.DatanodeServiceImpl
     //otherwise the namenode will rearrange the blocks on it
     @Override
     public void heartbeat(DatanodeProtocol.HeartbeatRequestProto request, StreamObserver<DatanodeProtocol.HeartbeatResponseProto> responseObserver) {
-        DatanodeRegistration registration = new DatanodeRegistration(request.getRegistration());
+        DatanodeRegistration registration = PBHelper.convert(request.getRegistration());
         DatanodeID datanodeID = new DatanodeID(registration);
         //for now, each datanode have one storage which means report could parse to datanodeInfo
         DatanodeInfo datanodeInfo = new DatanodeInfo(datanodeID);
@@ -68,7 +72,11 @@ public class DatanodeServiceImpl extends DatanodeServiceGrpc.DatanodeServiceImpl
 
     @Override
     public void blockReport(DatanodeProtocol.BlockReportRequestProto request, StreamObserver<DatanodeProtocol.BlockReportResponseProto> responseObserver) {
-        super.blockReport(request, responseObserver);
+        StorageBlockReport[] reports = PBHelper.convert(request.getReportsList());
+        DatanodeRegistration registration = PBHelper.convert(request.getRegistration());
+        BlockManager blockManager = new BlockManager();
+        blockManager.processFirstReport(registration,reports);
+        log.info("Block report");
     }
 
     private void setInfoProperties(DatanodeInfo info, HdfsProtos.StorageReportProto report) {

@@ -15,6 +15,8 @@ import org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportRequest
 import org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportContextProto;
 import org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class PBHelper {
@@ -184,17 +186,33 @@ public class PBHelper {
                 .build();
     }
 
+    public static StorageBlockReport convert(StorageBlockReportProto proto){
+        List<BlockProto> blocksList = proto.getBlocksList();
+        int l = blocksList.size();
+        Block[] blks = new Block[l];
+        for (int i = 0; i < l; i++) {
+            blks[i] = convert(blocksList.get(i));
+        }
+        return new StorageBlockReport(proto.getStorageUuid(),blks,proto.getNumberOfBlocks());
+    }
+
+    public static StorageBlockReport[] convert(List<StorageBlockReportProto> protos){
+        int size = protos.size();
+        StorageBlockReport[] reports = new StorageBlockReport[size];
+        for (int i = 0; i < size; i++) {
+            reports[i] = convert(protos.get(i));
+        }
+        return reports;
+    }
+
     public static StorageBlockReportProto convert(StorageBlockReport report){
         StorageBlockReportProto.Builder builder
                 = StorageBlockReportProto.newBuilder();
         builder.setStorageUuid(report.getStorageUuid()).setNumberOfBlocks(report.getNumberOfBlocks());
-        long[] blocks = report.getBlocks();
-        for (long l :blocks) {
-            builder.addBlocks(l);
+        Block[] blocks = report.getBlocks();
+        for (Block l :blocks) {
+            builder.addBlocks(convert(l));
         }
-        //TODO bytes
-        byte[] blocksBuffers = report.getBlocksBuffers();
-
         return builder.build();
     }
 
