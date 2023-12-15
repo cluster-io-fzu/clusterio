@@ -8,10 +8,14 @@ public class DatanodeInfo extends DatanodeID {
     private long lastUpdated;
     private int numBlocks;
     private long lastBlockReportTime;
-    private DatanodeStatus status;giyt
+    private DatanodeStatus status;
+    //TODO scan local file system to acquire blocks
+    private DatanodeStorageInfo storageInfo;
     public static final DatanodeInfo[] EMPTY_ARRAY = {};
+
     public DatanodeInfo(DatanodeID id){
         super(id);
+        this.storageInfo = new DatanodeStorageInfo();
         setLastUpdated(System.currentTimeMillis());
     }
 
@@ -24,6 +28,7 @@ public class DatanodeInfo extends DatanodeID {
         this.lastUpdated = lastUpdated;
         this.numBlocks = numBlocks;
         this.lastBlockReportTime = lastBlockReportTime;
+        this.storageInfo = new DatanodeStorageInfo();
         setLastUpdated(System.currentTimeMillis());
     }
     //synchronized method, avoid thread problem
@@ -85,6 +90,10 @@ public class DatanodeInfo extends DatanodeID {
 
     public void setNumBlocks(int numBlocks) {
         this.numBlocks = numBlocks;
+    }
+
+    public DatanodeStorageInfo getStorageInfo() {
+        return storageInfo;
     }
 
     public long getLastBlockReportTime() {
