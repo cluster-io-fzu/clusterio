@@ -16,6 +16,8 @@ public class DatanodeManager {
     private static final Logger log = LoggerFactory.getLogger(DatanodeManager.class.getName());
     //TODO This singleton is wrong
     private static DatanodeManager manager;
+    private final NameSystem sys;
+    private BlockManager blockManager;
     //Datanode uuid(temporary) => DatanodeInfo
     private final Map<String, DatanodeInfo> registry = new HashMap<>();
     private int size;
@@ -23,7 +25,9 @@ public class DatanodeManager {
     private long namespaceID;
     private String clusterID;
     private boolean isFirstHeartbeat = false;
-    public DatanodeManager(long namespaceID, String clusterID) {
+    public DatanodeManager(final NameSystem sys,long namespaceID, String clusterID) {
+        this.sys = sys;
+        blockManager = sys.getBlockManager();
         if (manager == null) {
             this.namespaceID = namespaceID;
             this.clusterID = clusterID;
@@ -77,7 +81,8 @@ public class DatanodeManager {
         if (status == DatanodeStatus.AMBIGUITY) {
             setDatanodeStatus(uuid, DatanodeStatus.DOWN);
         }
-        //TODO rearrange its replicas
+        blockManager.removeDatanodeBlocks(uuid);
+        //TODO notify to add replicas if current replicas number can not satisfy replicas factor
     }
 
     private DatanodeStatus getDatanodeStatus(String uuid) {

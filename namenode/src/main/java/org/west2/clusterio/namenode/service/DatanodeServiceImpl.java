@@ -14,6 +14,7 @@ import org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReport
 import org.west2.clusterio.common.protocolPB.DatanodeProtocol;
 import org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto;
 import org.west2.clusterio.common.protocolPB.service.DatanodeServiceGrpc;
+import org.west2.clusterio.namenode.server.NameSystem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,22 +26,23 @@ import java.util.List;
 public class DatanodeServiceImpl extends DatanodeServiceGrpc.DatanodeServiceImplBase {
     private static final Logger log = LoggerFactory.getLogger(DatanodeServiceImpl.class.getName());
     //TODO here has a need for unified management of all managers(NameSystem)
-    private final DatanodeManager manager = DatanodeManager.getManager();
-
+    private final NameSystem sys = NameSystem.getSystem();
+    private final DatanodeManager dnManager = sys.getDatanodeManager();
+    private final BlockManager blockManager = sys.getBlockManager();
     //datanode register itself to namenode
     @Override
     public void registerDatanode(DatanodeProtocol.RegisterDatanodeRequestProto request, StreamObserver<DatanodeProtocol.RegisterDatanodeResponseProto> responseObserver) {
         DatanodeRegistration registration = PBHelper.convert(request.getRegistration());
         DatanodeID datanodeID = new DatanodeID(registration);
         DatanodeInfo info = new DatanodeInfo(datanodeID);
-        boolean success = manager.register(info.getDatanodeUuid(), info);
+        boolean success = dnManager.register(info.getDatanodeUuid(), info);
         DatanodeProtocol.DatanodeRegistrationProto.Builder regBuilder = DatanodeProtocol.DatanodeRegistrationProto.newBuilder().setDatanodeId(request.getRegistration().getDatanodeId());
         DatanodeProtocol.RegisterDatanodeResponseProto.Builder respBuilder = DatanodeProtocol.RegisterDatanodeResponseProto.newBuilder();
         if (success) {
             //layoutVersion haven't been added
             StorageInfoProtoc build = StorageInfoProtoc.newBuilder()
-                    .setStorageUuid(info.getDatanodeUuid()).setClusterID(manager.getClusterID())
-                    .setNamespaceID(manager.getNamespaceID()).build();
+                    .setStorageUuid(info.getDatanodeUuid()).setClusterID(dnManager.getClusterID())
+                    .setNamespaceID(dnManager.getNamespaceID()).build();
             DatanodeProtocol.DatanodeRegistrationProto regProto = regBuilder.setStorageInfo(build).build();
             DatanodeProtocol.RegisterDatanodeResponseProto reg = respBuilder.setRegistration(regProto).build();
             responseObserver.onNext(reg);
@@ -62,7 +64,7 @@ public class DatanodeServiceImpl extends DatanodeServiceGrpc.DatanodeServiceImpl
         StorageReportProto report = request.getReports(0);
         setInfoProperties(datanodeInfo, report);
         //TODO put command as response to datanode
-        DatanodeCommand command = manager.heartbeat(datanodeID.getDatanodeUuid(), datanodeInfo);
+        DatanodeCommand command = dnManager.heartbeat(datanodeID.getDatanodeUuid(), datanodeInfo);
         ArrayList<DatanodeCommand> cmds = new ArrayList<>();
         cmds.add(command);//Test
         HeartbeatResponse heartbeatResponse = new HeartbeatResponse(cmds);
@@ -74,7 +76,6 @@ public class DatanodeServiceImpl extends DatanodeServiceGrpc.DatanodeServiceImpl
     public void blockReport(DatanodeProtocol.BlockReportRequestProto request, StreamObserver<DatanodeProtocol.BlockReportResponseProto> responseObserver) {
         StorageBlockReport[] reports = PBHelper.convert(request.getReportsList());
         DatanodeRegistration registration = PBHelper.convert(request.getRegistration());
-        BlockManager blockManager = new BlockManager();
         blockManager.processFirstReport(registration,reports);
         log.info("Block report");
     }
