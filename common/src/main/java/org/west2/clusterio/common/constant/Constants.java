@@ -11,5 +11,7 @@ public class Constants {
 
     public static final long DEFAULT_TOTAL_BLOCK_REPORT_INTERVAL = TimeUnit.HOURS.toMillis(6);
 
+    public static final String DEFAULT_POOL = "0";
+
     public static final int DEFAULT_NAMENODE_PORT = 9096;
 }

@@ -50,7 +50,7 @@ public class BlockInfo extends Block {
         this.bcId = bcId;
     }
 
-    public DatanodeInfo getInfo() {
+    public DatanodeInfo getDatanodeInfo() {
         return info;
     }
 

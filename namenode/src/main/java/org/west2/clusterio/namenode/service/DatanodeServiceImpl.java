@@ -8,16 +8,13 @@ import org.west2.clusterio.common.protocolPB.HdfsProtos;
 import org.west2.clusterio.common.protocolPB.HdfsProtos.StorageInfoProtoc;
 import org.west2.clusterio.datanode.protocol.*;
 import org.west2.clusterio.namenode.server.BlockManager;
-import org.west2.clusterio.namenode.server.Command;
 import org.west2.clusterio.namenode.server.DatanodeManager;
-import org.west2.clusterio.common.protocolPB.DatanodeProtocol.StorageBlockReportProto;
 import org.west2.clusterio.common.protocolPB.DatanodeProtocol;
 import org.west2.clusterio.common.protocolPB.HdfsProtos.StorageReportProto;
 import org.west2.clusterio.common.protocolPB.service.DatanodeServiceGrpc;
 import org.west2.clusterio.namenode.server.NameSystem;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Datanode related rpc service on a namenode

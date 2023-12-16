@@ -24,6 +24,7 @@ public class BlockCommand extends DatanodeCommand{
         this(action,poolId,blocks,EMPTY_TARGET_DATANODES,EMPTY_TARGET_STORAGEIDS);
     }
 
+
     public String getPoolId() {
         return poolId;
     }

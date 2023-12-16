@@ -30,16 +30,25 @@ public class BlocksMap {
             Iterator<BlockInfo> iterator = blockInfos.iterator();
             while (iterator.hasNext()){
                 BlockInfo blockInfo = iterator.next();
-                if (blockInfo.getInfo().getDatanodeUuid().equals(datanodeUuid)){
+                if (blockInfo.getDatanodeInfo().getDatanodeUuid().equals(datanodeUuid)){
                     blockInfos.remove(blockInfo);
                 }
             }
         }
     }
 
-    public List<BlockInfo> getInfosByBid(long blockId){
+    public List<BlockInfo> getBlocksByBid(long blockId){
         LinkedList<BlockInfo> infos = blocks.get(blockId);
         return infos;
+    }
+
+    public List<String> getRelatedDatanode(long blockId){
+        List<BlockInfo> infos = getBlocksByBid(blockId);
+        ArrayList<String> uuids = new ArrayList<>(infos.size());
+        for (BlockInfo blockInfo :infos) {
+            uuids.add(blockInfo.getDatanodeInfo().getDatanodeUuid());
+        }
+        return uuids;
     }
 
     public List<BlockInfo> getInfosFromBlock(Block blk){
