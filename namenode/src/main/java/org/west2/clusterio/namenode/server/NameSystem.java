@@ -7,6 +7,7 @@ public class NameSystem {
     private NameNodeRpcServer server;
     private DatanodeManager datanodeManager;
     private BlockManager blockManager;
+    private CommandManager commandManager;
     private String host;
     private int port;
 
@@ -14,6 +15,7 @@ public class NameSystem {
         this.host = host;
         this.port = port;
         blockManager = new BlockManager(this);
+        commandManager = new CommandManager();
         initDatanodeManager();
     }
 
@@ -39,6 +41,10 @@ public class NameSystem {
 
     public DatanodeManager getDatanodeManager() {
         return datanodeManager;
+    }
+
+    public CommandManager getCommandManager() {
+        return commandManager;
     }
 
     public String getHost() {

@@ -11,22 +11,23 @@ public class FsFile implements BlockCollection{
     private String suffix;
     private Block[] blocks;
     private Block lastBlock;
+    private short replicas;
     private long lastModifiedTime;
 
 
     public FsFile(FsFile from){
         this(from.numBlocks,from.bcId,from.fileLength,from.filename,
-                from.suffix, from.blocks, from.lastBlock,from.lastModifiedTime);
+                from.suffix, from.blocks, from.lastBlock,from.replicas,from.lastModifiedTime);
     }
 
-    public FsFile(int numBlocks, int bcId, long fileLength, String filename, Block[] blocks, Block lastBlock) {
+    public FsFile(int numBlocks, int bcId, long fileLength, String filename, Block[] blocks, Block lastBlock,short replicas) {
         this(numBlocks,bcId,fileLength,filename, FileUtil.suffix(filename),
-                blocks,lastBlock,System.currentTimeMillis());
+                blocks,lastBlock,replicas,System.currentTimeMillis());
     }
 
     public FsFile(int numBlocks, int bcId, long fileLength,
                   String filename, String suffix, Block[] blocks,
-                  Block lastBlock, long lastModifiedTime) {
+                  Block lastBlock,short replicas ,long lastModifiedTime) {
         this.numBlocks = numBlocks;
         this.bcId = bcId;
         this.fileLength = fileLength;
@@ -34,6 +35,7 @@ public class FsFile implements BlockCollection{
         this.suffix = suffix;
         this.blocks = blocks;
         this.lastBlock = lastBlock;
+        this.replicas = replicas;
         this.lastModifiedTime =  lastModifiedTime;
     }
 
@@ -73,10 +75,6 @@ public class FsFile implements BlockCollection{
         this.lastModifiedTime = lastModifiedTime;
     }
 
-    public int getBcId() {
-        return bcId;
-    }
-
     public long getFileLength() {
         return fileLength;
     }
@@ -87,6 +85,10 @@ public class FsFile implements BlockCollection{
 
     public String getSuffix() {
         return suffix;
+    }
+
+    public short getReplicas() {
+        return replicas;
     }
 
     public long getLastModifiedTime() {
