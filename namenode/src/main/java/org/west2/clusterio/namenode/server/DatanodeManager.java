@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.west2.clusterio.common.constant.Constants;
 import org.west2.clusterio.common.protocol.Block;
 import org.west2.clusterio.datanode.protocol.*;
+import org.west2.clusterio.namenode.protocol.BlockInfo;
 
 
 import java.util.*;
@@ -14,8 +15,11 @@ import java.util.concurrent.TimeUnit;
 
 public class DatanodeManager {
     private static final Logger log = LoggerFactory.getLogger(DatanodeManager.class.getName());
-    //Test
+    //TODO This singleton is wrong
+    private final NameSystem sys;
     private static DatanodeManager manager;
+    private BlockManager blockManager;
+    private CommandManager commandManager;
     //Datanode uuid(temporary) => DatanodeInfo
     private final Map<String, DatanodeInfo> registry = new HashMap<>();
     private int size;
@@ -23,7 +27,10 @@ public class DatanodeManager {
     private long namespaceID;
     private String clusterID;
     private boolean isFirstHeartbeat = false;
-    public DatanodeManager(long namespaceID, String clusterID) {
+    public DatanodeManager(final NameSystem sys,long namespaceID, String clusterID) {
+        this.sys = sys;
+        blockManager = sys.getBlockManager();
+        commandManager = sys.getCommandManager();
         if (manager == null) {
             this.namespaceID = namespaceID;
             this.clusterID = clusterID;
@@ -40,6 +47,7 @@ public class DatanodeManager {
             return false;
         }
         registry.put(uuid, info);
+        size++;
         return true;
     }
 
@@ -77,7 +85,44 @@ public class DatanodeManager {
         if (status == DatanodeStatus.AMBIGUITY) {
             setDatanodeStatus(uuid, DatanodeStatus.DOWN);
         }
-        //TODO rearrange its replicas
+        datanodeDownProcess(uuid);
+        //TODO notify to add replicas if current replicas number can not satisfy replicas factor
+    }
+
+    private void datanodeDownProcess(String uuid){
+        blockManager.removeDatanodeBlocks(uuid);
+        LinkedList<Long> blocks = registry.get(uuid).getStorageInfo().getBlocks();
+        BlocksMap bmap = blockManager.blocksMap;
+        for (long blockId :blocks) {
+            List<String> dnIds = bmap.getRelatedDatanode(blockId);
+            //TODO calculate a proper datanode to transfer block for now it just random
+            String source = dnIds.get(random(dnIds.size()));
+            String target = getRandomUuid(source);
+            DatanodeCommand command = createCommand(DatanodeProtocol.DNA_TRANSFER, new Block(blockId), registry.get(target), target);
+            commandManager.insertCommand(source,command);
+        }
+    }
+
+    public DatanodeCommand createCommand(int action, Block block,DatanodeInfo target,String targetStorageID){
+        Block[] blks = new Block[]{block};
+        DatanodeInfo[] targets = new DatanodeInfo[]{target};
+        String[] storageIds = new String[]{targetStorageID};
+        return new BlockCommand(action,Constants.DEFAULT_POOL,blks,targets,storageIds);
+    }
+
+    private String getRandomUuid(String unexpected){
+        Set<String> keySet = registry.keySet();
+        String[] uuids = keySet.toArray(new String[keySet.size()]);
+        String res;
+        while (true){
+             if ((res = uuids[random(keySet.size())]) != unexpected){
+                 break;
+             }
+        }
+        return res;
+    }
+    private int random(int size){
+        return new Random().nextInt(size);
     }
 
     private DatanodeStatus getDatanodeStatus(String uuid) {
@@ -92,12 +137,8 @@ public class DatanodeManager {
         return registry;
     }
 
-    public int getSize() {
+    public int size() {
         return size;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
     }
 
     public long getNamespaceID() {

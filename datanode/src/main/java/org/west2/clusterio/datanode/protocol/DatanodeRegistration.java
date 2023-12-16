@@ -10,15 +10,15 @@ public class DatanodeRegistration extends DatanodeID {
         super(from);
         this.storageInfo = storageInfo;
     }
-    public DatanodeRegistration(DatanodeRegistrationProto proto){
-        super(proto.getDatanodeId());
-        this.storageInfo = new StorageInfo(proto.getStorageInfo());
-    }
     public DatanodeRegistrationProto parseDatanodeReg(){
         HdfsProtos.DatanodeIDProto datanodeIDProto = super.parseDatanodeID();
-        HdfsProtos.StorageInfoProtoc infoProtoc = storageInfo.parse();
+        HdfsProtos.StorageInfoProtoc infoProtoc = PBHelper.convert(storageInfo);
         return DatanodeProtocol.DatanodeRegistrationProto.newBuilder()
                 .setDatanodeId(datanodeIDProto)
                 .setStorageInfo(infoProtoc).build();
+    }
+
+    public StorageInfo getStorageInfo() {
+        return storageInfo;
     }
 }

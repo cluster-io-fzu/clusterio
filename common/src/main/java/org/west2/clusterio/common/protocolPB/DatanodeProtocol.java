@@ -4639,8 +4639,7 @@ public final class DatanodeProtocol {
 
     /**
      * <pre>
-     *uint64 cacheCapacity = 3;
-     *uint64 cacheUsed = 4;
+     *current there is only one storage
      * </pre>
      *
      * <code>repeated .StorageReportProto reports = 2;</code>
@@ -4649,8 +4648,7 @@ public final class DatanodeProtocol {
         getReportsList();
     /**
      * <pre>
-     *uint64 cacheCapacity = 3;
-     *uint64 cacheUsed = 4;
+     *current there is only one storage
      * </pre>
      *
      * <code>repeated .StorageReportProto reports = 2;</code>
@@ -4658,8 +4656,7 @@ public final class DatanodeProtocol {
     HdfsProtos.StorageReportProto getReports(int index);
     /**
      * <pre>
-     *uint64 cacheCapacity = 3;
-     *uint64 cacheUsed = 4;
+     *current there is only one storage
      * </pre>
      *
      * <code>repeated .StorageReportProto reports = 2;</code>
@@ -4667,8 +4664,7 @@ public final class DatanodeProtocol {
     int getReportsCount();
     /**
      * <pre>
-     *uint64 cacheCapacity = 3;
-     *uint64 cacheUsed = 4;
+     *current there is only one storage
      * </pre>
      *
      * <code>repeated .StorageReportProto reports = 2;</code>
@@ -4677,8 +4673,7 @@ public final class DatanodeProtocol {
         getReportsOrBuilderList();
     /**
      * <pre>
-     *uint64 cacheCapacity = 3;
-     *uint64 cacheUsed = 4;
+     *current there is only one storage
      * </pre>
      *
      * <code>repeated .StorageReportProto reports = 2;</code>
@@ -4754,8 +4749,7 @@ public final class DatanodeProtocol {
     private java.util.List<HdfsProtos.StorageReportProto> reports_;
     /**
      * <pre>
-     *uint64 cacheCapacity = 3;
-     *uint64 cacheUsed = 4;
+     *current there is only one storage
      * </pre>
      *
      * <code>repeated .StorageReportProto reports = 2;</code>
@@ -4766,8 +4760,7 @@ public final class DatanodeProtocol {
     }
     /**
      * <pre>
-     *uint64 cacheCapacity = 3;
-     *uint64 cacheUsed = 4;
+     *current there is only one storage
      * </pre>
      *
      * <code>repeated .StorageReportProto reports = 2;</code>
@@ -4779,8 +4772,7 @@ public final class DatanodeProtocol {
     }
     /**
      * <pre>
-     *uint64 cacheCapacity = 3;
-     *uint64 cacheUsed = 4;
+     *current there is only one storage
      * </pre>
      *
      * <code>repeated .StorageReportProto reports = 2;</code>
@@ -4791,8 +4783,7 @@ public final class DatanodeProtocol {
     }
     /**
      * <pre>
-     *uint64 cacheCapacity = 3;
-     *uint64 cacheUsed = 4;
+     *current there is only one storage
      * </pre>
      *
      * <code>repeated .StorageReportProto reports = 2;</code>
@@ -4803,8 +4794,7 @@ public final class DatanodeProtocol {
     }
     /**
      * <pre>
-     *uint64 cacheCapacity = 3;
-     *uint64 cacheUsed = 4;
+     *current there is only one storage
      * </pre>
      *
      * <code>repeated .StorageReportProto reports = 2;</code>
@@ -5370,8 +5360,7 @@ public final class DatanodeProtocol {
 
       /**
        * <pre>
-       *uint64 cacheCapacity = 3;
-       *uint64 cacheUsed = 4;
+       *current there is only one storage
        * </pre>
        *
        * <code>repeated .StorageReportProto reports = 2;</code>
@@ -5385,8 +5374,7 @@ public final class DatanodeProtocol {
       }
       /**
        * <pre>
-       *uint64 cacheCapacity = 3;
-       *uint64 cacheUsed = 4;
+       *current there is only one storage
        * </pre>
        *
        * <code>repeated .StorageReportProto reports = 2;</code>
@@ -5400,8 +5388,7 @@ public final class DatanodeProtocol {
       }
       /**
        * <pre>
-       *uint64 cacheCapacity = 3;
-       *uint64 cacheUsed = 4;
+       *current there is only one storage
        * </pre>
        *
        * <code>repeated .StorageReportProto reports = 2;</code>
@@ -5415,8 +5402,7 @@ public final class DatanodeProtocol {
       }
       /**
        * <pre>
-       *uint64 cacheCapacity = 3;
-       *uint64 cacheUsed = 4;
+       *current there is only one storage
        * </pre>
        *
        * <code>repeated .StorageReportProto reports = 2;</code>
@@ -5437,8 +5423,7 @@ public final class DatanodeProtocol {
       }
       /**
        * <pre>
-       *uint64 cacheCapacity = 3;
-       *uint64 cacheUsed = 4;
+       *current there is only one storage
        * </pre>
        *
        * <code>repeated .StorageReportProto reports = 2;</code>
@@ -5456,8 +5441,7 @@ public final class DatanodeProtocol {
       }
       /**
        * <pre>
-       *uint64 cacheCapacity = 3;
-       *uint64 cacheUsed = 4;
+       *current there is only one storage
        * </pre>
        *
        * <code>repeated .StorageReportProto reports = 2;</code>
@@ -5477,8 +5461,7 @@ public final class DatanodeProtocol {
       }
       /**
        * <pre>
-       *uint64 cacheCapacity = 3;
-       *uint64 cacheUsed = 4;
+       *current there is only one storage
        * </pre>
        *
        * <code>repeated .StorageReportProto reports = 2;</code>
@@ -5499,8 +5482,7 @@ public final class DatanodeProtocol {
       }
       /**
        * <pre>
-       *uint64 cacheCapacity = 3;
-       *uint64 cacheUsed = 4;
+       *current there is only one storage
        * </pre>
        *
        * <code>repeated .StorageReportProto reports = 2;</code>
@@ -5518,8 +5500,7 @@ public final class DatanodeProtocol {
       }
       /**
        * <pre>
-       *uint64 cacheCapacity = 3;
-       *uint64 cacheUsed = 4;
+       *current there is only one storage
        * </pre>
        *
        * <code>repeated .StorageReportProto reports = 2;</code>
@@ -5537,8 +5518,7 @@ public final class DatanodeProtocol {
       }
       /**
        * <pre>
-       *uint64 cacheCapacity = 3;
-       *uint64 cacheUsed = 4;
+       *current there is only one storage
        * </pre>
        *
        * <code>repeated .StorageReportProto reports = 2;</code>
@@ -5557,8 +5537,7 @@ public final class DatanodeProtocol {
       }
       /**
        * <pre>
-       *uint64 cacheCapacity = 3;
-       *uint64 cacheUsed = 4;
+       *current there is only one storage
        * </pre>
        *
        * <code>repeated .StorageReportProto reports = 2;</code>
@@ -5575,8 +5554,7 @@ public final class DatanodeProtocol {
       }
       /**
        * <pre>
-       *uint64 cacheCapacity = 3;
-       *uint64 cacheUsed = 4;
+       *current there is only one storage
        * </pre>
        *
        * <code>repeated .StorageReportProto reports = 2;</code>
@@ -5593,8 +5571,7 @@ public final class DatanodeProtocol {
       }
       /**
        * <pre>
-       *uint64 cacheCapacity = 3;
-       *uint64 cacheUsed = 4;
+       *current there is only one storage
        * </pre>
        *
        * <code>repeated .StorageReportProto reports = 2;</code>
@@ -5605,8 +5582,7 @@ public final class DatanodeProtocol {
       }
       /**
        * <pre>
-       *uint64 cacheCapacity = 3;
-       *uint64 cacheUsed = 4;
+       *current there is only one storage
        * </pre>
        *
        * <code>repeated .StorageReportProto reports = 2;</code>
@@ -5620,8 +5596,7 @@ public final class DatanodeProtocol {
       }
       /**
        * <pre>
-       *uint64 cacheCapacity = 3;
-       *uint64 cacheUsed = 4;
+       *current there is only one storage
        * </pre>
        *
        * <code>repeated .StorageReportProto reports = 2;</code>
@@ -5636,8 +5611,7 @@ public final class DatanodeProtocol {
       }
       /**
        * <pre>
-       *uint64 cacheCapacity = 3;
-       *uint64 cacheUsed = 4;
+       *current there is only one storage
        * </pre>
        *
        * <code>repeated .StorageReportProto reports = 2;</code>
@@ -5648,8 +5622,7 @@ public final class DatanodeProtocol {
       }
       /**
        * <pre>
-       *uint64 cacheCapacity = 3;
-       *uint64 cacheUsed = 4;
+       *current there is only one storage
        * </pre>
        *
        * <code>repeated .StorageReportProto reports = 2;</code>
@@ -5661,8 +5634,7 @@ public final class DatanodeProtocol {
       }
       /**
        * <pre>
-       *uint64 cacheCapacity = 3;
-       *uint64 cacheUsed = 4;
+       *current there is only one storage
        * </pre>
        *
        * <code>repeated .StorageReportProto reports = 2;</code>
@@ -6563,27 +6535,27 @@ public final class DatanodeProtocol {
         getBlockPoolIdBytes();
 
     /**
-     * <code>repeated .StorageReportProto reports = 3;</code>
+     * <code>repeated .StorageBlockReportProto reports = 3;</code>
      */
-    java.util.List<HdfsProtos.StorageReportProto>
+    java.util.List<StorageBlockReportProto>
         getReportsList();
     /**
-     * <code>repeated .StorageReportProto reports = 3;</code>
+     * <code>repeated .StorageBlockReportProto reports = 3;</code>
      */
-    HdfsProtos.StorageReportProto getReports(int index);
+    StorageBlockReportProto getReports(int index);
     /**
-     * <code>repeated .StorageReportProto reports = 3;</code>
+     * <code>repeated .StorageBlockReportProto reports = 3;</code>
      */
     int getReportsCount();
     /**
-     * <code>repeated .StorageReportProto reports = 3;</code>
+     * <code>repeated .StorageBlockReportProto reports = 3;</code>
      */
-    java.util.List<? extends HdfsProtos.StorageReportProtoOrBuilder>
+    java.util.List<? extends StorageBlockReportProtoOrBuilder>
         getReportsOrBuilderList();
     /**
-     * <code>repeated .StorageReportProto reports = 3;</code>
+     * <code>repeated .StorageBlockReportProto reports = 3;</code>
      */
-    HdfsProtos.StorageReportProtoOrBuilder getReportsOrBuilder(
+    StorageBlockReportProtoOrBuilder getReportsOrBuilder(
         int index);
 
     /**
@@ -6706,41 +6678,41 @@ public final class DatanodeProtocol {
 
     public static final int REPORTS_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private java.util.List<HdfsProtos.StorageReportProto> reports_;
+    private java.util.List<StorageBlockReportProto> reports_;
     /**
-     * <code>repeated .StorageReportProto reports = 3;</code>
+     * <code>repeated .StorageBlockReportProto reports = 3;</code>
      */
     @Override
-    public java.util.List<HdfsProtos.StorageReportProto> getReportsList() {
+    public java.util.List<StorageBlockReportProto> getReportsList() {
       return reports_;
     }
     /**
-     * <code>repeated .StorageReportProto reports = 3;</code>
+     * <code>repeated .StorageBlockReportProto reports = 3;</code>
      */
     @Override
-    public java.util.List<? extends HdfsProtos.StorageReportProtoOrBuilder>
+    public java.util.List<? extends StorageBlockReportProtoOrBuilder>
         getReportsOrBuilderList() {
       return reports_;
     }
     /**
-     * <code>repeated .StorageReportProto reports = 3;</code>
+     * <code>repeated .StorageBlockReportProto reports = 3;</code>
      */
     @Override
     public int getReportsCount() {
       return reports_.size();
     }
     /**
-     * <code>repeated .StorageReportProto reports = 3;</code>
+     * <code>repeated .StorageBlockReportProto reports = 3;</code>
      */
     @Override
-    public HdfsProtos.StorageReportProto getReports(int index) {
+    public StorageBlockReportProto getReports(int index) {
       return reports_.get(index);
     }
     /**
-     * <code>repeated .StorageReportProto reports = 3;</code>
+     * <code>repeated .StorageBlockReportProto reports = 3;</code>
      */
     @Override
-    public HdfsProtos.StorageReportProtoOrBuilder getReportsOrBuilder(
+    public StorageBlockReportProtoOrBuilder getReportsOrBuilder(
         int index) {
       return reports_.get(index);
     }
@@ -7217,9 +7189,9 @@ public final class DatanodeProtocol {
                 break;
               } // case 18
               case 26: {
-                HdfsProtos.StorageReportProto m =
+                StorageBlockReportProto m =
                     input.readMessage(
-                        HdfsProtos.StorageReportProto.parser(),
+                        StorageBlockReportProto.parser(),
                         extensionRegistry);
                 if (reportsBuilder_ == null) {
                   ensureReportsIsMutable();
@@ -7446,22 +7418,22 @@ public final class DatanodeProtocol {
         return this;
       }
 
-      private java.util.List<HdfsProtos.StorageReportProto> reports_ =
+      private java.util.List<StorageBlockReportProto> reports_ =
         java.util.Collections.emptyList();
       private void ensureReportsIsMutable() {
         if (!((bitField0_ & 0x00000004) != 0)) {
-          reports_ = new java.util.ArrayList<HdfsProtos.StorageReportProto>(reports_);
+          reports_ = new java.util.ArrayList<StorageBlockReportProto>(reports_);
           bitField0_ |= 0x00000004;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          HdfsProtos.StorageReportProto, HdfsProtos.StorageReportProto.Builder, HdfsProtos.StorageReportProtoOrBuilder> reportsBuilder_;
+          StorageBlockReportProto, StorageBlockReportProto.Builder, StorageBlockReportProtoOrBuilder> reportsBuilder_;
 
       /**
-       * <code>repeated .StorageReportProto reports = 3;</code>
+       * <code>repeated .StorageBlockReportProto reports = 3;</code>
        */
-      public java.util.List<HdfsProtos.StorageReportProto> getReportsList() {
+      public java.util.List<StorageBlockReportProto> getReportsList() {
         if (reportsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(reports_);
         } else {
@@ -7469,7 +7441,7 @@ public final class DatanodeProtocol {
         }
       }
       /**
-       * <code>repeated .StorageReportProto reports = 3;</code>
+       * <code>repeated .StorageBlockReportProto reports = 3;</code>
        */
       public int getReportsCount() {
         if (reportsBuilder_ == null) {
@@ -7479,9 +7451,9 @@ public final class DatanodeProtocol {
         }
       }
       /**
-       * <code>repeated .StorageReportProto reports = 3;</code>
+       * <code>repeated .StorageBlockReportProto reports = 3;</code>
        */
-      public HdfsProtos.StorageReportProto getReports(int index) {
+      public StorageBlockReportProto getReports(int index) {
         if (reportsBuilder_ == null) {
           return reports_.get(index);
         } else {
@@ -7489,10 +7461,10 @@ public final class DatanodeProtocol {
         }
       }
       /**
-       * <code>repeated .StorageReportProto reports = 3;</code>
+       * <code>repeated .StorageBlockReportProto reports = 3;</code>
        */
       public Builder setReports(
-          int index, HdfsProtos.StorageReportProto value) {
+          int index, StorageBlockReportProto value) {
         if (reportsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -7506,10 +7478,10 @@ public final class DatanodeProtocol {
         return this;
       }
       /**
-       * <code>repeated .StorageReportProto reports = 3;</code>
+       * <code>repeated .StorageBlockReportProto reports = 3;</code>
        */
       public Builder setReports(
-          int index, HdfsProtos.StorageReportProto.Builder builderForValue) {
+          int index, StorageBlockReportProto.Builder builderForValue) {
         if (reportsBuilder_ == null) {
           ensureReportsIsMutable();
           reports_.set(index, builderForValue.build());
@@ -7520,9 +7492,9 @@ public final class DatanodeProtocol {
         return this;
       }
       /**
-       * <code>repeated .StorageReportProto reports = 3;</code>
+       * <code>repeated .StorageBlockReportProto reports = 3;</code>
        */
-      public Builder addReports(HdfsProtos.StorageReportProto value) {
+      public Builder addReports(StorageBlockReportProto value) {
         if (reportsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -7536,10 +7508,10 @@ public final class DatanodeProtocol {
         return this;
       }
       /**
-       * <code>repeated .StorageReportProto reports = 3;</code>
+       * <code>repeated .StorageBlockReportProto reports = 3;</code>
        */
       public Builder addReports(
-          int index, HdfsProtos.StorageReportProto value) {
+          int index, StorageBlockReportProto value) {
         if (reportsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -7553,10 +7525,10 @@ public final class DatanodeProtocol {
         return this;
       }
       /**
-       * <code>repeated .StorageReportProto reports = 3;</code>
+       * <code>repeated .StorageBlockReportProto reports = 3;</code>
        */
       public Builder addReports(
-          HdfsProtos.StorageReportProto.Builder builderForValue) {
+          StorageBlockReportProto.Builder builderForValue) {
         if (reportsBuilder_ == null) {
           ensureReportsIsMutable();
           reports_.add(builderForValue.build());
@@ -7567,10 +7539,10 @@ public final class DatanodeProtocol {
         return this;
       }
       /**
-       * <code>repeated .StorageReportProto reports = 3;</code>
+       * <code>repeated .StorageBlockReportProto reports = 3;</code>
        */
       public Builder addReports(
-          int index, HdfsProtos.StorageReportProto.Builder builderForValue) {
+          int index, StorageBlockReportProto.Builder builderForValue) {
         if (reportsBuilder_ == null) {
           ensureReportsIsMutable();
           reports_.add(index, builderForValue.build());
@@ -7581,10 +7553,10 @@ public final class DatanodeProtocol {
         return this;
       }
       /**
-       * <code>repeated .StorageReportProto reports = 3;</code>
+       * <code>repeated .StorageBlockReportProto reports = 3;</code>
        */
       public Builder addAllReports(
-          Iterable<? extends HdfsProtos.StorageReportProto> values) {
+          Iterable<? extends StorageBlockReportProto> values) {
         if (reportsBuilder_ == null) {
           ensureReportsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -7596,7 +7568,7 @@ public final class DatanodeProtocol {
         return this;
       }
       /**
-       * <code>repeated .StorageReportProto reports = 3;</code>
+       * <code>repeated .StorageBlockReportProto reports = 3;</code>
        */
       public Builder clearReports() {
         if (reportsBuilder_ == null) {
@@ -7609,7 +7581,7 @@ public final class DatanodeProtocol {
         return this;
       }
       /**
-       * <code>repeated .StorageReportProto reports = 3;</code>
+       * <code>repeated .StorageBlockReportProto reports = 3;</code>
        */
       public Builder removeReports(int index) {
         if (reportsBuilder_ == null) {
@@ -7622,16 +7594,16 @@ public final class DatanodeProtocol {
         return this;
       }
       /**
-       * <code>repeated .StorageReportProto reports = 3;</code>
+       * <code>repeated .StorageBlockReportProto reports = 3;</code>
        */
-      public HdfsProtos.StorageReportProto.Builder getReportsBuilder(
+      public StorageBlockReportProto.Builder getReportsBuilder(
           int index) {
         return getReportsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .StorageReportProto reports = 3;</code>
+       * <code>repeated .StorageBlockReportProto reports = 3;</code>
        */
-      public HdfsProtos.StorageReportProtoOrBuilder getReportsOrBuilder(
+      public StorageBlockReportProtoOrBuilder getReportsOrBuilder(
           int index) {
         if (reportsBuilder_ == null) {
           return reports_.get(index);  } else {
@@ -7639,9 +7611,9 @@ public final class DatanodeProtocol {
         }
       }
       /**
-       * <code>repeated .StorageReportProto reports = 3;</code>
+       * <code>repeated .StorageBlockReportProto reports = 3;</code>
        */
-      public java.util.List<? extends HdfsProtos.StorageReportProtoOrBuilder>
+      public java.util.List<? extends StorageBlockReportProtoOrBuilder>
            getReportsOrBuilderList() {
         if (reportsBuilder_ != null) {
           return reportsBuilder_.getMessageOrBuilderList();
@@ -7650,33 +7622,33 @@ public final class DatanodeProtocol {
         }
       }
       /**
-       * <code>repeated .StorageReportProto reports = 3;</code>
+       * <code>repeated .StorageBlockReportProto reports = 3;</code>
        */
-      public HdfsProtos.StorageReportProto.Builder addReportsBuilder() {
+      public StorageBlockReportProto.Builder addReportsBuilder() {
         return getReportsFieldBuilder().addBuilder(
-            HdfsProtos.StorageReportProto.getDefaultInstance());
+            StorageBlockReportProto.getDefaultInstance());
       }
       /**
-       * <code>repeated .StorageReportProto reports = 3;</code>
+       * <code>repeated .StorageBlockReportProto reports = 3;</code>
        */
-      public HdfsProtos.StorageReportProto.Builder addReportsBuilder(
+      public StorageBlockReportProto.Builder addReportsBuilder(
           int index) {
         return getReportsFieldBuilder().addBuilder(
-            index, HdfsProtos.StorageReportProto.getDefaultInstance());
+            index, StorageBlockReportProto.getDefaultInstance());
       }
       /**
-       * <code>repeated .StorageReportProto reports = 3;</code>
+       * <code>repeated .StorageBlockReportProto reports = 3;</code>
        */
-      public java.util.List<HdfsProtos.StorageReportProto.Builder>
+      public java.util.List<StorageBlockReportProto.Builder>
            getReportsBuilderList() {
         return getReportsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          HdfsProtos.StorageReportProto, HdfsProtos.StorageReportProto.Builder, HdfsProtos.StorageReportProtoOrBuilder>
+          StorageBlockReportProto, StorageBlockReportProto.Builder, StorageBlockReportProtoOrBuilder>
           getReportsFieldBuilder() {
         if (reportsBuilder_ == null) {
           reportsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              HdfsProtos.StorageReportProto, HdfsProtos.StorageReportProto.Builder, HdfsProtos.StorageReportProtoOrBuilder>(
+              StorageBlockReportProto, StorageBlockReportProto.Builder, StorageBlockReportProtoOrBuilder>(
                   reports_,
                   ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
@@ -8548,21 +8520,28 @@ public final class DatanodeProtocol {
         getStorageUuidBytes();
 
     /**
-     * <code>repeated uint64 blocks = 2;</code>
-     * @return A list containing the blocks.
+     * <code>repeated .BlockProto blocks = 2;</code>
      */
-    java.util.List<Long> getBlocksList();
+    java.util.List<HdfsProtos.BlockProto>
+        getBlocksList();
     /**
-     * <code>repeated uint64 blocks = 2;</code>
-     * @return The count of blocks.
+     * <code>repeated .BlockProto blocks = 2;</code>
+     */
+    HdfsProtos.BlockProto getBlocks(int index);
+    /**
+     * <code>repeated .BlockProto blocks = 2;</code>
      */
     int getBlocksCount();
     /**
-     * <code>repeated uint64 blocks = 2;</code>
-     * @param index The index of the element to return.
-     * @return The blocks at the given index.
+     * <code>repeated .BlockProto blocks = 2;</code>
      */
-    long getBlocks(int index);
+    java.util.List<? extends HdfsProtos.BlockProtoOrBuilder>
+        getBlocksOrBuilderList();
+    /**
+     * <code>repeated .BlockProto blocks = 2;</code>
+     */
+    HdfsProtos.BlockProtoOrBuilder getBlocksOrBuilder(
+        int index);
 
     /**
      * <pre>
@@ -8573,23 +8552,6 @@ public final class DatanodeProtocol {
      * @return The numberOfBlocks.
      */
     long getNumberOfBlocks();
-
-    /**
-     * <code>repeated bytes blocksBuffers = 4;</code>
-     * @return A list containing the blocksBuffers.
-     */
-    java.util.List<com.google.protobuf.ByteString> getBlocksBuffersList();
-    /**
-     * <code>repeated bytes blocksBuffers = 4;</code>
-     * @return The count of blocksBuffers.
-     */
-    int getBlocksBuffersCount();
-    /**
-     * <code>repeated bytes blocksBuffers = 4;</code>
-     * @param index The index of the element to return.
-     * @return The blocksBuffers at the given index.
-     */
-    com.google.protobuf.ByteString getBlocksBuffers(int index);
   }
   /**
    * Protobuf type {@code StorageBlockReportProto}
@@ -8605,8 +8567,7 @@ public final class DatanodeProtocol {
     }
     private StorageBlockReportProto() {
       storageUuid_ = "";
-      blocks_ = emptyLongList();
-      blocksBuffers_ = emptyList(com.google.protobuf.ByteString.class);
+      blocks_ = java.util.Collections.emptyList();
     }
 
     @Override
@@ -8670,33 +8631,44 @@ public final class DatanodeProtocol {
 
     public static final int BLOCKS_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList blocks_ =
-        emptyLongList();
+    private java.util.List<HdfsProtos.BlockProto> blocks_;
     /**
-     * <code>repeated uint64 blocks = 2;</code>
-     * @return A list containing the blocks.
+     * <code>repeated .BlockProto blocks = 2;</code>
      */
     @Override
-    public java.util.List<Long>
-        getBlocksList() {
+    public java.util.List<HdfsProtos.BlockProto> getBlocksList() {
       return blocks_;
     }
     /**
-     * <code>repeated uint64 blocks = 2;</code>
-     * @return The count of blocks.
+     * <code>repeated .BlockProto blocks = 2;</code>
      */
+    @Override
+    public java.util.List<? extends HdfsProtos.BlockProtoOrBuilder>
+        getBlocksOrBuilderList() {
+      return blocks_;
+    }
+    /**
+     * <code>repeated .BlockProto blocks = 2;</code>
+     */
+    @Override
     public int getBlocksCount() {
       return blocks_.size();
     }
     /**
-     * <code>repeated uint64 blocks = 2;</code>
-     * @param index The index of the element to return.
-     * @return The blocks at the given index.
+     * <code>repeated .BlockProto blocks = 2;</code>
      */
-    public long getBlocks(int index) {
-      return blocks_.getLong(index);
+    @Override
+    public HdfsProtos.BlockProto getBlocks(int index) {
+      return blocks_.get(index);
     }
-    private int blocksMemoizedSerializedSize = -1;
+    /**
+     * <code>repeated .BlockProto blocks = 2;</code>
+     */
+    @Override
+    public HdfsProtos.BlockProtoOrBuilder getBlocksOrBuilder(
+        int index) {
+      return blocks_.get(index);
+    }
 
     public static final int NUMBEROFBLOCKS_FIELD_NUMBER = 3;
     private long numberOfBlocks_ = 0L;
@@ -8713,35 +8685,6 @@ public final class DatanodeProtocol {
       return numberOfBlocks_;
     }
 
-    public static final int BLOCKSBUFFERS_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> blocksBuffers_ =
-        emptyList(com.google.protobuf.ByteString.class);
-    /**
-     * <code>repeated bytes blocksBuffers = 4;</code>
-     * @return A list containing the blocksBuffers.
-     */
-    @Override
-    public java.util.List<com.google.protobuf.ByteString>
-        getBlocksBuffersList() {
-      return blocksBuffers_;
-    }
-    /**
-     * <code>repeated bytes blocksBuffers = 4;</code>
-     * @return The count of blocksBuffers.
-     */
-    public int getBlocksBuffersCount() {
-      return blocksBuffers_.size();
-    }
-    /**
-     * <code>repeated bytes blocksBuffers = 4;</code>
-     * @param index The index of the element to return.
-     * @return The blocksBuffers at the given index.
-     */
-    public com.google.protobuf.ByteString getBlocksBuffers(int index) {
-      return blocksBuffers_.get(index);
-    }
-
     private byte memoizedIsInitialized = -1;
     @Override
     public final boolean isInitialized() {
@@ -8756,22 +8699,14 @@ public final class DatanodeProtocol {
     @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      getSerializedSize();
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(storageUuid_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, storageUuid_);
       }
-      if (getBlocksList().size() > 0) {
-        output.writeUInt32NoTag(18);
-        output.writeUInt32NoTag(blocksMemoizedSerializedSize);
-      }
       for (int i = 0; i < blocks_.size(); i++) {
-        output.writeUInt64NoTag(blocks_.getLong(i));
+        output.writeMessage(2, blocks_.get(i));
       }
       if (numberOfBlocks_ != 0L) {
         output.writeUInt64(3, numberOfBlocks_);
-      }
-      for (int i = 0; i < blocksBuffers_.size(); i++) {
-        output.writeBytes(4, blocksBuffers_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -8785,32 +8720,13 @@ public final class DatanodeProtocol {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(storageUuid_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, storageUuid_);
       }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < blocks_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt64SizeNoTag(blocks_.getLong(i));
-        }
-        size += dataSize;
-        if (!getBlocksList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        blocksMemoizedSerializedSize = dataSize;
+      for (int i = 0; i < blocks_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, blocks_.get(i));
       }
       if (numberOfBlocks_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(3, numberOfBlocks_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < blocksBuffers_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeBytesSizeNoTag(blocksBuffers_.get(i));
-        }
-        size += dataSize;
-        size += 1 * getBlocksBuffersList().size();
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -8833,8 +8749,6 @@ public final class DatanodeProtocol {
           .equals(other.getBlocksList())) return false;
       if (getNumberOfBlocks()
           != other.getNumberOfBlocks()) return false;
-      if (!getBlocksBuffersList()
-          .equals(other.getBlocksBuffersList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -8855,10 +8769,6 @@ public final class DatanodeProtocol {
       hash = (37 * hash) + NUMBEROFBLOCKS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getNumberOfBlocks());
-      if (getBlocksBuffersCount() > 0) {
-        hash = (37 * hash) + BLOCKSBUFFERS_FIELD_NUMBER;
-        hash = (53 * hash) + getBlocksBuffersList().hashCode();
-      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8991,9 +8901,14 @@ public final class DatanodeProtocol {
         super.clear();
         bitField0_ = 0;
         storageUuid_ = "";
-        blocks_ = emptyLongList();
+        if (blocksBuilder_ == null) {
+          blocks_ = java.util.Collections.emptyList();
+        } else {
+          blocks_ = null;
+          blocksBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
         numberOfBlocks_ = 0L;
-        blocksBuffers_ = emptyList(com.google.protobuf.ByteString.class);
         return this;
       }
 
@@ -9020,9 +8935,22 @@ public final class DatanodeProtocol {
       @Override
       public StorageBlockReportProto buildPartial() {
         StorageBlockReportProto result = new StorageBlockReportProto(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(StorageBlockReportProto result) {
+        if (blocksBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            blocks_ = java.util.Collections.unmodifiableList(blocks_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.blocks_ = blocks_;
+        } else {
+          result.blocks_ = blocksBuilder_.build();
+        }
       }
 
       private void buildPartial0(StorageBlockReportProto result) {
@@ -9030,16 +8958,8 @@ public final class DatanodeProtocol {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.storageUuid_ = storageUuid_;
         }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          blocks_.makeImmutable();
-          result.blocks_ = blocks_;
-        }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.numberOfBlocks_ = numberOfBlocks_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          blocksBuffers_.makeImmutable();
-          result.blocksBuffers_ = blocksBuffers_;
         }
       }
 
@@ -9092,30 +9012,34 @@ public final class DatanodeProtocol {
           bitField0_ |= 0x00000001;
           onChanged();
         }
-        if (!other.blocks_.isEmpty()) {
-          if (blocks_.isEmpty()) {
-            blocks_ = other.blocks_;
-            blocks_.makeImmutable();
-            bitField0_ |= 0x00000002;
-          } else {
-            ensureBlocksIsMutable();
-            blocks_.addAll(other.blocks_);
+        if (blocksBuilder_ == null) {
+          if (!other.blocks_.isEmpty()) {
+            if (blocks_.isEmpty()) {
+              blocks_ = other.blocks_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureBlocksIsMutable();
+              blocks_.addAll(other.blocks_);
+            }
+            onChanged();
           }
-          onChanged();
+        } else {
+          if (!other.blocks_.isEmpty()) {
+            if (blocksBuilder_.isEmpty()) {
+              blocksBuilder_.dispose();
+              blocksBuilder_ = null;
+              blocks_ = other.blocks_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              blocksBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBlocksFieldBuilder() : null;
+            } else {
+              blocksBuilder_.addAllMessages(other.blocks_);
+            }
+          }
         }
         if (other.getNumberOfBlocks() != 0L) {
           setNumberOfBlocks(other.getNumberOfBlocks());
-        }
-        if (!other.blocksBuffers_.isEmpty()) {
-          if (blocksBuffers_.isEmpty()) {
-            blocksBuffers_ = other.blocksBuffers_;
-            blocksBuffers_.makeImmutable();
-            bitField0_ |= 0x00000008;
-          } else {
-            ensureBlocksBuffersIsMutable();
-            blocksBuffers_.addAll(other.blocksBuffers_);
-          }
-          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -9148,20 +9072,17 @@ public final class DatanodeProtocol {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
-              case 16: {
-                long v = input.readUInt64();
-                ensureBlocksIsMutable();
-                blocks_.addLong(v);
-                break;
-              } // case 16
               case 18: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureBlocksIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  blocks_.addLong(input.readUInt64());
+                HdfsProtos.BlockProto m =
+                    input.readMessage(
+                        HdfsProtos.BlockProto.parser(),
+                        extensionRegistry);
+                if (blocksBuilder_ == null) {
+                  ensureBlocksIsMutable();
+                  blocks_.add(m);
+                } else {
+                  blocksBuilder_.addMessage(m);
                 }
-                input.popLimit(limit);
                 break;
               } // case 18
               case 24: {
@@ -9169,12 +9090,6 @@ public final class DatanodeProtocol {
                 bitField0_ |= 0x00000004;
                 break;
               } // case 24
-              case 34: {
-                com.google.protobuf.ByteString v = input.readBytes();
-                ensureBlocksBuffersIsMutable();
-                blocksBuffers_.add(v);
-                break;
-              } // case 34
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -9264,88 +9179,244 @@ public final class DatanodeProtocol {
         return this;
       }
 
-      private com.google.protobuf.Internal.LongList blocks_ = emptyLongList();
+      private java.util.List<HdfsProtos.BlockProto> blocks_ =
+        java.util.Collections.emptyList();
       private void ensureBlocksIsMutable() {
-        if (!blocks_.isModifiable()) {
-          blocks_ = makeMutableCopy(blocks_);
-        }
-        bitField0_ |= 0x00000002;
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          blocks_ = new java.util.ArrayList<HdfsProtos.BlockProto>(blocks_);
+          bitField0_ |= 0x00000002;
+         }
       }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          HdfsProtos.BlockProto, HdfsProtos.BlockProto.Builder, HdfsProtos.BlockProtoOrBuilder> blocksBuilder_;
+
       /**
-       * <code>repeated uint64 blocks = 2;</code>
-       * @return A list containing the blocks.
+       * <code>repeated .BlockProto blocks = 2;</code>
        */
-      public java.util.List<Long>
-          getBlocksList() {
-        blocks_.makeImmutable();
-        return blocks_;
+      public java.util.List<HdfsProtos.BlockProto> getBlocksList() {
+        if (blocksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(blocks_);
+        } else {
+          return blocksBuilder_.getMessageList();
+        }
       }
       /**
-       * <code>repeated uint64 blocks = 2;</code>
-       * @return The count of blocks.
+       * <code>repeated .BlockProto blocks = 2;</code>
        */
       public int getBlocksCount() {
-        return blocks_.size();
+        if (blocksBuilder_ == null) {
+          return blocks_.size();
+        } else {
+          return blocksBuilder_.getCount();
+        }
       }
       /**
-       * <code>repeated uint64 blocks = 2;</code>
-       * @param index The index of the element to return.
-       * @return The blocks at the given index.
+       * <code>repeated .BlockProto blocks = 2;</code>
        */
-      public long getBlocks(int index) {
-        return blocks_.getLong(index);
+      public HdfsProtos.BlockProto getBlocks(int index) {
+        if (blocksBuilder_ == null) {
+          return blocks_.get(index);
+        } else {
+          return blocksBuilder_.getMessage(index);
+        }
       }
       /**
-       * <code>repeated uint64 blocks = 2;</code>
-       * @param index The index to set the value at.
-       * @param value The blocks to set.
-       * @return This builder for chaining.
+       * <code>repeated .BlockProto blocks = 2;</code>
        */
       public Builder setBlocks(
-          int index, long value) {
-
-        ensureBlocksIsMutable();
-        blocks_.setLong(index, value);
-        bitField0_ |= 0x00000002;
-        onChanged();
+          int index, HdfsProtos.BlockProto value) {
+        if (blocksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBlocksIsMutable();
+          blocks_.set(index, value);
+          onChanged();
+        } else {
+          blocksBuilder_.setMessage(index, value);
+        }
         return this;
       }
       /**
-       * <code>repeated uint64 blocks = 2;</code>
-       * @param value The blocks to add.
-       * @return This builder for chaining.
+       * <code>repeated .BlockProto blocks = 2;</code>
        */
-      public Builder addBlocks(long value) {
-
-        ensureBlocksIsMutable();
-        blocks_.addLong(value);
-        bitField0_ |= 0x00000002;
-        onChanged();
+      public Builder setBlocks(
+          int index, HdfsProtos.BlockProto.Builder builderForValue) {
+        if (blocksBuilder_ == null) {
+          ensureBlocksIsMutable();
+          blocks_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          blocksBuilder_.setMessage(index, builderForValue.build());
+        }
         return this;
       }
       /**
-       * <code>repeated uint64 blocks = 2;</code>
-       * @param values The blocks to add.
-       * @return This builder for chaining.
+       * <code>repeated .BlockProto blocks = 2;</code>
+       */
+      public Builder addBlocks(HdfsProtos.BlockProto value) {
+        if (blocksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBlocksIsMutable();
+          blocks_.add(value);
+          onChanged();
+        } else {
+          blocksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BlockProto blocks = 2;</code>
+       */
+      public Builder addBlocks(
+          int index, HdfsProtos.BlockProto value) {
+        if (blocksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBlocksIsMutable();
+          blocks_.add(index, value);
+          onChanged();
+        } else {
+          blocksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BlockProto blocks = 2;</code>
+       */
+      public Builder addBlocks(
+          HdfsProtos.BlockProto.Builder builderForValue) {
+        if (blocksBuilder_ == null) {
+          ensureBlocksIsMutable();
+          blocks_.add(builderForValue.build());
+          onChanged();
+        } else {
+          blocksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BlockProto blocks = 2;</code>
+       */
+      public Builder addBlocks(
+          int index, HdfsProtos.BlockProto.Builder builderForValue) {
+        if (blocksBuilder_ == null) {
+          ensureBlocksIsMutable();
+          blocks_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          blocksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BlockProto blocks = 2;</code>
        */
       public Builder addAllBlocks(
-          Iterable<? extends Long> values) {
-        ensureBlocksIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, blocks_);
-        bitField0_ |= 0x00000002;
-        onChanged();
+          Iterable<? extends HdfsProtos.BlockProto> values) {
+        if (blocksBuilder_ == null) {
+          ensureBlocksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, blocks_);
+          onChanged();
+        } else {
+          blocksBuilder_.addAllMessages(values);
+        }
         return this;
       }
       /**
-       * <code>repeated uint64 blocks = 2;</code>
-       * @return This builder for chaining.
+       * <code>repeated .BlockProto blocks = 2;</code>
        */
       public Builder clearBlocks() {
-        blocks_ = emptyLongList();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        if (blocksBuilder_ == null) {
+          blocks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          blocksBuilder_.clear();
+        }
         return this;
+      }
+      /**
+       * <code>repeated .BlockProto blocks = 2;</code>
+       */
+      public Builder removeBlocks(int index) {
+        if (blocksBuilder_ == null) {
+          ensureBlocksIsMutable();
+          blocks_.remove(index);
+          onChanged();
+        } else {
+          blocksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .BlockProto blocks = 2;</code>
+       */
+      public HdfsProtos.BlockProto.Builder getBlocksBuilder(
+          int index) {
+        return getBlocksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .BlockProto blocks = 2;</code>
+       */
+      public HdfsProtos.BlockProtoOrBuilder getBlocksOrBuilder(
+          int index) {
+        if (blocksBuilder_ == null) {
+          return blocks_.get(index);  } else {
+          return blocksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .BlockProto blocks = 2;</code>
+       */
+      public java.util.List<? extends HdfsProtos.BlockProtoOrBuilder>
+           getBlocksOrBuilderList() {
+        if (blocksBuilder_ != null) {
+          return blocksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(blocks_);
+        }
+      }
+      /**
+       * <code>repeated .BlockProto blocks = 2;</code>
+       */
+      public HdfsProtos.BlockProto.Builder addBlocksBuilder() {
+        return getBlocksFieldBuilder().addBuilder(
+            HdfsProtos.BlockProto.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .BlockProto blocks = 2;</code>
+       */
+      public HdfsProtos.BlockProto.Builder addBlocksBuilder(
+          int index) {
+        return getBlocksFieldBuilder().addBuilder(
+            index, HdfsProtos.BlockProto.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .BlockProto blocks = 2;</code>
+       */
+      public java.util.List<HdfsProtos.BlockProto.Builder>
+           getBlocksBuilderList() {
+        return getBlocksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          HdfsProtos.BlockProto, HdfsProtos.BlockProto.Builder, HdfsProtos.BlockProtoOrBuilder>
+          getBlocksFieldBuilder() {
+        if (blocksBuilder_ == null) {
+          blocksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              HdfsProtos.BlockProto, HdfsProtos.BlockProto.Builder, HdfsProtos.BlockProtoOrBuilder>(
+                  blocks_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          blocks_ = null;
+        }
+        return blocksBuilder_;
       }
 
       private long numberOfBlocks_ ;
@@ -9388,90 +9459,6 @@ public final class DatanodeProtocol {
       public Builder clearNumberOfBlocks() {
         bitField0_ = (bitField0_ & ~0x00000004);
         numberOfBlocks_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> blocksBuffers_ = emptyList(com.google.protobuf.ByteString.class);
-      private void ensureBlocksBuffersIsMutable() {
-        if (!blocksBuffers_.isModifiable()) {
-          blocksBuffers_ = makeMutableCopy(blocksBuffers_);
-        }
-        bitField0_ |= 0x00000008;
-      }
-      /**
-       * <code>repeated bytes blocksBuffers = 4;</code>
-       * @return A list containing the blocksBuffers.
-       */
-      public java.util.List<com.google.protobuf.ByteString>
-          getBlocksBuffersList() {
-        blocksBuffers_.makeImmutable();
-        return blocksBuffers_;
-      }
-      /**
-       * <code>repeated bytes blocksBuffers = 4;</code>
-       * @return The count of blocksBuffers.
-       */
-      public int getBlocksBuffersCount() {
-        return blocksBuffers_.size();
-      }
-      /**
-       * <code>repeated bytes blocksBuffers = 4;</code>
-       * @param index The index of the element to return.
-       * @return The blocksBuffers at the given index.
-       */
-      public com.google.protobuf.ByteString getBlocksBuffers(int index) {
-        return blocksBuffers_.get(index);
-      }
-      /**
-       * <code>repeated bytes blocksBuffers = 4;</code>
-       * @param index The index to set the value at.
-       * @param value The blocksBuffers to set.
-       * @return This builder for chaining.
-       */
-      public Builder setBlocksBuffers(
-          int index, com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureBlocksBuffersIsMutable();
-        blocksBuffers_.set(index, value);
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated bytes blocksBuffers = 4;</code>
-       * @param value The blocksBuffers to add.
-       * @return This builder for chaining.
-       */
-      public Builder addBlocksBuffers(com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureBlocksBuffersIsMutable();
-        blocksBuffers_.add(value);
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated bytes blocksBuffers = 4;</code>
-       * @param values The blocksBuffers to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllBlocksBuffers(
-          Iterable<? extends com.google.protobuf.ByteString> values) {
-        ensureBlocksBuffersIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, blocksBuffers_);
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated bytes blocksBuffers = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearBlocksBuffers() {
-        blocksBuffers_ = emptyList(com.google.protobuf.ByteString.class);
-        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -10020,25 +10007,25 @@ public final class DatanodeProtocol {
       "tProto\0220\n\014registration\030\001 \001(\0132\032.DatanodeR" +
       "egistrationProto\022$\n\007reports\030\002 \003(\0132\023.Stor" +
       "ageReportProto\"=\n\026HeartbeatResponseProto" +
-      "\022#\n\004cmds\030\001 \003(\0132\025.DatanodeCommandProto\"\261\001" +
+      "\022#\n\004cmds\030\001 \003(\0132\025.DatanodeCommandProto\"\266\001" +
       "\n\027BlockReportRequestProto\0220\n\014registratio" +
       "n\030\001 \001(\0132\032.DatanodeRegistrationProto\022\023\n\013b" +
-      "lockPoolId\030\002 \001(\t\022$\n\007reports\030\003 \003(\0132\023.Stor" +
-      "ageReportProto\022)\n\007context\030\004 \001(\0132\030.BlockR" +
-      "eportContextProto\"J\n\027BlockReportContextP" +
-      "roto\022\023\n\013totalPieces\030\001 \001(\005\022\016\n\006curRpc\030\002 \001(" +
-      "\005\022\n\n\002id\030\003 \001(\003\"m\n\027StorageBlockReportProto" +
-      "\022\023\n\013storageUuid\030\001 \001(\t\022\016\n\006blocks\030\002 \003(\004\022\026\n" +
-      "\016numberOfBlocks\030\003 \001(\004\022\025\n\rblocksBuffers\030\004" +
-      " \003(\014\"\032\n\030BlockReportResponseProto2\346\001\n\017Dat" +
-      "anodeService\022Q\n\020registerDatanode\022\035.Regis" +
-      "terDatanodeRequestProto\032\036.RegisterDatano" +
-      "deResponseProto\022<\n\theartbeat\022\026.Heartbeat" +
-      "RequestProto\032\027.HeartbeatResponseProto\022B\n" +
-      "\013blockReport\022\030.BlockReportRequestProto\032\031" +
-      ".BlockReportResponseProtoB9\n%org.west2.c" +
-      "lusterio.common.protocolPBB\020DatanodeProt" +
-      "ocolb\006proto3"
+      "lockPoolId\030\002 \001(\t\022)\n\007reports\030\003 \003(\0132\030.Stor" +
+      "ageBlockReportProto\022)\n\007context\030\004 \001(\0132\030.B" +
+      "lockReportContextProto\"J\n\027BlockReportCon" +
+      "textProto\022\023\n\013totalPieces\030\001 \001(\005\022\016\n\006curRpc" +
+      "\030\002 \001(\005\022\n\n\002id\030\003 \001(\003\"c\n\027StorageBlockReport" +
+      "Proto\022\023\n\013storageUuid\030\001 \001(\t\022\033\n\006blocks\030\002 \003" +
+      "(\0132\013.BlockProto\022\026\n\016numberOfBlocks\030\003 \001(\004\"" +
+      "\032\n\030BlockReportResponseProto2\346\001\n\017Datanode" +
+      "Service\022Q\n\020registerDatanode\022\035.RegisterDa" +
+      "tanodeRequestProto\032\036.RegisterDatanodeRes" +
+      "ponseProto\022<\n\theartbeat\022\026.HeartbeatReque" +
+      "stProto\032\027.HeartbeatResponseProto\022B\n\013bloc" +
+      "kReport\022\030.BlockReportRequestProto\032\031.Bloc" +
+      "kReportResponseProtoB9\n%org.west2.cluste" +
+      "rio.common.protocolPBB\020DatanodeProtocolb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10104,7 +10091,7 @@ public final class DatanodeProtocol {
     internal_static_StorageBlockReportProto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_StorageBlockReportProto_descriptor,
-        new String[] { "StorageUuid", "Blocks", "NumberOfBlocks", "BlocksBuffers", });
+        new String[] { "StorageUuid", "Blocks", "NumberOfBlocks", });
     internal_static_BlockReportResponseProto_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_BlockReportResponseProto_fieldAccessorTable = new

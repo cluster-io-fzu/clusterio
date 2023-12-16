@@ -56,7 +56,7 @@ message HeartbeatResponseProto{
 message BlockReportRequestProto{
   DatanodeRegistrationProto registration = 1;
   string blockPoolId = 2;
-  repeated StorageReportProto reports = 3;
+  repeated StorageBlockReportProto reports = 3;
   BlockReportContextProto context = 4;
 }
 
@@ -71,10 +71,10 @@ message BlockReportContextProto{
 
 message StorageBlockReportProto{
   string storageUuid = 1;
-  repeated uint64 blocks = 2;
+  repeated BlockProto blocks = 2;
   //The total number of blocks in this datanode
   uint64 numberOfBlocks = 3;
-  repeated bytes blocksBuffers = 4;
+//  repeated bytes blocksBuffers = 4;
 }
 
 message BlockReportResponseProto{

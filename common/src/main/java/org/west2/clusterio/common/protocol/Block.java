@@ -16,6 +16,10 @@ public class Block {
         this(0,0,0);
     }
 
+    public Block(long blockId){
+        this(blockId,0,0);
+    }
+
     public Block(Block from){
         this(from.blockId,from.numBytes,from.generationStamp);
     }
