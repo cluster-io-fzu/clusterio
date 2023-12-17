@@ -6,6 +6,7 @@ import io.grpc.netty.shaded.io.grpc.netty.NettyChannelBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.west2.clusterio.common.constant.Constants;
+import org.west2.clusterio.common.protocol.Block;
 import org.west2.clusterio.common.protocolPB.DatanodeProtocol.BlockReportResponseProto;
 import org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeCommandProto;
 import org.west2.clusterio.common.protocolPB.service.DatanodeServiceGrpc;
@@ -47,11 +48,26 @@ public class DatanodeClient {
     }
 
     public boolean processCmd(DatanodeCommand cmd){
+        int action = cmd.getAction();
+        switch (action){
+            case DatanodeProtocol.DNA_TRANSFER:
+                processBlockCmd((BlockCommand) cmd);
+                break;
+        }
         //TODO handle the cmd here from daemon thread
         log.info("process CMD");
         return true;
     }
 
+    private boolean processBlockCmd(BlockCommand cmd){
+        DatanodeInfo[] targets = cmd.getTargets();
+        for (DatanodeInfo info :targets){
+            String ipAddr = info.getIpAddr();
+            int port = info.getPort();
+
+        }
+        return true;
+    }
 
     public void startHeartbeat() {
         executor = Executors.newSingleThreadScheduledExecutor();
@@ -74,7 +90,7 @@ public class DatanodeClient {
         //When registration complete start heartbeat
         log.info("Datanode Registration success");
         startHeartbeat();
-        sendFirstBlocReport();
+        sendFirstBlockReport();
     }
 
     public void sendBlockingHeartbeat() throws InterruptedException {
@@ -89,7 +105,7 @@ public class DatanodeClient {
         }
     }
 
-    protected void sendFirstBlocReport(){
+    protected void sendFirstBlockReport(){
         if (blockingStub == null){
             creatBlockingStub();
         }

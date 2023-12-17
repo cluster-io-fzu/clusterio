@@ -14,4 +14,6 @@ public class Constants {
     public static final String DEFAULT_POOL = "0";
 
     public static final int DEFAULT_NAMENODE_PORT = 9096;
+
+    public static final int DEFAULT_DATANODE_PORT = 9098;
 }
