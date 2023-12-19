@@ -16,4 +16,10 @@ public class Constants {
     public static final int DEFAULT_NAMENODE_PORT = 9096;
 
     public static final int DEFAULT_DATANODE_PORT = 9098;
+
+    public static final int DEFAULT_TRANSFER_SIZE = 1024;
+
+    public static final String DEFAULT_DATANODE_DIR = "/current/finalized";
+
+    public static final String DEFAULT_DATANODE_STREAM_DIR = "/current/rbw";
 }

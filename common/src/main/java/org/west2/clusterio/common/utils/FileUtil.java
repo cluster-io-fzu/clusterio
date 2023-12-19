@@ -1,5 +1,7 @@
 package org.west2.clusterio.common.utils;
 
+import java.util.zip.CRC32;
+
 public class FileUtil {
     public static String suffix(String filename){
         StringBuilder builder = new StringBuilder();
@@ -10,5 +12,15 @@ public class FileUtil {
             builder.append(filename.charAt(i));
         }
         return null;
+    }
+    public static boolean validate(byte[] bytes,long checksum){
+        CRC32 crc32 = new CRC32();
+        crc32.update(bytes,0,bytes.length);
+        return crc32.getValue() == checksum;
+    }
+    public static long generate(byte[] bytes){
+        CRC32 crc32 = new CRC32();
+        crc32.update(bytes,0,bytes.length);
+        return crc32.getValue();
     }
 }

@@ -1,6 +1,7 @@
 package org.west2.clusterio.datanode.client;
 
 import io.grpc.Channel;
+import io.grpc.ManagedChannel;
 import io.grpc.netty.shaded.io.grpc.netty.NegotiationType;
 import io.grpc.netty.shaded.io.grpc.netty.NettyChannelBuilder;
 import org.slf4j.Logger;
@@ -15,6 +16,7 @@ import org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeRe
 import org.west2.clusterio.common.protocolPB.DatanodeProtocol.HeartbeatResponseProto;
 import org.west2.clusterio.common.protocolPB.service.DatanodeServiceGrpc.DatanodeServiceBlockingStub;
 import org.west2.clusterio.datanode.DatanodeSystem;
+import org.west2.clusterio.datanode.service.transfer.TransferBlock;
 
 import java.util.List;
 import java.util.concurrent.Executors;
@@ -27,12 +29,13 @@ import java.util.concurrent.TimeUnit;
 public class DatanodeClient {
     private static final Logger log = LoggerFactory.getLogger(DatanodeClient.class.getName());
 
-    private Channel channel;
+    private ManagedChannel channel;
     private static final DatanodeClient client = new DatanodeClient();
     private final DatanodeSystem sys = DatanodeSystem.getSystem();
     private ScheduledExecutorService executor ;
     private DatanodeServiceBlockingStub blockingStub;
     private final CommandProcessingThread commandProcessingThread;
+
     private DatanodeClient(){
         this.commandProcessingThread = new CommandProcessingThread();
         commandProcessingThread.start();
@@ -59,14 +62,20 @@ public class DatanodeClient {
         return true;
     }
 
-    private boolean processBlockCmd(BlockCommand cmd){
+    private void processBlockCmd(BlockCommand cmd){
         DatanodeInfo[] targets = cmd.getTargets();
-        for (DatanodeInfo info :targets){
-            String ipAddr = info.getIpAddr();
-            int port = info.getPort();
-
+        Block[] blocks = cmd.getBlocks();
+        for (int i = 0; i < targets.length; i++) {
+            DatanodeInfo target = targets[i];
+            String ipAddr = target.getIpAddr();
+            int port = target.getPort();
+            DatanodeTcpClient tcpClient = new DatanodeTcpClient(ipAddr, port);
+            //TODO get dn's local block by blockID
+            Block block = blocks[i];
+            TransferBlock transferBlock = new TransferBlock(block, TransferBlock.Type.FULL);
+            tcpClient.setBlock(transferBlock);
+            tcpClient.transferBlock();
         }
-        return true;
     }
 
     public void startHeartbeat() {
@@ -130,7 +139,7 @@ public class DatanodeClient {
     }
 
     private BlockReportRequest createFirstBlockReport(){
-        //TODO first block need  scan op's file system to know blocks we have
+        //TODO first block need scan op's file system to know blocks we have
         //For now it just for testing
         return new BlockReportRequest(sys.getReg(),"1",new StorageBlockReport[0],new BlockReportContext(1,1,1));
     }
