@@ -18,6 +18,7 @@ public class NioTcpClient implements Peer {
     private ChannelInitializer<NioSocketChannel> channelInitializer;
     private NioEventLoopGroup eventExecutors;
     private Bootstrap bootstrap;
+    private ChannelFuture future;
     private Channel channel;
 
     public NioTcpClient(String ip, int port, ChannelInitializer<NioSocketChannel> channelInitializer) {
@@ -36,9 +37,7 @@ public class NioTcpClient implements Peer {
     @Override
     public void shutdown() throws Exception {
         try {
-            if (channel != null) {
-                channel.closeFuture().sync();
-            }
+            future.channel().closeFuture().sync();
         } catch (Exception e) {
             throw e;
         } finally {
@@ -67,7 +66,11 @@ public class NioTcpClient implements Peer {
         if (channel != null && channel.isActive()) {
             return;
         }
-        ChannelFuture future = bootstrap.connect(ip, port);
+        try {
+            future = bootstrap.connect(ip, port).sync();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         future.addListener((ChannelFutureListener) futureListener -> {
             if (futureListener.isSuccess()) {
                 channel = futureListener.channel();
