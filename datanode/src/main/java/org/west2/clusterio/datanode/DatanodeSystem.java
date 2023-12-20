@@ -1,5 +1,8 @@
 package org.west2.clusterio.datanode;
 
+import org.west2.clusterio.common.constant.Constants;
+import org.west2.clusterio.datanode.checker.VolumeScanner;
+import org.west2.clusterio.datanode.client.HeartbeatClientTimer;
 import org.west2.clusterio.datanode.protocol.DatanodeID;
 import org.west2.clusterio.datanode.protocol.DatanodeInfo;
 import org.west2.clusterio.datanode.protocol.DatanodeRegistration;
@@ -7,6 +10,8 @@ import org.west2.clusterio.datanode.protocol.StorageReport;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 /**
  * This is the base class of the datanode, every init and
@@ -18,8 +23,13 @@ public class DatanodeSystem {
     private DatanodeID id;
     private DatanodeInfo info;
     private DatanodeRegistration reg;
+    private VolumeScanner scanner;
 
-    private DatanodeSystem() {}
+    private DatanodeSystem() {
+        scanner = new VolumeScanner(Constants.DEFAULT_DATANODE_DIR);
+        Executors.newSingleThreadScheduledExecutor().scheduleAtFixedRate(scanner, 0,
+                Constants.DEFAULT_BLOCK_SCAN_INTERVAL, TimeUnit.MILLISECONDS);
+    }
 
     //TODO Config init
     public DatanodeSystem(DatanodeID id, DatanodeInfo info, DatanodeRegistration reg) {
@@ -69,5 +79,9 @@ public class DatanodeSystem {
 
     public void setReg(DatanodeRegistration reg) {
         this.reg = reg;
+    }
+
+    public VolumeScanner getScanner() {
+        return scanner;
     }
 }

@@ -1,5 +1,6 @@
 package org.west2.clusterio.common.utils;
 
+import java.nio.ByteBuffer;
 import java.util.zip.CRC32;
 
 public class FileUtil {
@@ -22,5 +23,11 @@ public class FileUtil {
         CRC32 crc32 = new CRC32();
         crc32.update(bytes,0,bytes.length);
         return crc32.getValue();
+    }
+
+    public static byte[] longToBytes(long x){
+        ByteBuffer buffer = ByteBuffer.allocate(Long.BYTES);
+        buffer.putLong(0,x);
+        return buffer.array();
     }
 }

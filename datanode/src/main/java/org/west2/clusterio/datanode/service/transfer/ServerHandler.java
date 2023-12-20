@@ -16,34 +16,41 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
     private long byteRead;
     private volatile long start = 0;
     private long totalLength = 0;
-    private String filename = Block.BLOCK_FILE_PREFIX;
+    private String filename;
     private RandomAccessFile rw = null;
+    private volatile long index = 0;
+    private RandomAccessFile metaRw = null;
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         TransferBlock block = (TransferBlock) msg;
         if (block.getType() ==  TransferBlock.Type.FULL){
             totalLength = block.getNumBytes();
-//            System.out.println("总长度："+totalLength);
-//            System.out.println("millis: "+ block.getGenerationStamp());
-            filename += block.getBlockId();
+            filename = Block.BLOCK_FILE_PREFIX +block.getBlockId();
             String path = Constants.DEFAULT_DATANODE_STREAM_DIR + File.separator +filename;
             File file = new File(path);
             rw = new RandomAccessFile(file,"rw");
-//            System.out.println("Server flush start: "+start);
+            //For meta file
+            String metaPath = path + ".meta";
+            File metaFile = new File(metaPath);
+            metaRw = new RandomAccessFile(metaFile,"rw");
             ctx.writeAndFlush(start);
         }else if (block.getType() == TransferBlock.Type.BYTES){
             rw.seek(start);
+            metaRw.seek(Long.BYTES * index);
             byte[] bytes = block.getBytes();
             byteRead = bytes.length;
             if (FileUtil.validate(bytes,block.getChecksum())){
                 start = start + byteRead;
+                index += 1;
                 rw.write(bytes);
+                metaRw.write(FileUtil.longToBytes(block.getChecksum()));
             }
             ctx.writeAndFlush(start);
             if (start == totalLength){
-                moveComplete(filename);
-//                System.out.println("Finish");
                 rw.close();
+                metaRw.close();
+                moveComplete(filename);
+                moveComplete(filename + ".meta");
                 ctx.close();
             }
         }
@@ -54,8 +61,7 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
         if (!endDirection.exists()){
             endDirection.mkdir();
         }
-
-        File start = new File(Constants.DEFAULT_DATANODE_STREAM_DIR+filename);
+        File start = new File(Constants.DEFAULT_DATANODE_STREAM_DIR+File.separator+filename);
         File end = new File(endDirection + File.separator + start.getName());
         try {
             if (!start.renameTo(end)){
