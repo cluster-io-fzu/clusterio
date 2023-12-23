@@ -73,7 +73,8 @@ message StorageBlockReportProto{
   string storageUuid = 1;
   repeated BlockProto blocks = 2;
   //The total number of blocks in this datanode
-  uint64 numberOfBlocks = 3;
+  //Changed to unint32 in 12.12 re-generated needed
+  uint32 numberOfBlocks = 3;
 //  repeated bytes blocksBuffers = 4;
 }
 
