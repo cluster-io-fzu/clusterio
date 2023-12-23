@@ -46,8 +46,12 @@ public class DatanodeClient {
     }
 
     public void initChannel(String host, int port) {
-        channel = NettyChannelBuilder.forAddress(host, port)
-                .negotiationType(NegotiationType.PLAINTEXT).build();
+        try {
+            channel = NettyChannelBuilder.forAddress(host, port)
+                    .negotiationType(NegotiationType.PLAINTEXT).build();
+        }catch (Exception e){
+            throw new RuntimeException("Channel init failed",e);
+        }
     }
 
     public boolean processCmd(DatanodeCommand cmd){

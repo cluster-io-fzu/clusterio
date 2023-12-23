@@ -24,13 +24,19 @@ public class CommandManager {
         cmds.put(target,datanodeCommands);
     }
 
-    public DatanodeCommand[] getDatanodeCommand(long datanodeUuid){
+//    public DatanodeCommand[] getDatanodeCommand(String datanodeUuid){
+//        LinkedList<DatanodeCommand> commands = cmds.get(datanodeUuid);
+//        if (commands == null) return new DatanodeCommand[0];
+//        DatanodeCommand[] res = new DatanodeCommand[commands.size()];
+//        for (int i = 0; i < commands.size(); i++) {
+//            res[i] = commands.poll();
+//        }
+//        return res;
+//    }
+
+    public List<DatanodeCommand> getDatanodeCommand(String datanodeUuid){
         LinkedList<DatanodeCommand> commands = cmds.get(datanodeUuid);
-        if (commands == null) return new DatanodeCommand[0];
-        DatanodeCommand[] res = new DatanodeCommand[commands.size()];
-        for (int i = 0; i < commands.size(); i++) {
-            res[i] = commands.poll();
-        }
-        return res;
+        if (commands == null) return new LinkedList<>();
+        return commands;
     }
 }

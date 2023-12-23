@@ -1,5 +1,7 @@
 package org.west2.clusterio;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.west2.clusterio.datanode.protocol.DatanodeID;
 import org.west2.clusterio.datanode.protocol.DatanodeInfo;
 import org.west2.clusterio.datanode.protocol.DatanodeRegistration;
@@ -9,6 +11,7 @@ import org.west2.clusterio.datanode.DatanodeSystem;
 import org.west2.clusterio.datanode.client.DatanodeClient;
 
 public class DataNodeStartUp {
+    private static Logger log = LoggerFactory.getLogger(DataNodeStartUp.class);
     public static void main(String[] args) {
         DatanodeClient client =DatanodeClient.getInstance();
         //For test
@@ -19,8 +22,12 @@ public class DataNodeStartUp {
         DatanodeInfo info = new DatanodeInfo(idTest, 4096, 1024, 3072, 3072, System.currentTimeMillis(), 0, System.currentTimeMillis());
         sys.setInfo(info);
         sys.setReg(datanodeRegistration);
-        client.initChannel("127.0.0.1",9096);
-        client.register();
-
+        try {
+            client.initChannel("127.0.0.1",9096);
+            client.register();
+        }catch (RuntimeException e){
+            log.error("Connection failed");
+            e.printStackTrace();
+        }
     }
 }

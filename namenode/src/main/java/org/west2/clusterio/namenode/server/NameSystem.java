@@ -1,6 +1,10 @@
 package org.west2.clusterio.namenode.server;
 
 import org.west2.clusterio.common.utils.HashUtil;
+import org.west2.clusterio.namenode.protocol.FsFile;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class NameSystem {
     private static NameSystem sys;
@@ -8,15 +12,17 @@ public class NameSystem {
     private DatanodeManager datanodeManager;
     private BlockManager blockManager;
     private CommandManager commandManager;
+    private List<FsFile> files;
     private String host;
     private int port;
 
     private NameSystem(String host, int port) {
         this.host = host;
         this.port = port;
+        files = new ArrayList<>();
         blockManager = new BlockManager(this);
         commandManager = new CommandManager();
-        initDatanodeManager();
+        datanodeManager = new DatanodeManager(this,HashUtil.getNamespaceId(host,port),"1");
     }
 
     public static NameSystem getSystem(){
@@ -30,9 +36,8 @@ public class NameSystem {
         return sys;
     }
 
+    public void recoverFromFsImage(){
 
-    public void initDatanodeManager(){
-        datanodeManager = new DatanodeManager(this,HashUtil.getNamespaceId(host,port),"1");
     }
 
     public BlockManager getBlockManager() {
