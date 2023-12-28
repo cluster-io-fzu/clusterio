@@ -29,8 +29,6 @@ public class DatanodeManager {
     private boolean isFirstHeartbeat = false;
     public DatanodeManager(final NameSystem sys,long namespaceID, String clusterID) {
         this.sys = sys;
-        blockManager = sys.getBlockManager();
-        commandManager = sys.getCommandManager();
         if (manager == null) {
             this.namespaceID = namespaceID;
             this.clusterID = clusterID;
@@ -56,23 +54,21 @@ public class DatanodeManager {
         executor.scheduleAtFixedRate(new HeartbeatValidationTimer(), 0, Constants.DEFAULT_HEARTBEAT_INTERVAL, TimeUnit.MILLISECONDS);
     }
 
-    public final DatanodeCommand heartbeat(String uuid, DatanodeInfo info) {
+    public final List<DatanodeCommand> heartbeat(String uuid, DatanodeInfo info) {
+        checkManagers();
         DatanodeInfo datanodeInfo = registry.get(uuid);
         datanodeInfo.update(info);
         setDatanodeStatus(uuid,DatanodeStatus.ACTIVE);
-        //TODO Store the command and get here
-        Block block = new Block(1, 1024, System.currentTimeMillis());
-        Block[] blks = {block};
-        BlockCommand blockCommand = new BlockCommand(DatanodeProtocol.DNA_TRANSFER, "1", blks);
+        List<DatanodeCommand> datanodeCommands = commandManager.getDatanodeCommand(uuid);
         if (!isFirstHeartbeat){
             isFirstHeartbeat = true;
             heartbeatInitialize();
         }
-        return blockCommand;
+        return datanodeCommands;
     }
 
     public void heartbeatExpiration(String uuid) {
-        log.info("datanode heartbeat expiration");
+        log.info("datanode-{} heartbeat expiration",uuid);
         DatanodeStatus status = getDatanodeStatus(uuid);
         if (status == DatanodeStatus.ACTIVE) {
             setDatanodeStatus(uuid, DatanodeStatus.AMBIGUITY);
@@ -80,7 +76,7 @@ public class DatanodeManager {
     }
 
     public void datanodeDown(String uuid) {
-        log.warn("datanode is down");
+        log.warn("datanode-{} is down",uuid);
         DatanodeStatus status = getDatanodeStatus(uuid);
         if (status == DatanodeStatus.AMBIGUITY) {
             setDatanodeStatus(uuid, DatanodeStatus.DOWN);
@@ -90,6 +86,7 @@ public class DatanodeManager {
     }
 
     private void datanodeDownProcess(String uuid){
+        checkManagers();
         blockManager.removeDatanodeBlocks(uuid);
         LinkedList<Long> blocks = registry.get(uuid).getStorageInfo().getBlocks();
         BlocksMap bmap = blockManager.blocksMap;
@@ -100,6 +97,15 @@ public class DatanodeManager {
             String target = getRandomUuid(source);
             DatanodeCommand command = createCommand(DatanodeProtocol.DNA_TRANSFER, new Block(blockId), registry.get(target), target);
             commandManager.insertCommand(source,command);
+        }
+    }
+
+    private void checkManagers(){
+        if (blockManager == null){
+            blockManager = sys.getBlockManager();
+        }
+        if (commandManager == null){
+            commandManager = sys.getCommandManager();;
         }
     }
 

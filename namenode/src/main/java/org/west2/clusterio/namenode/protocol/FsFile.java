@@ -3,7 +3,9 @@ package org.west2.clusterio.namenode.protocol;
 import org.west2.clusterio.common.protocol.Block;
 import org.west2.clusterio.common.utils.FileUtil;
 
-public class FsFile implements BlockCollection{
+import java.io.Serializable;
+
+public class FsFile implements BlockCollection, Serializable {
     private int numBlocks;
     private int bcId;
     private long fileLength;
