@@ -23,5 +23,7 @@ public class Constants {
 
     public static final String DEFAULT_DATANODE_DIR = "/current/finalized";
 
+    public static final String DEFAULT_FSIMAGE_DIR = "/current/finalized";
+
     public static final String DEFAULT_DATANODE_STREAM_DIR = "/current/rbw";
 }

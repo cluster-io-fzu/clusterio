@@ -32,6 +32,7 @@ public class BlockManager {
         DatanodeStorageInfo storageInfo = datanodeInfo.getStorageInfo();
         for (StorageBlockReport report : reports) {
             Block[] blocks = report.getBlocks();
+            //Set number of blocks in this dn
             datanodeInfo.setNumBlocks((int)report.getNumberOfBlocks());
             for (Block block :blocks) {
                 BlockInfo blockInfo = new BlockInfo(block);
@@ -39,7 +40,7 @@ public class BlockManager {
                 storageInfo.addBlock(block.getBlockId());
                 boolean success =  blocksMap.insertBlockInfo(block.getBlockId(),blockInfo);
                 if (!success){
-                    log.warn("No related block in the manager");
+                    log.warn("block-{} is not in the maps",block.getBlockId());
                 }
             }
         }

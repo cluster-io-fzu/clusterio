@@ -8,7 +8,6 @@ import org.west2.clusterio.common.protocolPB.HdfsProtos;
 import org.west2.clusterio.common.protocolPB.HdfsProtos.StorageInfoProtoc;
 import org.west2.clusterio.datanode.protocol.*;
 import org.west2.clusterio.namenode.server.BlockManager;
-import org.west2.clusterio.namenode.server.CommandManager;
 import org.west2.clusterio.namenode.server.DatanodeManager;
 import org.west2.clusterio.common.protocolPB.DatanodeProtocol.RegisterDatanodeResponseProto;
 import org.west2.clusterio.common.protocolPB.DatanodeProtocol.DatanodeRegistrationProto;

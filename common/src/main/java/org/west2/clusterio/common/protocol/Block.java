@@ -1,8 +1,9 @@
 package org.west2.clusterio.common.protocol;
 
+import java.io.Serializable;
 import java.util.regex.Pattern;
 
-public class Block {
+public class Block implements Serializable {
     public static final String BLOCK_FILE_PREFIX = "blk_";
     public static final String METADATA_EXTENSION = ".meta";
     private long blockId;
