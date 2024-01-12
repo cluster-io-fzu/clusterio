@@ -29,10 +29,14 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
             String path = Constants.DEFAULT_DATANODE_STREAM_DIR + File.separator +filename;
             File file = new File(path);
             rw = new RandomAccessFile(file,"rw");
-            //For meta file
             String metaPath = path + ".meta";
             File metaFile = new File(metaPath);
             metaRw = new RandomAccessFile(metaFile,"rw");
+            if (file.exists()){
+                index = file.length() / Constants.DEFAULT_TRANSFER_SIZE;
+                start = index  * Constants.DEFAULT_TRANSFER_SIZE;
+            }
+            //For meta file
             ctx.writeAndFlush(start);
         }else if (block.getType() == TransferBlock.Type.BYTES){
             rw.seek(start);
