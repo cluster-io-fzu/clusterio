@@ -2,6 +2,7 @@ package org.west2.clusterio.datanode.client;
 
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.socket.nio.NioSocketChannel;
+import io.netty.handler.codec.LengthFieldPrepender;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.west2.clusterio.common.codec.LongDecoder;
@@ -41,6 +42,7 @@ public class DatanodeTcpClient implements StartAndShutdown {
         tcpClient = new NioTcpClient(ipAddr, port, new ChannelInitializer<NioSocketChannel>() {
             @Override
             protected void initChannel(NioSocketChannel ch) throws Exception {
+                ch.pipeline().addLast(new LengthFieldPrepender(4));
                 ch.pipeline().addLast(new TransferBlockEncoder());
                 ch.pipeline().addLast(new LongDecoder());
                 ch.pipeline().addLast(new ClientHandler(block));

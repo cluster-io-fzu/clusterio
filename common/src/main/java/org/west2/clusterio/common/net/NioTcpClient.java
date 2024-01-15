@@ -54,6 +54,7 @@ public class NioTcpClient implements Peer {
                     .channel(NioSocketChannel.class)
                     .handler(channelInitializer);
             doConnect();
+            
         } catch (Exception e) {
             throw e;
         }
